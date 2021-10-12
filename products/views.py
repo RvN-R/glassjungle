@@ -22,3 +22,9 @@ def full_terrariums(request):
     }
     
     return render(request, 'products/full_terrariums.html', context)
+
+
+def product_detail(request):
+    """A view to return full_terrariums.html"""
+
+    return render(request, 'products/product_detail.html')

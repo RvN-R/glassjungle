@@ -13,13 +13,31 @@
 
 {% block content %}
     <div class="container h-100">
-        <div class="row h-100">
+        <div class="row g-0 h-100">
             <div class="col my-auto">
                 <h1 class="display-4 logo-font text-black">Welcome to Empty Terrarium</h1>
-                {% for product in products %}
-                    <h2>{{ product.name }}</h2>
-                {% endfor %}
             </div>
         </div>
+    </div>
+    <div class="row">
+    {% for product in products %}
+        <div class="col-lg-4 col-md-12 col-sm-12">
+            <div class="card mx-5 mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="/media/{{product.image}}" class="img-fluid rounded-start" alt="{{ product.name }}">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ product.name }}</h5>
+                      <p class="card-text">{{ product.description }}</p>
+                      <a href="#" class="mb-2 card-link btn btn-primary btn-lg">Add to Bag</a>
+                      <a href="#" class="mb-2 card-link btn btn-primary btn-lg">Customize this Terrarium!</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>                
+    {% endfor %}
     </div>
 {% endblock %}

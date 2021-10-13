@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Product
 
 # Create your views here.
@@ -24,10 +24,10 @@ def full_terrariums(request):
     return render(request, 'products/full_terrariums.html', context)
 
 
-def product_detail(request, id):
+def product_detail(request, product_id):
     """A view show indivdual product"""
     # products = Product.objects.get(id=pk)
-    products = get_object_or_404(Product, pk=id)
+    products = get_object_or_404(Product, pk=product_id)
     
     context = {
         'products': products

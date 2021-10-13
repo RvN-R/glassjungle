@@ -4,5 +4,5 @@ from . import views
 urlpatterns = [
     path('empty_terrariums/', views.empty_terrariums, name='empty_terrariums'),
     path('full_terrariums/', views.full_terrariums, name='full_terrariums'),
-    path('<int:id>/', views.product_detail, name='product_detail'),
+    path('<product_id>/', views.product_detail, name='product_detail'),
 ]

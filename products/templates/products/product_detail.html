@@ -18,5 +18,32 @@
                 <h1 class="display-4 logo-font text-black">Product Detail</h1>
             </div>
         </div>
+        <div class="row">
+            <!-- {{ products.name }} -->
+            <div class="col-12">
+                <div class="card" style="width: 18rem;">
+                    <img src="/media/{{products.image}}" class="card-img-top" alt="{{ products.name }}">
+                    <div class="card-body">
+                      <h5 class="card-title text-center"><strong>{{ products.name }}</strong></h5>
+                      <h6 class="card-title"><strong><i>Description</i></strong></h6>
+                      <p class="card-text">{{ products.description }}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <h6 class="card-title"><strong><i>Manufacture</i></strong></h6>
+                            <p class="card-text">{{ products.manufacture }}</p>
+                          </li>
+                      <li class="list-group-item">
+                        <h6 class="card-title"><strong><i>Price</i></strong></h6>
+                        <p class="card-text">£{{ products.price }}</p>
+                      </li>
+                    </ul>
+                    <div class="card-body">
+                      <a href="#" class="card-link btn btn-primary" type="button">Add to Cart</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+            
     </div>
 {% endblock %}

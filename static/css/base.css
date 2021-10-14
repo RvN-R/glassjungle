@@ -57,8 +57,10 @@ html{
 }
 
 /*empty terrariums.html*/
-.card_img{
-    
+
+/* bag.html */
+.update-link, .remove-item{
+    cursor: pointer;
 }
 
 /* -------------------------------- Media Queries */

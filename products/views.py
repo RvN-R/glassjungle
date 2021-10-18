@@ -24,6 +24,16 @@ def full_terrariums(request):
     return render(request, 'products/full_terrariums.html', context)
 
 
+def terrarium_accessories(request):
+    """A view to return all terrarium_accessories.html"""
+    products = Product.objects.exclude(name__contains='terrarium')
+    context = {
+        'products': products
+    }
+
+    return render(request, 'products/terrarium_accessories.html', context)
+
+
 def product_detail(request, product_id):
     """A view show indivdual product"""
     # products = Product.objects.get(id=pk)

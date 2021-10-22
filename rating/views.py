@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from .models import Rating
 
-# Create your views here.
+
+def create_rating(request):
+    """A view to return create_rating.html"""
+    context = {
+    }
+    
+    return render(request, 'rating/create_rating.html', context)
+

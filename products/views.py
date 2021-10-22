@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Product
+from rating.models import Rating
 
 # Create your views here.
 
@@ -38,9 +39,12 @@ def product_detail(request, product_id):
     """A view show indivdual product"""
     # products = Product.objects.get(id=pk)
     products = get_object_or_404(Product, pk=product_id)
-    
+    ratings = Rating.objects.filter(product_id=products)
+    print(ratings)
+    print(products)
     context = {
-        'products': products
+        'products': products,
+        'ratings': ratings
     }
     print(products)
 

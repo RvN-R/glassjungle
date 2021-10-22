@@ -74,7 +74,31 @@
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
                             <input type="submit" class="btn btn-primary rounded-0 text-uppercase mt-5" value="Add to Cart">
+                            <hr>
                         </div>
+                        {% if ratings %}
+                            <div class="card-body">
+                                <h5 class="card-title text-center text-uppercase">Customer Ratings</h5>
+                            </div>
+                            {% for rating in ratings %}
+                                <div class="card-body">
+                                        <hr>
+                                        <h6>{{ rating.poster.username }}</h6>
+                                        <p class="card-text"></p>
+                                        <p class="card-text small">{{ rating.rating }}/5<i class="fas fa-star small"></i></p>
+                                        <p class="card-text small">{{ rating }}</p>
+                                        <p class="card-text small">{{ rating.updated }}</p>
+                                        <p class="card-text small">{{ rating.created }}</p>
+                                        <hr>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                        <div class="card-body">
+                            <h5 class="card-title text-center text-uppercase">this product has has no ratings</h5>
+                            {% if user.is_authenticated %} <a href="">Leave a Rating</a>{% endif %}
+                        </div>
+                        {% endif %}
+                        
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form>

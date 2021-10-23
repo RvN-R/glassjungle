@@ -91,6 +91,7 @@
                                         <p class="card-text small">{{ rating.updated }}</p>
                                         <p class="card-text small">{{ rating.created }}</p>
                                         <hr>
+                                        <a href="{% url 'update_rating' rating.id %}" class="rounded-0 btn-sm btn-dark">Edit Rating</a>
                                 </div>
                             {% endfor %}
                         {% else %}

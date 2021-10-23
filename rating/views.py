@@ -51,3 +51,15 @@ def update_rating(request, rating_id):
             messages.success(request, 'Rating Successfully Updated!')
             return redirect(reverse('product_detail', args=[rating.id]))
     return render(request, 'rating/update_rating.html', context)
+
+
+def delete_rating(request, rating_id):
+    """A view to return delete_rating"""
+    rating = get_object_or_404(Rating, pk=rating_id)
+    if request.method == 'POST':
+        rating.delete()
+        return redirect(reverse('product_detail', args=[rating.id]))
+    context = {
+        'rating': rating,
+    }
+    return render(request, 'rating/delete_rating.html', context)

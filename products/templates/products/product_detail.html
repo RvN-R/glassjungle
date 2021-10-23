@@ -45,17 +45,20 @@
                             <div class="form-group">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <button class="decrement-qty btn btn-black rounded-0" data-item_id="{{ products.id }}" id="decrement-qty_{{ products.id }}">
+                                        <button class="decrement-qty btn btn-black rounded-0"
+                                            data-item_id="{{ products.id }}" id="decrement-qty_{{ products.id }}">
                                             <span class="icon">
                                                 <i class="fas fa-minus"></i>
                                             </span>
                                         </button>
                                     </div>
 
-                                    <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ products.id }}" id="id_qty_{{ products.id }}">
-                                    
+                                    <input class="form-control qty_input" type="number" name="quantity" value="1"
+                                        min="1" max="99" data-item_id="{{ products.id }}" id="id_qty_{{ products.id }}">
+
                                     <div class="input-group-append">
-                                        <button class="increment-qty btn btn-black rounded-0" data-item_id="{{ products.id }}" id="increment-qty_{{ products.id }}">
+                                        <button class="increment-qty btn btn-black rounded-0"
+                                            data-item_id="{{ products.id }}" id="increment-qty_{{ products.id }}">
                                             <span class="icon">
                                                 <i class="fas fa-plus"></i>
                                             </span>
@@ -73,34 +76,40 @@
                                 </span>
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
-                            <input type="submit" class="btn btn-primary rounded-0 text-uppercase mt-5" value="Add to Cart">
+                            <input type="submit" class="btn btn-primary rounded-0 text-uppercase mt-5"
+                                value="Add to Cart">
                             <hr>
                         </div>
                         {% if ratings %}
-                            <div class="card-body">
-                                <h5 class="card-title text-center text-uppercase">Customer Ratings</h5>
-                                <h6 class="text-center"><a href="{% url 'create_rating' products.id %}">Leave a Rating</a></h6>
-                            </div>
-                            {% for rating in ratings %}
-                                <div class="card-body">
-                                        <hr>
-                                        <h6>{{ rating.poster.username }}</h6>
-                                        <p class="card-text"></p>
-                                        <p class="card-text small">{{ rating.rating }}/5<i class="fas fa-star small"></i></p>
-                                        <p class="card-text small">{{ rating }}</p>
-                                        <p class="card-text small">{{ rating.updated }}</p>
-                                        <p class="card-text small">{{ rating.created }}</p>
-                                        <hr>
-                                        <a href="{% url 'update_rating' rating.id %}" class="rounded-0 btn-sm btn-dark">Edit Rating</a>
-                                </div>
-                            {% endfor %}
+                        <div class="card-body">
+                            <h5 class="card-title text-center text-uppercase">Customer Ratings</h5>
+                            <h6 class="text-center"><a href="{% url 'create_rating' products.id %}">Leave a Rating</a>
+                            </h6>
+                        </div>
+                        {% for rating in ratings %}
+                        <div class="card-body">
+                            <hr>
+                            <h6>{{ rating.poster.username }}</h6>
+                            <p class="card-text"></p>
+                            <p class="card-text small">{{ rating.rating }}/5<i class="fas fa-star small"></i></p>
+                            <p class="card-text small">{{ rating }}</p>
+                            <p class="card-text small">{{ rating.updated }}</p>
+                            <p class="card-text small">{{ rating.created }}</p>
+                            <hr>
+                            <a href="{% url 'update_rating' rating.id %}" class="rounded-0 btn-sm btn-dark">Edit
+                                Rating</a>
+                            <hr>
+                            <a href="{% url 'delete_rating' rating.id %}" class="rounded-0 btn-sm btn-dark">Delete Rating</a>
+                        </div>
+                        {% endfor %}
                         {% else %}
                         <div class="card-body">
                             <h5 class="card-title text-center text-uppercase">this product has has no ratings</h5>
-                            {% if user.is_authenticated %} <a href="{% url 'create_rating' products.id %}">Leave a Rating</a>{% endif %}
+                            {% if user.is_authenticated %} <a href="{% url 'create_rating' products.id %}">Leave a
+                                Rating</a>{% endif %}
                         </div>
                         {% endif %}
-                        
+
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form>

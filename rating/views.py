@@ -38,27 +38,36 @@ def create_rating(request, product_id):
 
 def update_rating(request, rating_id):
     """A view to return update_rating.html"""
+    # rating varible returns the id of the rating you want to update
+    # product varible returns the product attached to that rating. 
     rating = get_object_or_404(Rating, pk=rating_id)
+    product = Product.objects.get(name=rating.product_id)
     form = CreateRatingForm(instance=rating)
     context = {
         'rating': rating,
         'form': form
     }
+    print(rating.id)
+    print(rating.product_id)
+    print(product.id)
     if request.method == 'POST':
         form = CreateRatingForm(request.POST, instance=rating)
         if form.is_valid():
             form.save()
             messages.success(request, 'Rating Successfully Updated!')
-            return redirect(reverse('product_detail', args=[rating.id]))
+            return redirect(reverse('product_detail', args=[product.id]))
     return render(request, 'rating/update_rating.html', context)
 
 
 def delete_rating(request, rating_id):
     """A view to return delete_rating"""
+    # rating varible returns the id of the rating you want to delete
+    # product varible returns the product attached to that rating. 
     rating = get_object_or_404(Rating, pk=rating_id)
+    product = Product.objects.get(name=rating.product_id)
     if request.method == 'POST':
         rating.delete()
-        return redirect(reverse('product_detail', args=[rating.id]))
+        return redirect(reverse('product_detail', args=[product.id]))
     context = {
         'rating': rating,
     }

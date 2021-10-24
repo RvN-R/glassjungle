@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import Rating
 from .forms import CreateRatingForm
@@ -7,7 +8,7 @@ from products.models import Product
 
 import datetime
 
-
+@login_required
 def create_rating(request, product_id):
     """A view to return create_rating.html"""
     product = get_object_or_404(Product, pk=product_id)
@@ -36,6 +37,7 @@ def create_rating(request, product_id):
     return render(request, 'rating/create_rating.html', context)
 
 
+@login_required
 def update_rating(request, rating_id):
     """A view to return update_rating.html"""
     # rating varible returns the id of the rating you want to update
@@ -59,6 +61,7 @@ def update_rating(request, rating_id):
     return render(request, 'rating/update_rating.html', context)
 
 
+@login_required
 def delete_rating(request, rating_id):
     """A view to return delete_rating"""
     # rating varible returns the id of the rating you want to delete

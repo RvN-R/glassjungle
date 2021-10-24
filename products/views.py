@@ -37,15 +37,21 @@ def terrarium_accessories(request):
 
 def product_detail(request, product_id):
     """A view show indivdual product"""
-    # products = Product.objects.get(id=pk)
+    # products variable returns the product that matches the product_id
+    # ratings variable returns any ratings assocaited with the product with
+    # the product_id
+    # user variable returns the request.user value.
+
     products = get_object_or_404(Product, pk=product_id)
     ratings = Rating.objects.filter(product_id=products)
-    print(ratings)
-    print(products)
+    user = str(request.user)
     context = {
         'products': products,
-        'ratings': ratings
+        'ratings': ratings,
+        'user': user
     }
-    print(products)
+    print(type(user))
+    print(type(request.user))
+
 
     return render(request, 'products/product_detail.html', context)

@@ -41,23 +41,27 @@ def create_rating(request, product_id):
 def update_rating(request, rating_id):
     """A view to return update_rating.html"""
     # rating varible returns the id of the rating you want to update
-    # product varible returns the product attached to that rating. 
+    # product varible returns the product attached to that rating
+    # user variable returns the request.user converted to a string
     rating = get_object_or_404(Rating, pk=rating_id)
     product = Product.objects.get(name=rating.product_id)
+    user = str(request.user)
     form = CreateRatingForm(instance=rating)
     context = {
         'rating': rating,
         'form': form
     }
-    print(rating.id)
-    print(rating.product_id)
-    print(product.id)
-    if request.method == 'POST':
-        form = CreateRatingForm(request.POST, instance=rating)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Rating Successfully Updated!')
-            return redirect(reverse('product_detail', args=[product.id]))
+    if rating.poster.username == user:
+        if request.method == 'POST':
+            form = CreateRatingForm(request.POST, instance=rating)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Rating Successfully Updated!')
+                return redirect(reverse('product_detail', args=[product.id]))
+    else:
+        messages.warning(request, 'Not allowed to update other users ratings! ')
+        return redirect('home') 
+
     return render(request, 'rating/update_rating.html', context)
 
 
@@ -65,13 +69,24 @@ def update_rating(request, rating_id):
 def delete_rating(request, rating_id):
     """A view to return delete_rating"""
     # rating varible returns the id of the rating you want to delete
-    # product varible returns the product attached to that rating. 
+    # product varible returns the product attached to that rating.
+    # user variable returns the request.user converted to a string  
     rating = get_object_or_404(Rating, pk=rating_id)
     product = Product.objects.get(name=rating.product_id)
-    if request.method == 'POST':
-        rating.delete()
-        return redirect(reverse('product_detail', args=[product.id]))
+    user = str(request.user)
     context = {
         'rating': rating,
     }
+
+    print(rating.poster.username)
+    print(user)
+
+    if rating.poster.username == user:
+        if request.method == 'POST':
+            rating.delete()
+            return redirect(reverse('product_detail', args=[product.id]))
+    else:
+        messages.warning(request, 'Not allowed to delete other users ratings!')
+        return redirect('home')
+  
     return render(request, 'rating/delete_rating.html', context)

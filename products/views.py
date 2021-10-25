@@ -50,8 +50,7 @@ def product_detail(request, product_id):
         'ratings': ratings,
         'user': user
     }
-    print(type(user))
-    print(type(request.user))
+    
 
 
     return render(request, 'products/product_detail.html', context)

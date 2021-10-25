@@ -108,8 +108,7 @@
                         {% else %}
                         <div class="card-body">
                             <h5 class="card-title text-center text-uppercase">this product has has no ratings</h5>
-                            {% if user.is_authenticated %} <a href="{% url 'create_rating' products.id %}">Leave a
-                                Rating</a>{% endif %}
+                            {% if request.user.is_authenticated %} <a href="{% url 'create_rating' products.id %}" class="text-center">Leave a Rating</a>{% endif %}
                         </div>
                         {% endif %}
 

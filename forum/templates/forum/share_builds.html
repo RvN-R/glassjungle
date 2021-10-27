@@ -2,24 +2,42 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col">
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
 
-            </div>
         </div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row g-0 h-100">
-            <div class="col my-auto">
-                <h1 class="display-4 logo-font text-black">Share Your Builds!</h1>
+<div class="container h-100">
+    <div class="row g-0 h-100">
+        <div class="col my-auto">
+            <h1 class="display-4 logo-font text-black">Share Your Builds!</h1>
+        </div>
+    </div>
+</div>
+<div class="row">
+    {% for post in posts %}
+    <div class="col-md-6 offset-md-3 mt-5">
+        <div class="card" style="width: 25rem;">
+            <a href="#" target="#"><img src="/media/{{post.image}}" class="card-img-top" alt="Image from {{post.title}} post"></a>
+            <div class="card-body">
+                <h5 class="card-title">{{post.title}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{post.poster.username}}</h6>
+                <p class="card-text">{{post.comment}}</p>
+                <p class="small text-muted">Post Created:{{post.created}}</p>
+                <p class="small text-muted">Post Updated:{{post.updated}}</p>
             </div>
         </div>
     </div>
-    <div class="row">
-    
+    {% endfor %}
+    <div class="col-md-6 offset-md-3 mt-5">
+        <div>
+            <h5 class="card-title text-center text-uppercase"><a href="#" class="btn btn-black rounded-0">Click to Share Your Builds </a></h5>
+        </div>
     </div>
+</div>
 {% endblock %}

@@ -11,5 +11,6 @@ import datetime
 
 def share_builds(request):
     """ A view to return share_builds page """
-    context = {}
-    return render(request, 'forum/share_builds.html')
+    posts = Forum.objects.all()
+    context = {"posts": posts}
+    return render(request, 'forum/share_builds.html', context)

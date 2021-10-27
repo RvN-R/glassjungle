@@ -31,6 +31,7 @@
                 <p class="small text-muted">Post Created:{{post.created}}</p>
                 <p class="small text-muted">Post Updated:{{post.updated}}</p>
             </div>
+            <h6 class="card-title text-center text-uppercase"><a href="{% url 'edit_post' post.id %}" class="btn btn-black rounded-0">Edit Post</a></h6>
         </div>
     </div>
     {% endfor %}

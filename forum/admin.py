@@ -3,6 +3,7 @@ from .models import Forum
 
 class ForumAdmin(admin.ModelAdmin):
     list_display = (
+        'id',
         'poster',
         'title',
         'comment',

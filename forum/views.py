@@ -32,6 +32,8 @@ def create_post(request):
             post.save()
             messages.success(request, 'Build Successfully Shared')
             return redirect('share_builds')
+        else:
+            messages.error(request, 'Failed to update post. Please esnure the form is valid.')
 
 
     return render(request, 'forum/create_post.html', context)
@@ -58,3 +60,18 @@ def edit_post(request, post_id):
     }
 
     return render(request, 'forum/edit_post.html', context)
+
+
+def delete_post(request, post_id):
+    post = get_object_or_404(Forum, pk=post_id)
+
+    context = {
+        'post': post,
+    }
+
+    if request.method == 'POST':
+        post.delete()
+        messages.success(request,'Successfully deleted post!')
+        return redirect(reverse('share_builds'))
+    
+    return render(request, 'forum/delete_post.html', context)

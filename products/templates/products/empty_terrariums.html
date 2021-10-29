@@ -15,17 +15,17 @@
     <div class="container h-100">
         <div class="row g-0 h-100">
             <div class="col my-auto">
-                <h1 class="display-4 logo-font text-black">Welcome to Empty Terrarium</h1>
+                <h1 class="display-4 logo-font text-white">Welcome to Empty Terrarium</h1>
             </div>
         </div>
     </div>
     <div class="row">
     {% for product in products %}
         <div class="col-lg-4 col-md-12 col-sm-12">
-            <div class="card mx-5 mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                  <div class="col-md-4">
-                    <a href="{% url 'product_detail' product.id %}">
+            <div class="card mx-5 mb-3 h-100 border-0" style="max-width: 540px; min-height: 272px;">
+                <div class="row no-gutters pt-2">
+                  <div class="col-md-4 d-block m-auto pl-4">
+                    <a href="{% url 'product_detail' product.id %}" class="text-center">
                         <img src="/media/{{product.image}}" class="img-fluid rounded-start" alt="{{ product.name }}">
                     </a>
                   </div>

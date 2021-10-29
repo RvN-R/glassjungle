@@ -15,21 +15,24 @@
     <div class="container h-100">
         <div class="row h-100">
             <div class="col my-auto">
-                <h1 class="display-4 logo-font text-black">Glass Jungle</h1>
-                <h2 class="display-4 logo-font text-black">Bringing the Jungle to you!</h2>
+                <h1 class="display-4 logo-font text-white ">Glass Jungle</h1>
+                <h2 class="display-4 logo-font text-white ">Bringing the Jungle to you!</h2>
             </div>
         </div>
+        <hr>
         <div class="row h-100">
+            
             <div class="col-sm-12 col-md-4 col-lg-4 text-center">
-                <a href="{% url 'empty_terrariums' %}">Empty Terrariums</a>
+                <a class="btn index-btn btn-lg btn-block" href="{% url 'empty_terrariums' %}">Empty Terrariums</a>
             </div>
             <div class="col-sm-12 col-md-4 col-lg-4 text-center">
-                <a href="{% url 'full_terrariums' %}">Full Terrariums</a>
+                <a class="btn index-btn btn-lg btn-block" href="{% url 'full_terrariums' %}">Full Terrariums</a>
             </div>
             <div class="col-sm-12 col-md-4 col-lg-4 text-center">
-                <a href="{% url 'terrarium_accessories' %}">Terrarium Accessories</a>
+                <a class="btn index-btn btn-lg btn-block" href="{% url 'terrarium_accessories' %}">Terrarium Accessories</a>
             </div>
             
         </div>
+        <hr>
     </div>
 {% endblock %}

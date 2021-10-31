@@ -133,6 +133,11 @@ body{
     background-color: rgba(0, 0, 0, 0.75);
 }
 
+/*Profile page*/
+.profile-container{
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -281,7 +286,7 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+    color: white; /* text-secondary */
 }
 
 .allauth-form-inner-content input {
@@ -309,8 +314,8 @@ input[name='q']::placeholder {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #000;
-    border: 1px solid #000;
+    background-color: #114634;
+    border: 1px solid #114634;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
@@ -323,13 +328,18 @@ input[name='q']::placeholder {
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
 	color: #fff;
-    background-color: #222;
-    border-color: #222;
+    background-color: #002416;
+    border-color: #002416;
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+	color: white; /* text-info */
 }
+
+.form-check-label{
+    color: white;
+}
+
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {

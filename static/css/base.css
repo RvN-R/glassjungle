@@ -33,6 +33,7 @@ body{
     color: white;
 }
 
+
 /*index*/
 
 /* .index-large-button{
@@ -64,30 +65,58 @@ body{
 } */
 
 /*Taken inspiration from Bootstrap Buttons*/
-.index-btn{
+.dark-green-btn{
     color: #fff;
     background-color: #114634;
     border-color: #114634;
+    
 }
-.index-btn:hover{
+.dark-green-btn:hover{
     color: #fff;
     background-color: #002416;
     border-color: #002416;
+    text-decoration: none;
 }
 
-.index-btn:focus{
+.dark-green-btn:focus{
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgb(156 194 77 / 50%);
 }
 
 
-/*Terrarium Accessories*/
+/*Terrarium Accessories page*/
 
 .accessories-img{
     width: 100%;
     height: 270px;
     object-fit: contain;
 }
+
+/*Product Details page*/
+.keep-shopping-btn{
+    color:whitesmoke;
+    background-color: #9CC24D;
+    border-color: #9CC24D;
+    
+}
+.keep-shopping-btn:hover{
+    color: #fff;
+    background-color: #02661D;
+    border-color: #02661D;
+    text-decoration: none;
+}
+
+.keep-shopping-btn:focus{
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(156 194 77 / 50%);
+}
+
+.product-detail-img{
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+}
+
 
 /* from Bulma */
 .icon {

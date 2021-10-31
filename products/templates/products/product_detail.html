@@ -19,24 +19,18 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12">
-            <div class="card" style="width: 18rem;">
-                <img src="/media/{{products.image}}" class="card-img-top" alt="{{ products.name }}">
+        <div class="col-12 d-flex justify-content-center">
+            <div class="card" style="width: 20rem;">
+                <img src="/media/{{products.image}}" class="card-img-top product-detail-img mt-2 px-2" alt="{{ products.name }}">
                 <div class="card-body">
-                    <h5 class="card-title text-center"><strong>{{ products.name }}</strong></h5>
+                    <h5 class="card-title text-center pb-1"><strong>{{ products.name }}</strong></h5>
                     <h6 class="card-title"><strong><i>Description</i></strong></h6>
                     <p class="card-text">{{ products.description }}</p>
+                    <h6 class="card-title"><strong><i>Manufacture</i></strong></h6>
+                    <p class="card-text">{{ products.manufacture }}</p>
+                    <h6 class="card-title"><strong><i>Price</i></strong></h6>
+                    <p class="card-text">£{{ products.price }}</p>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        <h6 class="card-title"><strong><i>Manufacture</i></strong></h6>
-                        <p class="card-text">{{ products.manufacture }}</p>
-                    </li>
-                    <li class="list-group-item">
-                        <h6 class="card-title"><strong><i>Price</i></strong></h6>
-                        <p class="card-text">£{{ products.price }}</p>
-                    </li>
-                </ul>
                 <form class="form" action="{% url 'add_to_bag' products.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
@@ -69,21 +63,21 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12">
-                            <a href="{% url 'home' %}" class="btn btn-outline-black rounded-0 mt-5">
+                        <div class="col-12 text-center">
+                            <a href="{% url 'home' %}" class="btn keep-shopping-btn rounded-0 mt-5">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
-                                <span class="text-uppercase">Keep Shopping</span>
+                                <span class="text-uppercase text">Keep Shopping</span>
                             </a>
-                            <input type="submit" class="btn btn-primary rounded-0 text-uppercase mt-5"
+                            <input type="submit" class="btn dark-green-btn rounded-0 text-uppercase mt-5"
                                 value="Add to Cart">
                             <hr>
                         </div>
                         {% if ratings %}
                         <div class="card-body">
                             <h5 class="card-title text-center text-uppercase">Customer Ratings</h5>
-                            <h6 class="text-center"><a href="{% url 'create_rating' products.id %}">Leave a Rating</a>
+                            <h6 class="text-center pt-2"><a href="{% url 'create_rating' products.id %}" class="btn dark-green-btn rounded-0">Leave a Rating</a>
                             </h6>
                         </div>
                         {% for rating in ratings %}
@@ -97,9 +91,11 @@
                             <p class="card-text small">{{ rating.created }}</p>
                             <hr>
                             {% if user == rating.poster.username %}
-                                <a href="{% url 'update_rating' rating.id %}" class="rounded-0 btn-sm btn-dark">Edit Rating</a>
-                                <hr>
-                                <a href="{% url 'delete_rating' rating.id %}" class="rounded-0 btn-sm btn-dark">Delete Rating</a>
+                                <div>
+                                    <a href="{% url 'update_rating' rating.id %}" class="rounded-0 btn-sm dark-green-btn text-center">Edit Rating</a>
+                                    <hr>
+                                    <a href="{% url 'delete_rating' rating.id %}" class="rounded-0 btn-sm dark-green-btn text-center">Delete Rating</a>
+                                </div>
                             {% else %}
                             <p></p>
                             {% endif %}                
@@ -108,7 +104,7 @@
                         {% else %}
                         <div class="card-body">
                             <h5 class="card-title text-center text-uppercase">this product has has no ratings</h5>
-                            {% if request.user.is_authenticated %} <a href="{% url 'create_rating' products.id %}" class="text-center">Leave a Rating</a>{% endif %}
+                            {% if request.user.is_authenticated %} <h6 class="text-center"><a href="{% url 'create_rating' products.id %}" class="text-center btn dark-green-btn rounded-0">Leave a Rating</a></h6>{% endif %}
                         </div>
                         {% endif %}
 

@@ -340,6 +340,14 @@ input[name='q']::placeholder {
     color: white;
 }
 
+/* Create Post*/
+.requiredField{
+    color: white;
+}
+
+.form-control-file{
+    color: white;
+}
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {

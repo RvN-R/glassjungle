@@ -15,11 +15,11 @@
 <div class="container h-100">
     <div class="row g-0 h-100">
         <div class="col my-auto">
-            <h1 class="display-4 logo-font text-black">Share Your Builds!</h1>
+            <h1 class="display-4 logo-font text-white">Share Your Builds!</h1>
         </div>
     </div>
 </div>
-<div class="row">
+<div class="row d-flex justify-content-center">
     {% for post in posts %}
     <div class="col-md-6 offset-md-3 mt-5">
         <div class="card" style="width: 25rem;">
@@ -32,16 +32,18 @@
                 <p class="small text-muted">Post Updated:{{post.updated}}</p>
             </div>
             {% if user == post.poster.username %}
-            <h6 class="card-title text-center text-uppercase"><a href="{% url 'edit_post' post.id %}" class="btn btn-black rounded-0">Edit Post</a></h6>
-            <h6 class="card-title text-center text-uppercase"><a href="{% url 'delete_post' post.id %}" class="btn btn-black rounded-0">Delete Post</a></h6>
+            <h6 class="card-title text-center text-uppercase"><a href="{% url 'edit_post' post.id %}" class="btn dark-green-btn rounded-0">Edit Post</a></h6>
+            <h6 class="card-title text-center text-uppercase"><a href="{% url 'delete_post' post.id %}" class="btn dark-green-btn rounded-0">Delete Post</a></h6>
             {% endif %}
         </div>
     </div>
     {% endfor %}
-    <div class="col-md-6 offset-md-3 mt-5">
+    <div class="col-12">
         {% if request.user.is_authenticated %}
         <div>
-            <h5 class="card-title text-center text-uppercase"><a href="{% url 'create_post' %}" class="btn btn-black rounded-0">Click to Share Your Builds!</a></h5>
+            <hr>
+            <h5 class="card-title text-center text-uppercase"><a href="{% url 'create_post' %}" class="btn dark-green-btn rounded-0">Click to Share Your Builds!</a></h5>
+            <hr>
         </div>
         {% else %}
         <div></div>

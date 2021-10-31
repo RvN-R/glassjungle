@@ -94,13 +94,13 @@ body{
 
 /*Product Details page*/
 .keep-shopping-btn{
-    color:whitesmoke;
+    color:black;
     background-color: #9CC24D;
     border-color: #9CC24D;
     
 }
 .keep-shopping-btn:hover{
-    color: #fff;
+    color: white;
     background-color: #02661D;
     border-color: #02661D;
     text-decoration: none;
@@ -117,6 +117,21 @@ body{
     object-fit: contain;
 }
 
+/*Bag page*/
+
+.table-bag{
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+/*Checkout page*/
+.checkout-container{
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+/*Checkout Success page*/
+.checkout-success-container{
+    background-color: rgba(0, 0, 0, 0.75);
+}
 
 /* from Bulma */
 .icon {

@@ -16,7 +16,7 @@
 <div class="container h-100">
     <div class="row g-0 h-100">
         <div class="col my-auto">
-            <h1 class="display-4 logo-font text-black">Welcome to Cart</h1>
+            <h1 class="display-4 logo-font text-white">Welcome to Cart</h1>
         </div>
     </div>
 </div>
@@ -24,8 +24,8 @@
     <div class="col-lg-12 col-md-12 col-sm-12">
         {% if bag_items %}
         <div class="table-responsive rounded">
-            <table class="table table-sm">
-                <thead class="text-black">
+            <table class="table table-sm table-bag text-white">
+                <thead class="text-white">
                     <tr>
                         <th scope="col"></th>
                         <th scope="col">Product Info</th>
@@ -42,10 +42,10 @@
                             alt="{{ item.product.name }}">
                     </td>
                     <td class="p-3">
-                        <p class="py-3">{{ item.products.name }}</p>
+                        <p class="py-3 text-white">{{ item.products.name }}</p>
                     </td>
                     <td class="p-3">
-                        <p class="py-3">${{ item.products.price }}</p>
+                        <p class="py-3 text-white">${{ item.products.price }}</p>
                     </td>
                     <td class="p-3">
                         <form class="form update-form " method="POST" action="{% url 'adjust_bag' item.item_id %}">
@@ -82,10 +82,10 @@
                 </tr>
                 {% endfor %}
                 <tr>
-                    <td colspan="5" class="pt-5 text-right">
+                    <td colspan="5" class="pt-5 text-right text-white">
                         <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
                         <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                        <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                        <h4 class="mt-4 text-white"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
                         {% if free_delivery_delta > 0 %}
                         <p class="mb-1 text-danger">
                             You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong>
@@ -96,13 +96,13 @@
                 </tr>
                 <tr>
                     <td colspan="5" class="text-right">
-                        <a href="{% url 'home' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                        <a href="{% url 'home' %}" class="btn keep-shopping-btn rounded-0 btn-lg">
                             <span class="icon">
                                 <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="text-uppercase">Keep Shopping</span>
                         </a>
-                        <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
+                        <a href="{% url 'checkout' %}" class="btn dark-green-btn rounded-0 btn-lg">
                             <span class="text-uppercase">Secure Checkout</span>
                             <span class="icon">
                                 <i class="fas fa-lock"></i>
@@ -114,8 +114,8 @@
             <!-- {{ bag_items }} -->
         </div>
         {% else %}
-        <p class="lead mb-5 text-center">Your cart is empty.</p>
-        <a href="{% url 'home' %}" class="btn btn-outline-black rounded-0 btn-lg">
+        <p class="lead mb-5 text-center text-white">Your cart is empty.</p>
+        <a href="{% url 'home' %}" class="btn keep-shopping-btn rounded-0 btn-lg mx-4">
             <span class="icon">
                 <i class="fas fa-chevron-left"></i>
             </span>

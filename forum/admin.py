@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Forum
 
+
 class ForumAdmin(admin.ModelAdmin):
     list_display = (
         'id',

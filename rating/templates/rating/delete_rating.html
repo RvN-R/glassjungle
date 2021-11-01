@@ -20,11 +20,11 @@
     <div class="row">
         <div class="col">
             <hr>
-            <h2 class="logo-font mb-4">Delete Rating</h2>
+            <h2 class="logo-font mb-4 text-white">Delete Rating</h2>
             <hr>
         </div>
     </div>
-    <div class="row">
+    <div class="row d-flex justify-content-center">
         <form method="POST" action="">
             {% csrf_token %}
             <div class="col-12 col-lg-6">
@@ -33,9 +33,9 @@
                         <h5 class="card-title">Delete Your Rating</h5>
                         <p class="card-text">Are you really sure you want to delete your rating for the
                             {{ rating.product_id }} ? Once you click yes there's no going back ! </p>
-                        <button class="btn btn-black rounded-0 text-uppercase float-right">Yes</button>
+                        <button class="btn dark-green-btn rounded-0 text-uppercase float-right">Yes</button>
                         <a href="{{ request.META.HTTP_REFERER }}"
-                            class="btn btn-black btn-lg rounded-0 text-uppercase float-left">No</a>
+                            class="btn dark-green-btn rounded-0 rounded-0 text-uppercase float-left">No</a>
                     </div>
                 </div>
             </div>

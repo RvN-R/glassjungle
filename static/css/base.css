@@ -33,6 +33,21 @@ body{
     color: white;
 }
 
+.text-info {
+    color: #02661D !important;
+}
+
+
+
+/* Navigation*/
+
+
+.dropdown-item:active{
+    color: #fff;
+    text-decoration: none;
+    background-color: #9CC24D;
+}
+
 
 /*index*/
 
@@ -138,6 +153,26 @@ body{
     background-color: rgba(0, 0, 0, 0.75);
 }
 
+/*Create Post page*/
+.create-post-container{
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+/*Edit Post page*/
+.edit-post-container{
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+/*Create Rating page*/
+.create-rating-container{
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+/*Update Rating page*/
+.update-rating-container{
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -207,9 +242,13 @@ input[name='q']::placeholder {
     z-index: 999999999999;
 }
 
-.custom-toast{
+.custom-bg-warning{
     overflow: visible;
 }
+
+/* .bg-warning{
+    background-color: #9CC24D;
+} */
 
 .toast-capper {
     height: 2px;

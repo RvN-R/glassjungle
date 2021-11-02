@@ -36,13 +36,14 @@
             <h6 class="card-title text-center text-uppercase"><a href="{% url 'delete_post' post.id %}" class="btn dark-green-btn rounded-0">Delete Post</a></h6>
             {% endif %}
         </div>
+        
     </div>
     {% endfor %}
-    <div class="col-12">
+    <div class="col-md-6 offset-md-3 mt-5">
         {% if request.user.is_authenticated %}
-        <div>
+        <div class="share-builds-btn-container">
             <hr>
-            <h5 class="card-title text-center text-uppercase"><a href="{% url 'create_post' %}" class="btn dark-green-btn rounded-0">Click to Share Your Builds!</a></h5>
+            <h5 class="card-title text-uppercase"><a href="{% url 'create_post' %}" class="btn dark-green-btn rounded-0">Click to Share Your Builds!</a></h5>
             <hr>
         </div>
         {% else %}

@@ -21,22 +21,40 @@ def create_rating(request, product_id):
         }
     
     if request.method == 'POST':
-        if ValidationError:
+        form_data = {
+            "comment": request.POST['comment'],
+            "rating": request.POST['rating'],
+        }
+        rating_form = CreateRatingForm(form_data)
+        if rating_form.is_valid():
+            rating = rating_form.save(commit=False)
+            rating.poster = request.user
+            rating.product_id = product
+            rating.updated = datetime.datetime.now()
+            rating.created = datetime.datetime.now()
+            rating.save()
+            messages.success(request, 'Rating Successfully added!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
             messages.error(request, "Please rate product between 0 and 5")
-            form_data = {
-                "comment": request.POST['comment'],
-                "rating": request.POST['rating'],
-            }
-            rating_form = CreateRatingForm(form_data)
-            if rating_form.is_valid():
-                rating = rating_form.save(commit=False)
-                rating.poster = request.user
-                rating.product_id = product
-                rating.updated = datetime.datetime.now()
-                rating.created = datetime.datetime.now()
-                rating.save()
-                messages.success(request, 'Rating Successfully added!')
-                return redirect(reverse('product_detail', args=[product.id]))
+        
+
+        # if ValidationError:
+        #     messages.error(request, "Please rate product between 0 and 5")
+            # form_data = {
+            #     "comment": request.POST['comment'],
+            #     "rating": request.POST['rating'],
+            # }
+            # rating_form = CreateRatingForm(form_data)
+            # if rating_form.is_valid():
+            #     rating = rating_form.save(commit=False)
+            #     rating.poster = request.user
+            #     rating.product_id = product
+            #     rating.updated = datetime.datetime.now()
+            #     rating.created = datetime.datetime.now()
+            #     rating.save()
+            #     messages.success(request, 'Rating Successfully added!')
+            #     return redirect(reverse('product_detail', args=[product.id]))
         
           
    
@@ -59,16 +77,38 @@ def update_rating(request, rating_id):
     }
     if rating.poster.username == user:
         if request.method == 'POST':
-            if ValidationError:
-                print('recieved validation error')
+            form = CreateRatingForm(request.POST, instance=rating)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Rating Successfully Updated!')
+                return redirect(reverse('product_detail', args=[product.id]))
+            else:
                 messages.error(request, "Please rate product between 0 and 5")
-                form = CreateRatingForm(request.POST, instance=rating)
-                if form.is_valid():
-                    form.save()
-                    messages.success(request, 'Rating Successfully Updated!')
-                    return redirect(reverse('product_detail', args=[product.id]))
+
+
+            # if ValidationError:
+            #     print('recieved validation error')
+            #     print(ValidationError)
+            #     messages.error(request, "Please rate product between 0 and 5")
+            #     form = CreateRatingForm(request.POST, instance=rating)
+            #     if form.is_valid():
+            #         form.save()
+            #         messages.success(request, 'Rating Successfully Updated!')
+            #         return redirect(reverse('product_detail', args=[product.id]))
+
+        # try:
+        #     form = CreateRatingForm(request.POST, instance=rating)
+        #     if form.is_valid():
+        #         form.save()
+        #         messages.success(request, 'Rating Successfully Updated!')
+        #         return redirect(reverse('product_detail', args=[product.id]))
+        # except ValidationError as e:
+        #     print('recieved validation error')
+        #     print(ValidationError)
+        #     messages.error(request, "Please rate product between 0 and 5")
+            
     else:
-        messages.warning(request, 'Not allowed to update other users ratings! ')
+        messages.warning(request, 'Not allowed to update other users ratings!')
         return redirect('home') 
 
     return render(request, 'rating/update_rating.html', context)

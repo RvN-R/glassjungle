@@ -15,11 +15,12 @@ body{
     background-position: center;
     background-attachment: fixed;
     
+    
 }
 
 .background-image::before{
     content: "";
-    position: absolute;
+    position: fixed;
     background-size: cover;
     top: 0px;
     right: 0px;
@@ -27,6 +28,7 @@ body{
     left:0px;
     background-color: rgba(0, 0, 0, 0.50);
 }
+
 
 .card{
     background-color: rgba(0, 0, 0, 0.75);
@@ -37,6 +39,10 @@ body{
     color: #02661D !important;
 }
 
+.text-info:focus
+.text-info:hover {
+    color: red ;
+}
 
 
 /* Navigation*/
@@ -171,6 +177,11 @@ body{
 /*Update Rating page*/
 .update-rating-container{
     background-color: rgba(0, 0, 0, 0.75);
+}
+
+/*Share Builds page*/
+.share-builds-btn-container{
+    padding-left: 55px;
 }
 
 /* from Bulma */

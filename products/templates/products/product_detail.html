@@ -21,7 +21,8 @@
     <div class="row">
         <div class="col-12 d-flex justify-content-center">
             <div class="card" style="width: 20rem;">
-                <img src="/media/{{products.image}}" class="card-img-top product-detail-img mt-2 px-2" alt="{{ products.name }}">
+                <a data-toggle="modal" data-target="#myModal"><img src="/media/{{products.image}}" class="card-img-top product-detail-img mt-2 px-2"
+                    alt="{{ products.name }}"></a>
                 <div class="card-body">
                     <h5 class="card-title text-center pb-1"><strong>{{ products.name }}</strong></h5>
                     <h6 class="card-title"><strong><i>Description</i></strong></h6>
@@ -77,7 +78,8 @@
                         {% if ratings %}
                         <div class="card-body">
                             <h5 class="card-title text-center text-uppercase">Customer Ratings</h5>
-                            <h6 class="text-center pt-2"><a href="{% url 'create_rating' products.id %}" class="btn dark-green-btn rounded-0">Leave a Rating</a>
+                            <h6 class="text-center pt-2"><a href="{% url 'create_rating' products.id %}"
+                                    class="btn dark-green-btn rounded-0">Leave a Rating</a>
                             </h6>
                         </div>
                         {% for rating in ratings %}
@@ -91,20 +93,24 @@
                             <p class="card-text small">{{ rating.created }}</p>
                             <hr>
                             {% if user == rating.poster.username %}
-                                <div>
-                                    <a href="{% url 'update_rating' rating.id %}" class="rounded-0 btn-sm dark-green-btn text-center">Edit Rating</a>
-                                    <hr>
-                                    <a href="{% url 'delete_rating' rating.id %}" class="rounded-0 btn-sm dark-green-btn text-center">Delete Rating</a>
-                                </div>
+                            <div>
+                                <a href="{% url 'update_rating' rating.id %}"
+                                    class="rounded-0 btn-sm dark-green-btn text-center">Edit Rating</a>
+                                <hr>
+                                <a href="{% url 'delete_rating' rating.id %}"
+                                    class="rounded-0 btn-sm dark-green-btn text-center">Delete Rating</a>
+                            </div>
                             {% else %}
                             <p></p>
-                            {% endif %}                
+                            {% endif %}
                         </div>
                         {% endfor %}
                         {% else %}
                         <div class="card-body">
                             <h5 class="card-title text-center text-uppercase">this product has has no ratings</h5>
-                            {% if request.user.is_authenticated %} <h6 class="text-center"><a href="{% url 'create_rating' products.id %}" class="text-center btn dark-green-btn rounded-0">Leave a Rating</a></h6>{% endif %}
+                            {% if request.user.is_authenticated %} <h6 class="text-center"><a
+                                    href="{% url 'create_rating' products.id %}"
+                                    class="text-center btn dark-green-btn rounded-0">Leave a Rating</a></h6>{% endif %}
                         </div>
                         {% endif %}
 
@@ -114,11 +120,33 @@
             </div>
         </div>
     </div>
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
 
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title text-center"><strong>{{ products.name }}</strong></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="/media/{{products.image}}" class="product-detail-modal-img"
+                    alt="{{ products.name }}">
+                </div>
+
+                
+
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
+
 {% endblock %}

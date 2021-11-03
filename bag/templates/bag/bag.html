@@ -20,7 +20,7 @@
         </div>
     </div>
 </div>
-<div class="row">
+<div class="row no-gutters">
     <div class="col-lg-12 col-md-12 col-sm-12">
         {% if bag_items %}
         <div class="table-responsive rounded">
@@ -65,7 +65,7 @@
                                     <div class="input-group-append">
                                         <button class="increment-qty btn btn-sm btn-black rounded-0"
                                             data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
-                                            <span>
+                                            <span class="">
                                                 <i class="fas fa-plus fa-sm"></i>
                                             </span>
                                         </button>
@@ -96,7 +96,7 @@
                 </tr>
                 <tr>
                     <td colspan="5" class="text-right">
-                        <a href="{% url 'home' %}" class="btn keep-shopping-btn rounded-0 btn-lg">
+                        <a href="{% url 'home' %}" class="btn keep-shopping-btn rounded-0 btn-lg my-4">
                             <span class="icon">
                                 <i class="fas fa-chevron-left"></i>
                             </span>

@@ -35,7 +35,8 @@ body{
     color: white;
 }
 
-.text-info {
+.text-info,
+.text-primary {
     color: #02661D !important;
 }
 
@@ -267,8 +268,13 @@ input[name='q']::placeholder {
     background-color: #9CC24D;
 } */
 
+/*Toast*/
 .toast-capper {
     height: 2px;
+}
+
+.toast_success_p{
+    background-color: #9CC24D;
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
@@ -418,4 +424,30 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 164px;
     }
+}
+
+@media only screen and  (max-width: 990px) {
+
+    .header-container {
+        padding-top: 180px;
+    }
+}
+
+@media only screen and  (max-width: 425px) {
+
+    .index-nav-button-outter,
+    .sign-out-btn,
+    .cancel-btn{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .header-container {
+        padding-top: 140px;
+    }
+
+    .increment-btn{
+        position:absolute;
+    }
+    
 }

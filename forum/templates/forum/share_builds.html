@@ -19,10 +19,10 @@
         </div>
     </div>
 </div>
-<div class="row d-flex justify-content-center">
+<div class="row">
     {% for post in posts %}
-    <div class="col-md-6 offset-md-3 mt-5">
-        <div class="card" style="width: 25rem;">
+    <div class="col-12 d-flex justify-content-center">
+        <div class="card my-4" style="width: 25rem;">
             <a href="#" target="#"><img src="/media/{{post.image}}" class="card-img-top" alt="Image from {{post.title}} post"></a>
             <div class="card-body">
                 <h5 class="card-title">{{post.title}}</h5>
@@ -36,10 +36,9 @@
             <h6 class="card-title text-center text-uppercase"><a href="{% url 'delete_post' post.id %}" class="btn dark-green-btn rounded-0">Delete Post</a></h6>
             {% endif %}
         </div>
-        
     </div>
     {% endfor %}
-    <div class="col-md-6 offset-md-3 mt-5">
+    <div class="col-12 d-flex justify-content-center">
         {% if request.user.is_authenticated %}
         <div class="share-builds-btn-container">
             <hr>

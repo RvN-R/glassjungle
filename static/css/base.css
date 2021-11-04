@@ -40,8 +40,8 @@ body{
     color: #02661D !important;
 }
 
-.text-info:focus
-.text-info:hover {
+a.text-info:focus
+a.text-info:hover {
     color: red ;
 }
 
@@ -431,6 +431,10 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 180px;
     }
+
+    .text-info{
+        padding-right: 5px
+    }
 }
 
 @media only screen and  (max-width: 425px) {
@@ -446,6 +450,10 @@ input[name='q']::placeholder {
         padding-top: 140px;
     }
 
+    .text-primary:hover,
+    .text-primary:focus{
+        color: #02661D !important
+    }
     
     
 }

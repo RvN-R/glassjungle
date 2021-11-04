@@ -49,6 +49,11 @@
             </div>
         </div>
         <hr>
+        {% if request.user.is_authenticated %}
+        <div class="row h-100">
+            <div class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center my-4"></div>
+        </div>
+        {% else %}
         <div class="row h-100">
             <div class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center my-4">
                 <div class="card" style="width: 40rem;">
@@ -76,6 +81,8 @@
                     </div>
                 </div>
             </div>
+            
         </div>
+        {% endif %}
     </div>
 {% endblock %}

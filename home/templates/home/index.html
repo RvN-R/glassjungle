@@ -22,17 +22,60 @@
         <hr>
         <div class="row h-100">
             
-            <div class="col-sm-12 col-md-4 col-lg-4 text-center index-nav-button-outter">
+            <div class="col-sm-12 col-md-4 col-lg-4 text-center index-nav-button-outter my-4">
                 <a class="dark-green-btn btn-lg btn-block" href="{% url 'empty_terrariums' %}">Empty Terrariums</a>
             </div>
-            <div class="col-sm-12 col-md-4 col-lg-4 text-center index-nav-button-outter">
+            <div class="col-sm-12 col-md-4 col-lg-4 text-center index-nav-button-outter my-4">
                 <a class="dark-green-btn btn-lg btn-block" href="{% url 'full_terrariums' %}">Full Terrariums</a>
             </div>
-            <div class="col-sm-12 col-md-4 col-lg-4 text-center index-nav-button-outter">
+            <div class="col-sm-12 col-md-4 col-lg-4 text-center index-nav-button-outter my-4">
                 <a class="dark-green-btn btn-lg btn-block" href="{% url 'terrarium_accessories' %}">Terrarium Accessories</a>
             </div>
             
         </div>
         <hr>
+        <div class="row h-100">
+            <div class="col-12 d-flex justify-content-center my-4">
+                <div class="card" style="width: 80rem;">
+                    <div class="card-header">
+                        <h2>About Us</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>Glass Jungle is your go to online terrarium supplier, here to help you with all of your terrarium needs.</p>
+                        <p>Weather you are creating a simple planted terrarium to brighten up the home, or creating your own mini jungle enviroment for your reptile or amphibian friends, we have all of the equipment avalaible to help you. For those that are looking to build there own custom terrariums from scratch, we supply small, medium and large empty terrariums for you to create what ever you can dream up. For those that want to buy a complete package we have small, medium and large full terrarium bundles avalaible. </p>
+                        <p>Looking for some inspiration for your own builds? Why not visit our <a href="{% url 'share_builds' %}" class="text-white">Share Your Builds</a> section of the site. We love to see our customers work, and this area of the site allows our users to upload a picture of there work.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row h-100">
+            <div class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center my-4">
+                <div class="card" style="width: 40rem;">
+                    <div class="card-header">
+                        <h2>Want to register an account?</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>Not registered for an account yet? Don't waste anymore time, get notified of upcoming offers, be able to rate products on our site and use our Share Your Builds feature. Use the button below to regsiter for an account. </p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="dark-green-btn btn-lg btn-block" href="{% url 'account_signup' %}">Register An Account!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center my-4">
+                <div class="card" style="width: 40rem;">
+                    <div class="card-header">
+                        <h2>Already have an account?</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>Already a customer of ours, and registred an account? Use the button below to login to your account. </p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="dark-green-btn btn-lg btn-block" href="{% url 'account_login' %}">Login to your Account</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}

@@ -1,0 +1,464 @@
+html{
+    height: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    font-family: "Rubik", sans-serif;
+}
+
+.background-image{
+    background-image: url('/media/cropped_home_page_background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    
+    
+}
+
+.background-image::before{
+    content: "";
+    position: fixed;
+    background-size: cover;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left:0px;
+    background-color: rgba(0, 0, 0, 0.50);
+}
+
+
+.card{
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+}
+
+.text-info,
+.text-primary {
+    color: #02661D !important;
+}
+
+a.text-info:focus
+a.text-info:hover {
+    color: red ;
+}
+
+
+/* Navigation*/
+
+
+.dropdown-item:active{
+    color: #fff;
+    text-decoration: none;
+    background-color: #9CC24D;
+}
+
+
+/*index*/
+
+/* .index-large-button{
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+    font-weight: 400;
+    height: 50%;
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    color:white;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+} */
+
+/* .empty_terraium_index-button{
+    background-color: transparent;
+    background-image: url('/media/empty_terrarium_home_button.png');
+    background-size: 50% 50%; 
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50%;
+    width: 50%;
+} */
+
+/*Taken inspiration from Bootstrap Buttons*/
+.dark-green-btn{
+    color: #fff;
+    background-color: #114634;
+    border-color: #114634;
+    
+}
+.dark-green-btn:hover{
+    color: #fff;
+    background-color: #002416;
+    border-color: #002416;
+    text-decoration: none;
+}
+
+.dark-green-btn:focus{
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(156 194 77 / 50%);
+}
+
+
+/*Terrarium Accessories page*/
+
+.accessories-img{
+    width: 100%;
+    height: 270px;
+    object-fit: contain;
+}
+
+/*Product Details page*/
+.keep-shopping-btn{
+    color:black;
+    background-color: #9CC24D;
+    border-color: #9CC24D;
+    
+}
+.keep-shopping-btn:hover{
+    color: white;
+    background-color: #02661D;
+    border-color: #02661D;
+    text-decoration: none;
+}
+
+.keep-shopping-btn:focus{
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(156 194 77 / 50%);
+}
+
+.product-detail-img{
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+}
+
+.product-detail-modal-img{
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+}
+
+/*Bag page*/
+
+.table-bag{
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+/*Checkout page*/
+.checkout-container{
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+/*Checkout Success page*/
+.checkout-success-container{
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+/*Profile page*/
+.profile-container{
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+/*Create Post page*/
+.create-post-container{
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+/*Edit Post page*/
+.edit-post-container{
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+/*Create Rating page*/
+.create-rating-container{
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+/*Update Rating page*/
+.update-rating-container{
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+/*Share Builds page*/
+.share-builds-btn-container{
+    padding-left: 0px;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.red{
+    color: red;
+}
+
+.blue{
+    color: blue;
+}
+
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
+.message-container{
+    position: fixed;
+    top:72px;
+    right: 15px;
+    z-index: 999999999999;
+}
+
+.custom-bg-warning{
+    overflow: visible;
+}
+
+/* .bg-warning{
+    background-color: #9CC24D;
+} */
+
+/*Toast*/
+.toast-capper {
+    height: 2px;
+}
+
+.toast_success_p{
+    background-color: #9CC24D;
+}
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent; 
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+/* Convenience classes - colors copied from Bootstrap */
+.arrow-primary {
+    border-bottom-color: #007bff !important;
+}
+
+.arrow-secondary {
+    border-bottom-color: #6c757d !important;
+}
+
+.arrow-success {
+    border-bottom-color: #28a745 !important;
+}
+
+.arrow-danger {
+    border-bottom-color: #dc3545 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #17a2b8 !important;
+}
+
+.arrow-light {
+    border-bottom-color: #f8f9fa !important;
+}
+
+.arrow-dark {
+    border-bottom-color: #343a40 !important;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+
+/* bag.html */
+.update-link, .remove-item{
+    cursor: pointer;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem; /* mt-4 */
+    color: white; /* text-secondary */
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #114634;
+    border: 1px solid #114634;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+	color: #fff;
+    background-color: #002416;
+    border-color: #002416;
+}
+
+.allauth-form-inner-content a {
+	color: white; /* text-info */
+}
+
+.form-check-label{
+    color: white;
+}
+
+/* Create Post*/
+.requiredField{
+    color: white;
+}
+
+.form-control-file{
+    color: white;
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+@media only screen and  (max-width: 990px) {
+
+    .header-container {
+        padding-top: 180px;
+    }
+
+    .text-info{
+        padding-right: 5px
+    }
+
+}
+
+@media only screen and  (max-width: 425px) {
+
+    .index-nav-button-outter,
+    .sign-out-btn,
+    .cancel-btn{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .header-container {
+        padding-top: 140px;
+    }
+
+    .text-primary:hover,
+    .text-primary:focus{
+        color: #02661D !important
+    }
+
+    .share-builds-btn-container{
+        padding-left: 0px;
+    }
+    
+    
+}

@@ -1,0 +1,1 @@
+web: gunicorn glass_jungle.wsgi:application

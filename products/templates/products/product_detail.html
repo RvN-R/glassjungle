@@ -20,7 +20,7 @@
     </div>
     <div class="row">
         <div class="col-12 d-flex justify-content-center">
-            <div class="card" style="width: 20rem;">
+            <div class="card" style="width: 60rem;">
                 <a data-toggle="modal" data-target="#myModal"><img src="/media/{{products.image}}" class="card-img-top product-detail-img mt-2 px-2"
                     alt="{{ products.name }}"></a>
                 <div class="card-body">
@@ -34,9 +34,9 @@
                 </div>
                 <form class="form" action="{% url 'add_to_bag' products.id %}" method="POST">
                     {% csrf_token %}
-                    <div class="form-row">
-                        <div class="col-12">
-                            <p class="mt-3"><strong>Quantity:</strong></p>
+                    <div class="form-row d-flex justify-content-center">
+                        <div class="col-12-lg col-md-6 col-sm-6">
+                            <p class="mt-3 text-center"><strong>Quantity:</strong></p>
                             <div class="form-group">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
@@ -48,7 +48,7 @@
                                         </button>
                                     </div>
 
-                                    <input class="form-control qty_input" type="number" name="quantity" value="1"
+                                    <input class="form-control qty_input product_detail_qty_input" type="number" name="quantity" value="1"
                                         min="1" max="99" data-item_id="{{ products.id }}" id="id_qty_{{ products.id }}">
 
                                     <div class="input-group-append">
@@ -77,9 +77,9 @@
                         </div>
                         {% if ratings %}
                         <div class="card-body">
-                            <h5 class="card-title text-center text-uppercase">Customer Ratings</h5>
+                            <h5 class="card-title text-center text-uppercase">Customer Review</h5>
                             <h6 class="text-center pt-2"><a href="{% url 'create_rating' products.id %}"
-                                    class="btn dark-green-btn rounded-0">Leave a Rating</a>
+                                    class="btn dark-green-btn rounded-0">Leave a Review</a>
                             </h6>
                         </div>
                         {% for rating in ratings %}
@@ -95,10 +95,10 @@
                             {% if user == rating.poster.username %}
                             <div>
                                 <a href="{% url 'update_rating' rating.id %}"
-                                    class="rounded-0 btn-sm dark-green-btn text-center">Edit Rating</a>
+                                    class="rounded-0 btn-sm dark-green-btn text-center">Edit Review</a>
                                 <hr>
                                 <a href="{% url 'delete_rating' rating.id %}"
-                                    class="rounded-0 btn-sm dark-green-btn text-center">Delete Rating</a>
+                                    class="rounded-0 btn-sm dark-green-btn text-center">Delete Review</a>
                             </div>
                             {% else %}
                             <p></p>
@@ -107,10 +107,10 @@
                         {% endfor %}
                         {% else %}
                         <div class="card-body">
-                            <h5 class="card-title text-center text-uppercase">this product has has no ratings</h5>
+                            <h5 class="card-title text-center text-uppercase">this product has has no review</h5>
                             {% if request.user.is_authenticated %} <h6 class="text-center"><a
                                     href="{% url 'create_rating' products.id %}"
-                                    class="text-center btn dark-green-btn rounded-0">Leave a Rating</a></h6>{% endif %}
+                                    class="text-center btn dark-green-btn rounded-0 text-uppercase">Leave a Reveiw</a></h6>{% endif %}
                         </div>
                         {% endif %}
 

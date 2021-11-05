@@ -188,7 +188,7 @@ a.text-info:hover {
 
 /*Share Builds page*/
 .share-builds-btn-container{
-    padding-left: 55px;
+    padding-left: 0px;
 }
 
 /* from Bulma */
@@ -435,6 +435,7 @@ input[name='q']::placeholder {
     .text-info{
         padding-right: 5px
     }
+
 }
 
 @media only screen and  (max-width: 425px) {
@@ -453,6 +454,10 @@ input[name='q']::placeholder {
     .text-primary:hover,
     .text-primary:focus{
         color: #02661D !important
+    }
+
+    .share-builds-btn-container{
+        padding-left: 0px;
     }
     
     

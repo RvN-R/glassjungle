@@ -19,11 +19,11 @@
         </div>
     </div>
 </div>
-<div class="row">
+<div class="row no-gutters">
     {% for post in posts %}
     <div class="col-12 d-flex justify-content-center">
-        <div class="card my-4" style="width: 25rem;">
-            <a href="#" target="#"><img src="/media/{{post.image}}" class="card-img-top" alt="Image from {{post.title}} post"></a>
+        <div class="card my-4" style="width: 60rem;">
+            <a href="/media/{{post.image}}" target="_blank"><img src="/media/{{post.image}}" class="card-img-top" alt="Image from {{post.title}} post"></a>
             <div class="card-body">
                 <h5 class="card-title">{{post.title}}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">{{post.poster.username}}</h6>

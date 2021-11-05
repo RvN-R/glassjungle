@@ -80,7 +80,7 @@ def update_rating(request, rating_id):
             form = CreateRatingForm(request.POST, instance=rating)
             if form.is_valid():
                 form.save()
-                messages.success(request, 'Rating Successfully Updated!')
+                messages.success(request, 'Review Successfully Updated!')
                 return redirect(reverse('product_detail', args=[product.id]))
             else:
                 messages.error(request, "Please rate product between 0 and 5")
@@ -108,7 +108,7 @@ def update_rating(request, rating_id):
         #     messages.error(request, "Please rate product between 0 and 5")
             
     else:
-        messages.warning(request, 'Not allowed to update other users ratings!')
+        messages.warning(request, 'Not allowed to update other users reviews!')
         return redirect('home') 
 
     return render(request, 'rating/update_rating.html', context)
@@ -129,9 +129,10 @@ def delete_rating(request, rating_id):
     if rating.poster.username == user:
         if request.method == 'POST':
             rating.delete()
+            messages.success(request, 'Review Successfully Deleted!')
             return redirect(reverse('product_detail', args=[product.id]))
     else:
-        messages.warning(request, 'Not allowed to delete other users ratings!')
+        messages.warning(request, 'Not allowed to delete other users reviews!')
         return redirect('home')
   
     return render(request, 'rating/delete_rating.html', context)

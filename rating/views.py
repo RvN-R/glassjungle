@@ -96,7 +96,7 @@ def update_rating(request, rating_id):
 @login_required
 def delete_rating(request, rating_id):
     """A view to return delete_rating"""
-    # rating varible returns the id of the rating you want to delete
+    # rating varible returns the id of the rating you want to delet
     # product varible returns the product attached to that rating.
     # user variable returns the request.user converted to a string  
     rating = get_object_or_404(Rating, pk=rating_id)

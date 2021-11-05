@@ -75,16 +75,6 @@ def update_rating(request, rating_id):
                 messages.error(request, "Please rate product between 0 and 5")
 
 
-            # if ValidationError:
-            #     print('recieved validation error')
-            #     print(ValidationError)
-            #     messages.error(request, "Please rate product between 0 and 5")
-            #     form = CreateRatingForm(request.POST, instance=rating)
-            #     if form.is_valid():
-            #         form.save()
-            #         messages.success(request, 'Rating Successfully Updated!')
-            #         return redirect(reverse('product_detail', args=[product.id]))
-
         # try:
         #     form = CreateRatingForm(request.POST, instance=rating)
         #     if form.is_valid():

@@ -27,3 +27,29 @@ The company's prime mission statement is to offer there customers a platform to 
 * We need a platform that allows users to purchase product. 
 
 * We need a platform that notifys users who have registered an account to document there previous purchase history. 
+
+## User Experience (UX)
+
+### User Stories 
+
+#### First Time Visitor Goals
+
+1. As a First Time Visitor, I want to easily understand the main purpose of the site, and learn more about the company. 
+2. As a First Time Visitor, I want to be able to easily navigate through the site to find key content. 
+3. As a First Time Visitor, I want to clearly find out how to register for an account. 
+4. As a First Time Visitor, I want to be able to find out what products the site offers. 
+5. As a First Time Visitor, I want to be able to choose what product I want and complete a transaction. 
+
+#### Returning Visitor Goals
+
+1. As a Returning Visitor, I want to be able to log into my account quickly. 
+2. As a Returning Visitor, I want to be able to register an account if not already. 
+3. As a Returning Visitor, I want to be able to visit my profile easily. 
+4. As a Returning Visitor, I want to be able to leave a review on a product easily. 
+5. As a Returning Visitor, I want to be able to leave a post on the Share Builds Section of the site easily.
+
+#### Frequent User Goals 
+1. As a Frequent User, I want to be able to see my previous purchase history. 
+2. As a Frequent User, I want to be able to edit or delete my product reviews. 
+3. As a Frequent User, I want to be able to edit or delete my posts on the Share Builds Section of the site. 
+4. As a Frequent User, I want to be able to edit or amend by default delivery information on my profile. 

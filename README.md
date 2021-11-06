@@ -53,3 +53,19 @@ The company's prime mission statement is to offer there customers a platform to 
 2. As a Frequent User, I want to be able to edit or delete my product reviews. 
 3. As a Frequent User, I want to be able to edit or delete my posts on the Share Builds Section of the site. 
 4. As a Frequent User, I want to be able to edit or amend by default delivery information on my profile. 
+
+## Design
+
+### Colour Scheme
+
+From the outset of building this site I new that it would take its key design features from one image. The image would be used as a background for the body of the site, and this background would feature across the site, tieing together the overall aesthetic and vibe. The image needed to be tropical, exotic in order to connect with the clients key demographic. I came across an amazing image on [Unsplashed](https://unsplash.com/) by a photographer called <a href="https://unsplash.com/@chrisabney">Chris Abney</a>. The image is of a stunning rainforest and perfectly connects with the demographic and key design approach for the site. Using the image I was able to deside a colour palette to use across the site that would compliment the image, and fit with my design brief. I used a website called [Coolors](https://coolors.co/), and uploaded the image by Chris Abney into its "create palette from photo" feature. I've inlcuded a list below of colours I ended up settling on:
+
+* #002416 - Dark Green
+* #114634 - Brunswick Green
+* #02661D - Pakistan Green
+* #9CC24D - Android Green
+* #24171B - Raisian Black
+
+### Typography
+
+Rubik is the font chosen for use across the site, with Sans Serif as the back up font in case there are any issues importing into the site correctly from Google Fonts. As I do with all my projects I research different fonts, to find the best one that would work with my design brief. Recently I came across an article by [awwards](https://www.awwwards.com/) website called the <a href="https://www.awwwards.com/20-best-web-fonts-from-google-web-fonts-and-font-face.html">20 Best Google Web Fonts</a>. This article is full of some fantastic fonts, but I felt Rubik would work best due to its bold and modern appearance. 

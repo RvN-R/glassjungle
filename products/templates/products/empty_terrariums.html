@@ -26,7 +26,7 @@
                 <div class="row no-gutters pt-2">
                   <div class="col-md-4 d-block m-auto pl-4">
                     <a href="{% url 'product_detail' product.id %}" class="text-center">
-                        <img src="/media/{{product.image}}" class="img-fluid rounded-start" alt="{{ product.name }}">
+                        <img src="{{ MEDIA_URL }}{{product.image}}" class="img-fluid rounded-start" alt="{{ product.name }}">
                     </a>
                   </div>
                   <div class="col-md-8">

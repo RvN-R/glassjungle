@@ -27,7 +27,7 @@ def full_terrariums(request):
 
 def terrarium_accessories(request):
     """A view to return all terrarium_accessories.html"""
-    products = Product.objects.exclude(name__contains='terrarium')
+    products = Product.objects.exclude(name__icontains='terrarium')
     context = {
         'products': products
     }

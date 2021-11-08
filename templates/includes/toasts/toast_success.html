@@ -20,7 +20,7 @@
             {% for item in bag_items %}
             <div class="row">
                 <div class="col-3 my-1">
-                    <img class="w-100 " src="/media/{{ item.products.image }}" alt="{{ item.products.name }}">
+                    <img class="w-100 " src="{{ MEDIA_URL }}{{ item.products.image }}" alt="{{ item.products.name }}">
                 </div>
                 <div class="col-9">
                     <p class="my-0"><strong>{{ item.products.name }} </strong></p>

@@ -59,7 +59,7 @@ def edit_post(request, post_id):
                 messages.success(request, 'Successfully updated post!')
                 return redirect(reverse('share_builds'))
             else:
-                messages.error(request, 'Failed to update post. Please esnure the form is valid.')
+                messages.error(request, 'Failed to update post. Please ensure the form is valid.')
         else:
             form = CreatePostForm(instance=post)
             messages.info(request, f'You are editing {post.title}')

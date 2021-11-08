@@ -69,3 +69,6 @@ From the outset of building this site I new that it would take its key design fe
 ### Typography
 
 Rubik is the font chosen for use across the site, with Sans Serif as the back up font in case there are any issues importing into the site correctly from Google Fonts. As I do with all my projects I research different fonts, to find the best one that would work with my design brief. Recently I came across an article by [awwards](https://www.awwwards.com/) website called the <a href="https://www.awwwards.com/20-best-web-fonts-from-google-web-fonts-and-font-face.html">20 Best Google Web Fonts</a>. This article is full of some fantastic fonts, but I felt Rubik would work best due to its bold and modern appearance. 
+
+### Code
+* I used a helpful article by Morgun Ivan entitled <a href="https://en.proft.me/2017/09/29/how-validate-file-size-imagefieldfilefiled-django/">How to validate file size in ImageField/FileFiled in Django </a> as inspriration for the validate_image function in the Forum model within my Forum app. 

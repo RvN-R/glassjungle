@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.core.exceptions import ValidationError
 from django.contrib import messages
 from .models import Forum
 from .forms import CreatePostForm
+
 
 
 
@@ -28,15 +30,15 @@ def create_post(request):
     }
     if request.method == "POST":
         post_form = CreatePostForm(request.POST, request.FILES)
-        if post_form.is_valid:
-            post = post_form.save(commit=False)
-            post.poster = request.user
-            print(post)
-            post.save()
-            messages.success(request, 'Build Successfully Shared')
-            return redirect('share_builds')
-        else:
-            messages.error(request, 'Failed to update post. Please esnure the form is valid.')
+        try:
+            if post_form.is_valid:
+                post = post_form.save(commit=False)
+                post.poster = request.user
+                post.save()
+                messages.success(request, 'Build Successfully Shared')
+                return redirect('share_builds')
+        except:
+            messages.error(request, 'Max file size is 2mb, please upload a smaller file')
 
     return render(request, 'forum/create_post.html', context)
 

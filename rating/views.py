@@ -42,7 +42,7 @@ def create_rating(request, product_id):
                 rating.updated = datetime.datetime.now()
                 rating.created = datetime.datetime.now()
                 rating.save()
-                messages.success(request, 'Rating Successfully added!')
+                messages.success(request, 'Review Successfully added!')
                 return redirect(reverse('product_detail', args=[product.id]))
             else:
                 messages.error(request, "Please rate product between 0 and 5")

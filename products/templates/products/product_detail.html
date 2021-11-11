@@ -79,7 +79,7 @@
                         <div class="card-body">
                             <h5 class="card-title text-center text-uppercase">Customer Review</h5>
                             <h6 class="text-center pt-2"><a href="{% url 'create_rating' products.id %}"
-                                    class="btn dark-green-btn rounded-0">Leave a Review</a>
+                                    class="btn dark-green-btn rounded-0 text-uppercase">Leave a Review</a>
                             </h6>
                         </div>
                         {% for rating in ratings %}
@@ -95,10 +95,10 @@
                             {% if user == rating.poster.username %}
                             <div>
                                 <a href="{% url 'update_rating' rating.id %}"
-                                    class="rounded-0 btn-sm dark-green-btn text-center">Edit Review</a>
+                                    class="rounded-0 btn-sm dark-green-btn text-center text-uppercase">Edit Review</a>
                                 <hr>
                                 <a href="{% url 'delete_rating' rating.id %}"
-                                    class="rounded-0 btn-sm dark-green-btn text-center">Delete Review</a>
+                                    class="rounded-0 btn-sm dark-green-btn text-center text-uppercase">Delete Review</a>
                             </div>
                             {% else %}
                             <p></p>

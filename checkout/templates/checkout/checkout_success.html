@@ -21,7 +21,8 @@
             <hr>
             <h2 class="logo-font mb-4 text-white">Thank You</h2>
             <hr>
-            <p class="text-white">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+            <p class="text-white">Your order information is below. A confirmation email will be sent to
+                <strong>{{ order.email }}</strong>.</p>
         </div>
     </div>
 
@@ -176,14 +177,25 @@
         </div>
     </div>
     <div class="row">
+        {% if request.user.is_authenticated %}
         <div class="col-12 col-lg-7 text-right">
-                <a href="{% url 'profile' %}" class="btn keep-shopping-btn rounded-0 my-2">
-                    <span class="icon mr-2">
-                        <i class="fas fa-angle-left"></i>
-                    </span>
-                    <span class="text-uppercase">Back to Profile</span>
-                </a>
+            <a href="{% url 'profile' %}" class="btn keep-shopping-btn rounded-0 my-2">
+                <span class="icon mr-2">
+                    <i class="fas fa-angle-left"></i>
+                </span>
+                <span class="text-uppercase">Back to Profile</span>
+            </a>
         </div>
+        {% else %}
+        <div class="col-12 col-lg-7 text-right">
+            <a href="{% url 'home' %}" class="btn keep-shopping-btn rounded-0 my-2">
+                <span class="icon mr-2">
+                    <i class="fas fa-angle-left"></i>
+                </span>
+                <span class="text-uppercase">Back to Home</span>
+            </a>
+        </div>
+        {% endif %}
     </div>
 </div>
 {% endblock %}

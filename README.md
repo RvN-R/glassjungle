@@ -92,7 +92,7 @@ Rubik is the font chosen for use across the site, with Sans Serif as the back up
 * <a href="readme_assets/readme_images/Share Your Builds Page iPhone View.png">Share Your Builds iPhone View</a>
 * <a href="readme_assets/readme_images/Share Your Builds Form iPhone View.png">Your Builds Form iPhone View</a>
 
-# Features
+## Features
 Each page of this site shares the same header and navigation bar. The header contains the clients logo and navigational links to all areas of the site. The navigation bar runs the length of the page and is fixed to the top of the page throughout the site. The navigation bar contains the company logo, which acts as a link to the "Home" page. In addition it has a drop down menu for the three category of products that are on sale on the site. These categories are "Empty Terrarium", "Full Terrarium" and "Terrarium Accessories". Next to the drop down is a link to the "Share Your Builds" page. The far right of the navigation bar is a link to the "Account" and "Cart" section of the site. The colour of the font used in the navigation bar is black with a white background colour. This is the only area of the site with this colour combination. This is because I wanted to the user of the site to associate this colour combination with navigation, making it easier to navigate across the site. 
 <hr>
 <b><i>Home</i></b>
@@ -140,6 +140,79 @@ The client wanted to offer the user the option to look at there previous purchas
 <b><i>Product Reviews </i></b>
 <hr>
 Another feature that was important for the client was allowing the user the ability to leave a review for a product. In order to do that they first have have an account registered and be logged in. Providing they are logged in when they visit a Product Detail page and scroll down the user will see a "Customer Review Section". If that particular product doesn't have a review then the user will see "THIS PRODUCT HAS NO REVIEW", and just bellow that a call to action button called "LEAVE A REVIEW". Alternatively if the product does have a review they will still see this call to action button, but below it they will see any reviews that other users have left. It will show them the username of the user who left the review, a rating out of 5 stars and a comment. They will also see when the user left the rating and whether that user has amended the rating and if so when. Assuming a user clicks the "LEAVE A REVIEW" call to action button they will be taken to the create rating page. When they arrive a heading will appear with "REVIEW A PRODUCT" denoting to the user they are on a page that allow them to leave a rating. The review form is situated inside a card, and the card has the same aesthetics as any card found throughout the site. The user will be able to leave a comment, and a rating between 0 and 5. Should they input a rating that doesn't meet that criteria the form will not submit, and they will be instructed to input a rating between 0 and 5. At the bottom of the form is two call to action buttons, one "CANCEL" and the other "ADD REVIEW". If the user clicks cancel they will be taken back to the Product Details page. Should they click "ADD REVIEW" the form will submit. Once submitted a success toast will appear just below the right hand side of the navigation bar confirming a review was successfully added. Should the user want to edit that review or delete the review two call to action buttons will appear below any review they leave. These call to action buttons will only appear for ratings left by the user, not ratings left by other users. If the user clicks "EDIT REVIEW" they will be taken to the edit rating page, their they have two options. The first they can either click the "CANCEL UPDATE" call to action button, which will take them back to the product detail page and not amend the rating. Alternatively they can amend any of the information in the form, click "UPDATE REVIEW" the form will submit and they will be taken back to the product details page where the rating will be updated. A success toast will appear just under the right hand side of the navigation bar notifying them the review has been successfully updated. If the user decides they want to delete the review they can click the call to action button called "DELETE REVIEW". Their they will be asked if they are sure they want to delete the review, and warn them its something that can't be undone. Their are two call to action buttons "NO" and "YES", if they click "NO" then they will be transported back to the product detail page and the review will not be deleted. If they click "YES" then the review will be deleted from the database.  A success toast will appear just under the right hand side of the navigation bar notifying them the review has been successfully deleted. A user can only leave one review per product. Should they try and leave two a error toast will appear just under the right hand side of the navigation bar notifying them of this fact. 
+
+<hr>
+<b><i>Share Your Builds </i></b>
+<hr>
+The final key feature that the client required was a feature that allowed its customers a post showing off there own terrarium builds. The post would allow the user to upload an image along with a description of the image. The client wants to create a online network between its customers, and they feel that this feature is a good starting point. Not only will this allow for a friendly community to blossom, this will also help to generate sales. For those potential customers that are having trouble deciding which terrarium to purchase, or what accessories they would require looking at other peoples builds for inspiration should help the decision process. Just like the Product Review feature in order to use the "Share Your Builds" feature  the user has to have an account registered and be logged in. They can visit the "Share Your Builds" section of the site without being registered or logged in, but they can only view the posts and not post themselves. Once logged in when a user visits the "Share Your Builds" page the page will have a title at the top of the page saying "Share Your Builds", this notifies the user that they have arrived at the right location. The posts themselves are in cards situated in the centre of the page. A large area of the card is filled with the post image as that's the main function of this part of the site and the post itself. Just below the image is the title of the post, the username of the user who posted, a description of the post image, when the post was created, and if it was updated. As the bottom of the page the user (assuming they are logged in) will see a call to action button called "CLICK TO SHARE YOUR BUILDS!". Once clicked it transports the user to the create post page. At the top of the page is a heading that says "CREATE POST", this informs the user they are in the right location. The create post form is situated inside a card, and the card has the same aesthetics as any card found throughout the site. Within the form is a text input for the posts title, text input for the posts comment and finally a image field to upload an image. There are two call to action buttons at the bottom of the form "CANCEL" and "SUBMIT POST". If the user clicks the "CANCEL" call to action button they will be taken back to the "Share Your Builds" page. Should the user click the "SUBMIT POST" then the form will be submitted. Providing the form has been filled out correctly the post will appear in the Share Your Builds page, otherwise the user will be prompted to fill out the form correctly. A success toast will appear just under the right hand side of the navigation bar notifying the user the post has been successful. Similar to the ratings feature only the user who has created the post can edit and delete it. Therefore a user will only see these call to action buttons below there own posts. Within the card they will see an "EDIT POST" and "DELETE POST" call to action button. Should they click the "EDIT POST" they will be transported to the edit post page. An alert toast will appear just under the right hand side of the navigation bar notifying the user they are about to edit there post. In addition the heading on the page will say "EDIT POST" notifying them they are on the correct page if they want to edit. The page will look identical to that of the create post page. However, the form will be pre filled with the information from the post. There will be two call to action buttons one "EDIT POST" and another "CANCEL". If the user clicks "CANCEL" they will be transported back to the "Share Your Builds" page. Should make any amendments to the post, and want to process those amendments they can click "EDIT POST". Providing the form has been filled out correctly the form will be submitted and they will be transported back to the "Share Your Builds" page and the post will be updated. A success toast will appear just under the right hand side of the navigation bar notifying the user the post has been updated. Should the user want to delete there post they can click the "DELETE POST" call to action button. This will transport them to the delete post page. The title of the page will be "DELETE POST" notifying them they are on the correct page. There will then be a small card notifying the user that they are about to delete there post, and do they really want to do that. Then they will be presented with two call to action buttons "NO" and "YES". If the user clicks "NO" then they will go back to the "Share Your Builds" page. If they click "YES", the post will be deleted and they will go back to the "Share Your Builds" page. The post will be gone and a success toast will appear just under the right hand side of the navigation bar notifying the user the post has been successfully deleted. 
+<hr>
+
+## Existing Features
+<hr>
+* Header Logo - Exists on ever page and allows the user to easily recognise the clients brand. But clicking the logo the user can be returned to the home page. 
+
+* Header Navigation Bar - appears at the top of each page in the same location, ensuring the user knows where to locate it no matter the location on the website. 
+
+* Remote View Navigation Bar - In remote screen sizes a full size navigation bar would get overbearing and take up much needed screen space. Remote view will allow users to toggle to the remote view navigation bar to better navigate around the site. 
+
+* Call to Action Buttons - found throughout the site. Allows the users to quickly access key information or key features. 
+
+* About Us - This section appears on the home page. Allows visitors to understand the client's journey, brand image and mission statement. 
+
+* Modal for viewing product - This allows the user to view images of the products with more scrutiny to make sure they are going to purchase the right thing. 
+
+* Register an account, Log In to that account, Log Out - these features all have the same purpose to allow a user to create a profile to keep track of purchase history, leave product reviews and get involved with the Share Your Builds section. 
+
+* Processing Payments - The user is able to add items to a cart, progress the items of the cart to the checkout, purchase those items and complete an order. 
+
+* Add Product Review - Allows the user to add a review to a product providing they have registered an account and logged in. Only allow one review per user per product. 
+
+* Edit Product Review - Allows the user to edit a review to a product providing they have registered an account ,logged in, and they originally left the review.
+
+* Delete Product Review - Allows the user to delete a review to a product providing they have registered an account, logged in, and they originally left the review.
+
+* Add Post to Share Your Builds - Allows the user to share a post of there own terrarium builds. They can only use this feature if they have registered an account and logged in. 
+
+* Edit Post to Share Your Builds - Allows the user to edit their post on the Share Your Builds page. They have to have registered an account ,logged in, and there the ones who originally made the post.
+
+* Delete Post to Share Your Builds - Allows the user to delete their post on the Share Your Builds page. They have to have registered an account ,logged in, and there the ones who originally made the post.
+
+## Features Left to Implement
+<hr>
+
+* Share Your Build posts with more than one image - At present a user is only able to upload one image and due to the fact this feature is at its initial stages this meets the clients requirements. However, moving forward it maybe nice to allow the user to upload more than one. A decision on how this would be displayed on the page would need to be seriously considered, and how you would amend the app Models would also need planning before this feature could be implemented. 
+
+* Allowing users to sign in with social media - Currently a user can sign in with the username they registered with, or a email address. It maybe a nice feature to allow them to create an account with there Gmail, Facebook, Instagram or Twitter. I know Django has built in allauth that should allow this, so this feature may not be that challenging to implement. 
+
+## Technologies Used
+<hr>
+* This website used HTML, CSS, Javascript and Python programming languages
+
+* <a href="https://getbootstrap.com/">[Bootstrap CDN](https://getbootstrap.com/)</a>: This project uses Bootstrap5 to help make the website responsive.
+
+* <a href="https://jquery.com/">JQuery</a>: This project uses JQuery to help make the website more interactive.
+
+* <a href="https://popper.js.org/">Popper.js</a>: This project uses Popper.js Javascript for the modal used on the "Product Detail" pages.
+
+* <a href="https://fonts.google.com/">Google Fonts</a>: This project uses Google Fonts to style the website's fonts.
+
+* <a href="https://fontawesome.com/">Font Awesome</a>: This project uses Font Awesome in the footer of the website to add social media icons.
+
+* <a href="https://coolors.co/">Coolors</a>: This project uses Coolors to identify which colour palette best meet the client's requirements and brand image.
+
+* <a href="https://balsamiq.com/">Balsamiq</a>: This project uses Balsamiq to create wireframes during the UX stages.
+
+* <a href="https://git-scm.com/">Git</a>: Git was used for version control, using the Gitpod terminal to add, commit to Git and push to Github.
+
+* <a href="https://github.com/">GitHub</a>: Github was used to store the project's code after being pushed from Git.
+
+* <a href="https://stackedit.io/">StackEdit</a>: StackEdit was used to confirm layout and spell check the README and TESTING md files.
+
+* <a href="https://www.djangoproject.com/">Django</a>: Django was used as the main frame work for this project. 
+
+## Testing
+<hr>
+Testing information can be found on a separate <a href="#">Testing Readme</a>
 
 
 ### Code

@@ -28,8 +28,8 @@
                 {% csrf_token %}
                 {{ form|crispy }}
                 <div class="text-right">
-                    <button class="btn dark-green-btn rounded-0 float-right" type="submit">Edit Post</button>
-                    <a class="btn dark-green-btn rounded-0 float-left" href="{% url 'share_builds' %}">Cancel</a>
+                    <button class="btn dark-green-btn rounded-0 float-right text-uppercase" type="submit">Edit Post</button>
+                    <a class="btn dark-green-btn rounded-0 float-left text-uppercase" href="{% url 'share_builds' %}">Cancel</a>
                 </div>
             </form>
         </div>

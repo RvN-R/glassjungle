@@ -216,15 +216,195 @@ The final key feature that the client required was a feature that allowed its cu
 Testing information can be found on a separate <a href="#">Testing Readme</a>
 
 # Deployment
-I've included both a Web Map and ERD of the site to aid in the deployment of the site. Having a better understanding of the user journey through the website, and connections between databases should increase the chances of a successful deployment. Please find links for the <a href="readme_assets/readme_images/GlassJungleWebMapV2.png">Web Map</a> and <a href="readme_assets/readme_images/GlassJungleERDV2.png">Web Map</a> here, also included images below: 
+I've included both a Web Map and ERD of the site to aid in the deployment of the site. Having a better understanding of the user journey through the website, and connections between databases should increase the chances of a successful deployment. Please find links for the <a href="readme_assets/readme_images/GlassJungleWebMapV2.png">Web Map</a> and <a href="readme_assets/readme_images/GlassJungleERDV2.png">ERD</a> here, also included images below: 
+<hr>
 
 ## Glass Jungle Web Map
 
+<hr>
+
 <img src="readme_assets/readme_images/GlassJungleWebMapV2.png">
+<hr>
 
 ## Glass Jungle ERD
 
+<hr>
+
 <img src="readme_assets/readme_images/GlassJungleERDV2.png">
+<hr>
+
+## Deploy The Application using Heroku and AWS
+
+<hr>
+
+1. Prior to creating an account with Heroku, its is necessary to create a requirements.txt and Procfile within your application, to enable Heroku to know which application and dependences are required to run the app.
+ 
+2. Log in or Register with Heroku
+
+3. Once logged in you will be taken to your Dashboard, at the top right hand corner of the Dashboard you will see New. Click New and select Create New App 
+
+4. You will be prompted to input an App name, this needs to be unique. 
+
+5. You will be prompted to "Choose a region" from a drop down list. Once chosen click "Create app"
+6. Go up to the top of the page and click "Settings" 
+7. Scroll down the page to the "Config Vars section and click the "Reveal Config Var" button. 
+
+8. At this point you are going to tell Heroku the variables you have hidden in your `env.py` in your app, otherwise you could get unwanted application errors. 
+
+9. Input a variable called SECRET_KEY and you need to copy the secret key from your  `env.py` and paste in the value. 
+10. Go to Resources table and in the Add-ons search Heroku Postgres and choose the free plan. 
+11. Within the requirements.txt file there should already be dj_database_url and psycopg2-binary installed. If not you will need to run the following in the terminal "pip3 install dj_database_url" and "pip3 install psycopg2-binary". 
+12. Within `settings.py` dj_database_url should be imported. 
+13. In the DATABASES section of `settings.py` dj_database_url should call the DATABASE_URL variable found in the config var of your Heroku app. Don't forget that the DATABASES section also needs to call the existing sqlite3 database in Django's backend. 
+14. Use the following command to backup the sqlite3 database and load it into a db.json file `python3 manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json`. 
+15. Now use the following command to load your data from the db.json file into postgres `python3 manage.py loaddata db.join`. 
+16. If you haven't created a super user already type the following command into the terminal `python3 manage.py createsuperuser` and fill out a username and password when prompted.
+17. In requirements.txt you should see gunicorn, if not you are going to need to install that. Use the following command `pip3 install gunicorn`
+18. In the Procfile you created you need to tell Heroku to run a web dyno to run gunicorn and serve the django app. It should look like the following: `web: gunicorn *HEROKU APP NAME*.wsgi:application`
+
+19. Login to Heroku via the terminal, type `heroku login -i`
+20. When prompted for the username use the email address you used to setup your Heroku account. 
+21. When prompted for the password go to the top right hand corner click the account icon, and select account settings. Scroll down to API Key and click the Reveal button. Copy that API Key into the terminal and submit that as the password. 
+22. In the terminal you need to tell Heroku not to collect the static files when we deploy. To do that type the following into the terminal `heroku config:set DISABLE_COLLETSTATIC=1 --app HEROKU USER NAME-HEROKU APP NAME`.
+23. In `settings.py` make sure that the hostname of the Heroku app is added to the ALLOWED_HOSTS section. This should look as follows: `'HEROKU USERNAME-HEROKUAPP.herokuapp.com','localhost'`
+24. Add, commit and push to Github, then type `git push heroku main` to push to Heroku. 
+25. Go back to Heroku and go to the Activity tab, you should see a build in process. 
+26. Once the build is complete go to "View build log", scroll down the log and you should see the url for your app deployed to Heroku. 
+27. Go to that URL in a browser and you should see the site without any static, or media files. 
+28. Next step is to connect the app to Github, so when you push to Github it updates Heroku as well. The simplest process is automatic deployment from your Github repository. So in Deployment method click "Github - Connect to Github" 
+
+29. Below a "Connect to Github" section will appear. Ensure that your Github name appears in the first drop down menu, and then add your repository name and click search. 
+
+30. Once Heroku finds your repository click connect. 
+31. Scroll down to Automatic deploys and click "Enable Automatic Deploys"
+32. We now need to set up an AWS account to host the media and static files for our site. 
+33. If you haven't already go to aws.amazon.com and click on "Create an AWS Account". 
+34. Once there fill out username, email address and password. 
+35. Then select account type "Personal" and fill out the form before clicking "Create Account and Continue. 
+36. You will be asked to fill in card information that will be billed should you go above the usage limit. For your purposes you shouldn't be billed. 
+37. You will need to verify via the email address you used to register your AWS account. 
+38. Once that's done go back to aws.amazon.com and sign in. Then in the top right hand corner you should see "My Account" click the drop down and select AWS Management Console. 
+39. Now signed in go to the top left hang corner, click "Services" and search s3 to open it. 
+40. Once on the Amazon S3 page click "Create Bucket"
+41. Use the same name you used to name the Heroku App to name the bucket. 
+42. In the region drop down select a region closes to you. 
+43. Uncheck "Block all public access" if its checked and acknowledge that you understand that current settings might result in this bucket and the objects within becoming public. It needs to be public in order to allow public access to the static files. 
+44. Click "Create Bucket"
+45. The bucket should appear in the bucket section of your S3 page. 
+46. Click the name of the bucket to change some of its settings. 
+47. Click the "Properties tab.
+48. Scroll dow to "Static website hosting" and make sure that its enabled.
+49. Fill out Index Document with the following "index.html" and fill out Error Document with the following "error.html" and click "Save Changes". 
+50. Click the "Permissions" tab.
+51. Scroll down to "Cross-origin resource sharing (CORS)" and copy in the following code: `[
+  {
+      "AllowedHeaders": [
+          "Authorization"
+      ],
+      "AllowedMethods": [
+          "GET"
+      ],
+      "AllowedOrigins": [
+          "*"
+      ],
+      "ExposeHeaders": []
+  }
+]`
+52. Scroll up to "Bucket Policy", click "Edit" and then "Policy generator". 
+53. This will open up another tab in your browser called AWS Policy Generator. Select "S3 Bucket Policy" in the "Select Type of Policy" drop down. 
+54. Allow all principles by inputting * in the "Principle" text input. 
+55. In the "Actions" drop down select GetObject. 
+56. Got back to the previous S3 tab and copy the ARN which should be below the heading "Bucket ARN". Paste this into the ARN text input in the AWS Policy Generator you have open in the other tab on your browser. 
+57. Click "Add Statement". 
+58. Click "Generate Policy".
+59. Once the policy is generated copy that into the Bucket Policy editor in the S3 tab you have open.  
+60. Within the policy you just generated in the resource key add a slash star to the end, this will allow access to all resources in the bucket. 
+61. Click "Save". 
+62. Scroll to "Edit access control list (ACL)" and in "Everyone (public access)" select "List" and then click "Save". 
+63. In the left hand corner of the screen go up to the "Services" drop down and search for "IAM" and select it. 
+64. On the left had side of the page click "User groups" 
+65. Then click "Create New Group" and call it "Manage NAME OF APP".
+66. Click "Next Step" and then click "Next Step" again as we don't have a policy to attach, and click "Create Group"
+67. With the group created on the left hand side you will see "Policies" click it. 
+68. Then click "Create policy" and go to the "JSON" tab. 
+69. Select "Import managed policy" and select "AmazonS3FullAccess" policy and click "Import". 
+70. Go back up to the top left hand corner of the screen and click the "Services" drop down. 
+71. Right click "S3" to open your S3 services in a different tab of your browser. 
+72. Click on the bucket you created in S3. 
+73. Go to the "Policy" tab.
+74. Scroll down to "Bucket Policy" and click edit. 
+75. Copy the ARN from that bucket policy. 
+76. Go back to our IAM tab and in the managed policy you just imported into the JSON tab go to the "Resources" variable. 
+77. Delete what is already in the "Resources" variable and create a list and paste the bucket policy ARN into it. 
+78. Add another rule to the list by adding a comma and paste the ARN again but this time adding /* to the end of it. You should now have two versions of the ARN inside the "Resources" variable inside your IAM policy. 
+79. Click "Review policy" 
+80. Name the policy "AMS USERNAME - S3 BUCKET NAME - policy". 
+81. Add a description, something similar to "Access to S3 bucket for HEROKU APP NAME static files.
+82. Click "Create policy" 
+83. You will be taken back to the IAM policy page were you will see your new policy has been created. 
+84. Attach the policy to the group you created by going to the left hand corner of the page and clicking "User Groups". 
+85. Click on the group you created earlier. 
+86. Click the "Permissions" tab and click "Add permissions".
+87. Search for the policy you just created and select it. 
+88. Click "Attach Policy"
+89. Now we need to create a user to add to the group. On the left hand side of the screen click "Users".
+90. Click "Add User"
+91. Add a username, something like "HEROKU APP NAME-staticfiles-user"
+92. Click the "Programmatic access" check box and click "Next Permissions"
+93. Add user to the group you created by selecting it in the "Add user to group" section. Click through to the end and then click "Create User" 
+94. Click "Download .csv" which will download the csv file. I suggest you save this in a folder on your desktop to keep it safe. 
+95. At this point we have completed the steps to setup AWS for deploying this project. Now we must connect this to Django. 
+96. Once again check the requirements.txt file to make sure boto3 and django-storages are installed. If not input the following code into your terminal pip3 `install bodo3` and `pip3 install django-storages`. 
+97. In your `settings.py` make sure storages appears in the INSTALLED_APPS section. 
+98. Now we need to tell `settings.py` which bucket it should be communicating with. Create an if statement as follows `if "USE_AWS" in os.environ:`
+99. Go back to Heroku settings tab and in the Config vars create a key called "USE_AWS" and assign it a value of "True". 
+100. Back in `settings.py` inside the if statement create a variable called "AWS_STORAGE_BUCKET_NAME" and assign it a string thats the name of the bucket you just created in S3. 
+101. In the same if statement create a variable called "AWS_S3_REGION_NAME" and assign it the AWS region you assigned your bucket. 
+102. The next two variables should be kept in your Heroku Config vars as they can be used to charge the card you registered to your AWS account. 
+103. Inside the if statement create a variable called "AWS_ACCESS_KEY_ID" and assign it the following value `os.environ.get('AWS_ACCESS_KEY_ID')`
+104. Go back to your Heroku settings tab and in the Config vars create a key called "AWS_ACCESS_KEY_ID". 
+105. Go to the .csv you downloaded earlier and open it, get the access key id and copy this into the value for the "AWS_ACCESS_KEY_ID" in your Heroku Config Var. 
+106. Back in `settings.py` and inside your if statment create a variable called "AWS_SECRET_ACCESS_KEY" and assign it the following value `os.environ.get('AWS_SECRET_ACCESS_KEY')`
+107. Go back o your Heroku settings tab and in the Config vars create a key called "AWS_SECRET_ACCESS_KEY". 
+108. Go to the .csv you downloaded earlier and open it, get the secret access key and copy this into the value for the "AWS_SECRET_ACCESS_KEY" in your Heroku Config Var.
+109. In your Heroku Config Var delete "DISABLE_COLLECTSTATIC" that we created earlier in the deploying process. 
+110. Back in `settings.py` and inside the if statement create a variable called "AWS_S3_CUSTOM_DOMAIN and assign it the following value: `f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'`
+111. We now need to tell Django that in production we want to use s3 to store our static files, and any uploaded images in our media to go there too. 
+112. create a file in the root of your project called `custom_storages.py` and import `settings` from `django.conf` and `S3Boto3Storage`. 
+113. Create two classes one called `StaticStorage` and the other `MediaStorage` both inheriting from `S3Boto3Storage` .
+114. Within `StaticStorage` create a variable called `location` and assign it the following: `settings.STATICFILES_LOCATION`
+115. Within `MediaStorage` create a variable called `location` and assign it the following:`settings.MEDIAFILES_LOCATION`
+116. Go back to `settings.py` within the if statement we are going to create a varaible called "STATICFILES_STORAGE" and assign it the following value 'custom_storages.StaticStorage'
+117. Inside the same if statement create a variable called "STATICFILES_LOCATION" and assign it the value of 'static'.
+118. Inside the same if statement create a variable called DEFAULT_FILE_STORAGE" and assign it the value 'custom_storages.MediaStorage'. 
+119. Finally inside the same if statement create a variable called MEDIAFILES_LOCATION and assign it the value 'media'.
+120. We now need to override and explicitly set the URLs for static and media files using the custom domain and new locations.
+121. In `settings.py` and the inside the same if statement create a variable called "STATIC_URL" and assign it the following value:`f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'`
+122. In `settings.py` and the same if statement create a variable called "MEDIA_URL" and assign it the following value: `f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'`
+123. Now add, commit and push your changes to Heroku, which will trigger a build. Heroku should find the new locations of the static files. If you go back to Heroku and the "Activity" tab you should see a build in process. 
+124. Go back to S3 and click on the bucket you created, you should now see a static folder but you will need to add a media folder. Click "Create Folder".
+125. Name the folder "media"
+126. Open the folder and click the "Upload" button. 
+127. At this point you are going to need to upload all of the images that are currently inside the media folder in the root of your project in Gitpod. You can download these from the projects repository, or in the project right click the media folder and select download, save the images in a folder to your desktop for ease. 
+128. Back in S3 click "Add files".
+129. Select all in the images that you have just downloaded from the media file from the projects repository. 
+130. Click "Next"
+131. Under "Manage public permissions" select "Grant public read access to this objects" and click "Next"
+132. Continue to click "Next" until you get to a page that has a button at the bottom called "Upload" click that button. 
+133. Media should begin to upload and should now appear on the site. 
+134. Finally you need to connect Stipe information to Heroku by adding it to the Heroku Config Vars.
+135. Go to Heroku settings and in the Config Vars create a key called "STRIPE_PUBLIC_KEY"
+136. Login to you Stripe account, got down to "Developers" and click "API Keys". 
+137. Copy the "Publishable key" and then go back to your Config Vars and paste in the key as the value for "STRIPE_PUBLIC_KEY".
+138. Go back to Stripe and click "Reveal test key token" you may be prompted to put your password in. Copy this Secret Key. 
+139. Go to Heroku settings and in the Config Vars create a key called "STRIPE_SECRET_KEY" and for its value paste in the secret key you just copied from Stripe. 
+140. Go back to Stipe, in the "Developers" section click "Webhooks".
+141. Click "Add endpoint"
+142. In the "Endpoint URL" add the URL for the Heroku App followed by /checkout/wh/.
+143. In the Events to send select "payment_intent.succeeded" and "payment_intent.payment_failed" and click "Add endpoint".
+144. Now a new webhook has been created scroll down to "Signing secret" and click "Click to reveal" and copy that secret. 
+145. Go to Heroku settings and in the Config Vars create a key called "STRIPE_WH_SECRET" and for its value paste in the secret key you just copied from Stripe. 
+146. At this point the website should be successfully deployed to Heroku, the static and media files should be displayed as they are hosted with AWS and Stripe webhooks should be functioning. 
 
 ### Code
 * I used a helpful article by Morgun Ivan entitled <a href="https://en.proft.me/2017/09/29/how-validate-file-size-imagefieldfilefiled-django/">How to validate file size in ImageField/FileFiled in Django </a> as inspriration for the validate_image function in the Forum model within my Forum app. 

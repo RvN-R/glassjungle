@@ -186,6 +186,7 @@ The final key feature that the client required was a feature that allowed its cu
 
 ## Technologies Used
 <hr>
+
 * This website used HTML, CSS, Javascript and Python programming languages
 
 * <a href="https://getbootstrap.com/">[Bootstrap CDN](https://getbootstrap.com/)</a>: This project uses Bootstrap5 to help make the website responsive.
@@ -214,6 +215,16 @@ The final key feature that the client required was a feature that allowed its cu
 <hr>
 Testing information can be found on a separate <a href="#">Testing Readme</a>
 
+# Deployment
+I've included both a Web Map and ERD of the site to aid in the deployment of the site. Having a better understanding of the user journey through the website, and connections between databases should increase the chances of a successful deployment. Please find links for the <a href="readme_assets/readme_images/GlassJungleWebMapV2.png">Web Map</a> and <a href="readme_assets/readme_images/GlassJungleERDV2.png">Web Map</a> here, also included images below: 
+
+## Glass Jungle Web Map
+
+<img src="readme_assets/readme_images/GlassJungleWebMapV2.png">
+
+## Glass Jungle ERD
+
+<img src="readme_assets/readme_images/GlassJungleERDV2.png">
 
 ### Code
 * I used a helpful article by Morgun Ivan entitled <a href="https://en.proft.me/2017/09/29/how-validate-file-size-imagefieldfilefiled-django/">How to validate file size in ImageField/FileFiled in Django </a> as inspriration for the validate_image function in the Forum model within my Forum app. 

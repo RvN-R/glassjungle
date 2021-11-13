@@ -405,6 +405,40 @@ I've included both a Web Map and ERD of the site to aid in the deployment of the
 144. Now a new webhook has been created scroll down to "Signing secret" and click "Click to reveal" and copy that secret. 
 145. Go to Heroku settings and in the Config Vars create a key called "STRIPE_WH_SECRET" and for its value paste in the secret key you just copied from Stripe. 
 146. At this point the website should be successfully deployed to Heroku, the static and media files should be displayed as they are hosted with AWS and Stripe webhooks should be functioning. 
+<hr>
+
+## Credits
+
+<hr>
 
 ### Code
 * I used a helpful article by Morgun Ivan entitled <a href="https://en.proft.me/2017/09/29/how-validate-file-size-imagefieldfilefiled-django/">How to validate file size in ImageField/FileFiled in Django </a> as inspriration for the validate_image function in the Forum model within my Forum app. 
+
+* I found <a href="https://www.youtube.com/c/TraversyMedia">Traversy Media</a> Youtube channel incredibly helpful during completion of this project. Number of useful content that I am sure I will be using from this point on, but the video I found most useful was <a href="https://www.youtube.com/watch?v=PtQiiknWUcI">Python Django 7 Hour Course</a>. The video goes over the various steps on how to make a discord-like platform, which I used as inspriation to create the "Share Your Builds" feature of the app. 
+<hr>
+
+## Content
+
+<hr>
+A large majority of the text content on this site including "About Us" and "Share Your Builds" have been written by me. However the text in the product descriptions and pricing was taken from an online Reptile equipment supplier called <a href="https://www.reptilecentre.com/">Reptile Centre</a>
+
+<hr>
+
+## Media
+
+<hr>
+Images used on this site were sourced from numerous websites. . 
+
+Images Used
+* <a href="https://unsplash.com/photos/qLW70Aoo8BE">Body Background Hero Image</a> was sourced from [Unsplashed](https://unsplash.com/). 
+* All of the product images where sourced from the website from an online Reptile equipment supplier called <a href="https://www.reptilecentre.com/">Reptile Centre</a>. 
+* The images used on the Full Terrarium page where created by me on Photoshop using the product images I sourced on the <a href="https://www.reptilecentre.com/">Reptile Centre</a> website. 
+<hr>
+
+## Acknowledgments 
+<hr>
+* Special thanks to my mentor Chris Quinn
+* Special thanks to fellow students on Slack for the support during completion of MS4. 
+* Thanks to the team of tutors at Code Institute for their support. 
+
+

@@ -46,12 +46,12 @@ The company's prime mission statement is to offer there customers a platform to 
 2. As a Returning Visitor, I want to be able to register an account if not already. 
 3. As a Returning Visitor, I want to be able to visit my profile easily. 
 4. As a Returning Visitor, I want to be able to leave a review on a product easily. 
-5. As a Returning Visitor, I want to be able to leave a post on the Share Builds Section of the site easily.
+5. As a Returning Visitor, I want to be able to leave a post on the Share Your Builds Section of the site easily.
 
 #### Frequent User Goals 
 1. As a Frequent User, I want to be able to see my previous purchase history. 
 2. As a Frequent User, I want to be able to edit or delete my product reviews. 
-3. As a Frequent User, I want to be able to edit or delete my posts on the Share Builds Section of the site. 
+3. As a Frequent User, I want to be able to edit or delete my posts on the Share Your Builds Section of the site. 
 4. As a Frequent User, I want to be able to edit or amend by default delivery information on my profile. 
 
 ## Design

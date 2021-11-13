@@ -25,3 +25,21 @@ I've built a number of apps within the project that allows registered and non re
 
 * **We need a platform that notifies users who have registered an account to document there previous purchase history.**
 Providing a user has registered an account once they have logged in if they go to the "My Account" link on the top right hand corner of the navigation bar and click the icon the drop down should appear with "Profile" in it. The user can click the "Profile" link and be transported to their Profile page. The page will display there shipping information on left hand side (that can be amended) and their purchasing history on the right. They can click any order number and that will open a summary of the order. However, the user has to purchase product logged into there account, if they aren't logged in when they purchase then that purchase won't appear in there history. 
+
+## Testing User Stories from UX section in README
+### Testing First Time Visitor Goals
+
+ 1. <b>As a First Time Visitor, I want to easily understand the main purpose of the site, and learn more about the company.</b>
+ * The "About Us " section on the home page features 3 paragraphs explaining the companies values. 
+ 
+ 2. <b>As a First Time Visitor, I want to be able to easily navigate through the site to find key content.</b>
+ * At the top of each page is a navigation bar that runs the length of the page. It's fixed at the top of the page and allows the visitor, no matter where they are on the website, to know the location of the navigation bar.
+
+3. <b>As a First Time Visitor, I want to clearly find out how to register for an account.</b>
+* There are a number of ways for the user to register an account on the site. To entice first time visitors of the site to register, I've included a link on the home page. The user will see a large heading that says "Want to register an account?", with a paragraph on why they should register an account and a link which takes them to the register page.
+
+4. <b>As a First Time Visitor, I want to be able to find out what products the site offers.</b>
+* To keep things simple the client has divided there product portfolio into three categories "Empty Terrariums", "Full Terrariums" and "Terrarium Accessories".  At the top of the home page are three large buttons that allow the user to navigate to three pages associated with the three main product categories. This helps the user start there transaction journey with as little clicks as possible. Alternatively on the navigation bar is a drop down list entitled "Terrariums". Once clicked a drop down list appears with all three product categories appearing. The user is then able to click which one they are interested in, and then they are transported to pages associated with these categories and the products within said category. 
+
+5. <b>As a First Time Visitor, I want to be able to choose what product I want and complete a transaction.</b>
+* Assuming the user has followed the journey discussed in point 4. they will have reached a product category page. This page will display all of the products associated with said category. If the user is interested in anyone of these products they can click on the image of the product that interests them. This will take them to a product detail page. An image of the product they are interested in will appear, along with a description and an opportunity to either return to the home page and continue there journey through the site, or add that product to the cart. They can even increase or decrease how many of these products they may want to purchase. Once added to the cart, the user can click on the cart icon at the top right hand corner of the navigation bar at the top of the page. Once on the cart page then can click the "Go To Secure Checkout" button to complete there transaction. 

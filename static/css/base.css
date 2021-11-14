@@ -56,36 +56,6 @@ a.text-info:hover {
 }
 
 
-/*index*/
-
-/* .index-large-button{
-    padding: 0.5rem 1rem;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    border-radius: 0.3rem;
-    font-weight: 400;
-    height: 50%;
-    padding: 0;
-    margin: 0;
-    width: 50%;
-    color:white;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    user-select: none;
-    border: 1px solid transparent;
-} */
-
-/* .empty_terraium_index-button{
-    background-color: transparent;
-    background-image: url('/media/empty_terrarium_home_button.png');
-    background-size: 50% 50%; 
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 50%;
-    width: 50%;
-} */
-
 /*Taken inspiration from Bootstrap Buttons*/
 .dark-green-btn{
     color: #fff;
@@ -115,7 +85,7 @@ a.text-info:hover {
 }
 
 /*Product Details page*/
-.keep-shopping-btn{
+/* .keep-shopping-btn{
     color:black;
     background-color: #9CC24D;
     border-color: #9CC24D;
@@ -129,6 +99,24 @@ a.text-info:hover {
 }
 
 .keep-shopping-btn:focus{
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(156 194 77 / 50%);
+} */
+
+.bright-green-btn{
+    color:black;
+    background-color: #9CC24D;
+    border-color: #9CC24D;
+    
+}
+.bright-green-btn:hover{
+    color: white;
+    background-color: #02661D;
+    border-color: #02661D;
+    text-decoration: none;
+}
+
+.bright-green-btn:focus{
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgb(156 194 77 / 50%);
 }

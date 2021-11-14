@@ -9,13 +9,14 @@ from products.models import Product
 
 import datetime
 
+
 @login_required
 def create_rating(request, product_id):
     """A view to return create_rating.html"""
     # product varible returns the product that you want to add a rating too.
     # user variable returns the request.user converted to a string
     # exisiting_user returns a bool if user has left rating for product with product_id
-    # form variable returns CreateRatingForm from form.py 
+    # form variable returns CreateRatingForm from form.py
     product = get_object_or_404(Product, pk=product_id)
     user = request.user
     exisiting_user = bool(Rating.objects.all().filter(poster=user).filter(product_id=product))
@@ -46,7 +47,7 @@ def create_rating(request, product_id):
                 return redirect(reverse('product_detail', args=[product.id]))
             else:
                 messages.error(request, "Please rate product between 0 and 5")
-            
+
     return render(request, 'rating/create_rating.html', context)
 
 
@@ -74,7 +75,6 @@ def update_rating(request, rating_id):
             else:
                 messages.error(request, "Please rate product between 0 and 5")
 
-
         # try:
         #     form = CreateRatingForm(request.POST, instance=rating)
         #     if form.is_valid():
@@ -85,10 +85,10 @@ def update_rating(request, rating_id):
         #     print('recieved validation error')
         #     print(ValidationError)
         #     messages.error(request, "Please rate product between 0 and 5")
-            
+
     else:
         messages.warning(request, 'Not allowed to update other users reviews!')
-        return redirect('home') 
+        return redirect('home')
 
     return render(request, 'rating/update_rating.html', context)
 
@@ -98,7 +98,7 @@ def delete_rating(request, rating_id):
     """A view to return delete_rating"""
     # rating varible returns the id of the rating you want to delete
     # product varible returns the product attached to that rating.
-    # user variable returns the request.user converted to a string  
+    # user variable returns the request.user converted to a string
     rating = get_object_or_404(Rating, pk=rating_id)
     product = Product.objects.get(name=rating.product_id)
     user = str(request.user)
@@ -113,5 +113,5 @@ def delete_rating(request, rating_id):
     else:
         messages.warning(request, 'Not allowed to delete other users reviews!')
         return redirect('home')
-  
+
     return render(request, 'rating/delete_rating.html', context)

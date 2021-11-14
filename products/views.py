@@ -11,7 +11,7 @@ def empty_terrariums(request):
     context = {
         'products': products,
     }
-    
+
     return render(request, 'products/empty_terrariums.html', context)
 
 
@@ -21,7 +21,7 @@ def full_terrariums(request):
     context = {
         'products': products,
     }
-    
+
     return render(request, 'products/full_terrariums.html', context)
 
 
@@ -50,7 +50,5 @@ def product_detail(request, product_id):
         'ratings': ratings,
         'user': user
     }
-    
-
 
     return render(request, 'products/product_detail.html', context)

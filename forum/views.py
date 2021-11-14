@@ -6,8 +6,6 @@ from .models import Forum
 from .forms import CreatePostForm
 
 
-
-
 def share_builds(request):
     """ A view to return share_builds page """
     # posts varible returns all of the posts in the Forum models
@@ -19,6 +17,7 @@ def share_builds(request):
         "user": user
         }
     return render(request, 'forum/share_builds.html', context)
+
 
 @login_required()
 def create_post(request):
@@ -94,5 +93,5 @@ def delete_post(request, post_id):
     else:
         messages.warning(request, 'Not allowed to delete other users posts! ')
         return redirect('home')
-    
+
     return render(request, 'forum/delete_post.html', context)

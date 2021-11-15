@@ -76,4 +76,163 @@ Providing a user has registered an account once they have logged in if they go t
 * Providing the user is logged in, when the visit the "Share Your Builds" section then an "EDIT POST" and "DELETE POST" button will appear underneath each post. If the user clicks the "EDIT POST" button they will be transported to a page with a form pre filled with information from that post.  They can amend the information on the form, and click the "UPDATE POST" button. They will be transported back to the "Share Your Builds" page, a toast success message will appear confirming the post has been updated and the post will be updated. Alternatively, if they want to delete the post they can click the "DELETE POST" button. They will be transported to a page that asks them to confirm the decision. If they click "YES" then a toast success message will appear confirming the post is deleted and the post will have been deleted.   
 
 4. <b>As a Frequent User, I want to be able to edit or amend by default delivery information on my profile.</b>
-* Assuming the user in logged in they can go up to the "My Account" icon and once clicked a drop down will appear. One of the options in the drop down menu  will be "My Profile", which the user needs to click. Once clicked they will be transported to there profile page. On the left hand side of the page will be their "Default Delivery Information". If they have made a transaction on the site then the delivery information they have used will fill this form. Alternatively, they form will be empty.  If they fill out the form or amend the information already present, click the "UPDATE INFORMATION" button then their "Default Delivery Information" will be updated.  
+* Assuming the user in logged in they can go up to the "My Account" icon and once clicked a drop down will appear. One of the options in the drop down menu  will be "My Profile", which the user needs to click. Once clicked they will be transported to there profile page. On the left hand side of the page will be their "Default Delivery Information". If they have made a transaction on the site then the delivery information they have used will fill this form. Alternatively, they form will be empty.  If they fill out the form or amend the information already present, click the "UPDATE INFORMATION" button then their "Default Delivery Information" will be updated.
+
+## Manually Testing Website Features
+To conduct the following tests an active email address will be required. Successful functions of a number of from's across this site will require you to follow links you have been emailed.  I would suggest either registering a new email address for these tests via gmail, or use <a href="https://temp-mail.org/en/">Temp Mail </a>
+### Navigation
+* Load the Website. 
+* Right click and select inspection. 
+* Change the screen size from desktop to tablet, then change from tablet to smaller devices and verify that the navigation bar is responsive. 
+* Confirm that the text in the navigation buttons and drop downs are unrestricted by differing screen sizes. 
+* Verify that small screen sizes activate the toggle feature. activating the navigation bar remote view nav button. 
+* Click each link in turn and confirm that you are transported to the relative section of the website. 
+* Confirm that the hover function is operational
+* Confirm that the focus function is operational after link has been clicked. 
+* Return to the desktop view and hover over the navigation links, make sure the hover selection function works for each link. 
+* Clock each link and make sure the focus function is operational, and make sure you are transported to the correct section of the site. 
+* Repeat verification of functionality and responsiveness on iPhone and iPad. 
+
+### Home 
+* Load the Website. 
+* Right click and select inspection.
+* Scroll down the page to three large call to action buttons, directing you to the three key product categories. 
+* Change screen size from desktop to tablet, then change from tablet to smaller devices and verify text and buttons remain visible and unrestricted. 
+* Hover over each button and confirm that the hover function is working properly. 
+* Scroll down the page to the "About Us" section. 
+* Repeat steps above for changing screen sizes, to check section's responsiveness. Text should remain visible and be unrestricted. 
+* Scroll down the page to the "Register and Login account" sections. 
+* Repeat steps above for changing screen sizes, to check section's responsiveness. Text and buttons should remain visible and be unrestricted.
+* Hover over each button and confirm that the hover function is working properly.
+* At this point you should log into your account, for update on how to do this scroll down below to the register or login manual tests. 
+* Once logged in scroll down to the bottom of the page, and confirm that the "Register and Login account" sections aren't visible anymore. 
+
+### Register
+#### Testing Links to Sign Up Page
+* Load the Website. 
+* Scroll down the page to the "Want to register an account?" section. 
+* Hover over the "Register An Account!" call to action button and verify that the hover function works.
+* Click the "Register An Account!" call to action button, verify the focus function works correctly. 
+* You should be transported to the "Sign Up" page. 
+* Click the "GLASS JUNGLE" company logo in the top of the navigation bar, should be transported back to the home page. 
+* Click the "My Account" icon on the navigation bar, a drop down should appear. 
+* Click "Register" and confirm that the focus function works after the link is clicked. 
+* You should be transported to the "Sign Up" page. 
+
+#### Testing Sign Up Function 
+* Navigate to the Sign Up Page. 
+* Right click and select inspection.
+* Toggle between different device screen sizes and confirm that text and buttons remain visible and unrestricted.
+* Click "BACK TO LOGIN", confirm the focus function is operational, should be transported to "Sign In" page. 
+*  Click the "sign up" link in the description of the "Sign In" form to be transported back to the "Sign Up" page. 
+* Click "SIGN UP" call to action button, should be reminded to fill in the "E-mail address" input. 
+* Input the email address you are choosing to conduct these manual tests into the "E-mail address" input. 
+* Click "SIGN UP" call to action button, should be reminded to fill in the "E-mail address confirmation" input. 
+* Input the email address you are choosing to conduct these manual tests into the "E-mail address confirmation" input. 
+* Click "SIGN UP" call to action button, should be reminded to fill in the "Username" input. 
+* Input a three letter word of your choice and click "SIGN UP" call to action button, should get a error "Please lengthen this text to 4 characters or more (you are currently using 3 characters)." 
+* Input a username longer than 4 characters in length and click the "SIGN UP" call to action button. You should be reminded to fill in the "Password" input.
+* Input a password and  click "SIGN UP" call to action button, should be reminded to fill in the "Password (again)" input.
+* Input a different password into the "Password (again)" input, and  click "SIGN UP" call to action button. 
+* The form won't submit, the "Password (again)" input will have a red outline and a error message underneath it saying "You must type the same password each time."
+* Input the same password into both the "Password" and "Password (again)" inputs, and  click "SIGN UP" call to action button. 
+* The "VERIFY YOUR EMAIL ADDRESS" page will appear notifying you that you have been emailed a confirmation email. 
+* A alert toast message will appear on the top right hand corner page saying "Confirmation e-mail sent to YOUREMAIL". 
+* Go to the inbox of the email address you used to register an account, you should see the verification email from Glass Jungle. 
+* Copy the link from that email into your browser. 
+* The link will have taken you to the "CONFIRM E-MAIL ADDRESS" page, you should see a message that says "Please confirm that YOUREMAIL is an e-mail address for user USERNAME. Click the "Confirm" call to action button. 
+* A success toast message will appear on the top right hand corner of the page saying "You have confirmed YOUREMAIL". 
+* You will also be on the Sign Up page. 
+* Fill in the email address you just registered an account with into the "Username or e-mail" text input, and input the password. 
+* Click the "SIGN IN" call to action button. 
+* You will now be at the Home page, signed into your account. 
+*   A success toast message will appear on the top right hand corner page saying "Successfully signed in as USERNAME".
+* In the navigation bar "Welcome USERNAME!" will have appeared next to the "My Account" icon confirming you have successfully logged in. 
+
+### Login
+####  Testing Links to Sign In Page
+* Load the Website. 
+* Make sure you are logged out, if you are unsure how to do that scroll down to the manual checks associated with logging out of your account. 
+* Scroll down the page to the "Already have an account?" section. 
+* Hover over the "Login to your Account" call to action button and verify that the hover function works.
+* Click the "Login to your Account" call to action button, verify the focus function works correctly. 
+* You should be transported to the "Sign In" page. 
+* Click the "GLASS JUNGLE" company logo in the top of the navigation bar, should be transported back to the home page. 
+* Click the "My Account" icon on the navigation bar, a drop down should appear. 
+* Click "Login" and confirm that the focus function works after the link is clicked. 
+* You should be transported to the "Sign In" page. 
+
+#### Testing Sign In Function 
+* Navigate to the Sign In page. If you have issues doing this make sure you are logged out of your account. If you are unsure how to do that scroll down to the manual checks associated with logging out of your account. 
+* Right click and select inspection.
+* Toggle between different device screen sizes and confirm that text and buttons remain visible and unrestricted.
+* Click "HOME", confirm the focus function is operational, should be transported to "Home" page. 
+*  Go to the "My Account" icon and click to activate the drop down menu, click "Login" to be transported back to the Sign Up page. 
+* Click "SIGN IN" call to action button, should be reminded to fill in the "Username or e-mail address" input. 
+* Fill in the "Username or e-mail address" input with the email address you used to register an account with, and click "SIGN IN" call to action button. 
+* A reminder to fill out the "Password" input should appear, fill in the "Password" input with the wrong password and click "SIGN IN" call to action button. 
+* An error message will appear saying "The e-mail address and/or password you specified are not correct." Fill in the "Password" input with correct password and click "SIGN IN" call to action button. 
+* A success toast message will appear on the top right hand corner of the page saying "Successfully signed in as USERNAME". 
+* You will be transported back to the home page, in the navigation bar "Welcome USERNAME!" will have appeared next to the "My Account" icon confirming you have successfully logged in. 
+* Go to the "My Account" icon and click to activate the drop down menu, click "Logout". 
+* Go back to the "My Account" icon and click to activate the drop down menu, click "Login". 
+* Fill out the "Username or e-mail" input with a random name. 
+* Input the correct "Password" into the password input, and click the "SIGN IN" call to action button.
+* You will get an error message saying "The username and/or password you specified  are not correct". 
+* Input your username into the the "Username or e-mail" input. 
+* In the "Password" input type the incorrect password and click the "SIGN IN" call to action button.
+* You will get an error message saying "The username and/or password you specified  are not correct". 
+* Input your username into the the "Username or e-mail" input. 
+* Input the correct password into the "Password" input and click the "SIGN IN" call to action button.
+* A success toast message will appear on the top right hand corner of the page saying "Successfully signed in as USERNAME". 
+* You will be transported back to the home page, in the navigation bar "Welcome USERNAME!" will have appeared next to the "My Account" icon confirming you have successfully logged in. 
+
+### Logout
+####  Testing Sign Out Function
+* Load the Website. 
+* Make sure you are logged in to you account. If you are unsure how to do that scroll down to the manual checks associated with logging in to your account. 
+* Go to the "My Account" icon and click to activate the drop down menu, click "Logout". 
+* You should be transported to the "Sign Out" page. 
+* Change the screen size from desktop to tablet, then change from tablet to smaller devices and verify that the navigation bar is responsive. 
+* Click the "CANCEL" call to action button to be transported back to the "Home" page. 
+* Go to back to the "My Account" icon and click to activate the drop down menu, click "Logout". 
+* You should be transported to the "Sign Out" page. 
+* Click the "SIGN OUT" call to action button. 
+* A success toast message will appear on the top right hand corner of the page saying "You have signed out".
+* You will be transported back to the home page, in the navigation bar you will no longer see "Welcome USERNAME!"  next to the "My Account" icon. This confirms you are no longer logged into your account.
+
+### Forgot Password
+#### Testing Links to Password Reset Page
+* Load the Website. 
+* Make sure you are logged out, if you are unsure how to do that scroll down to the manual checks associated with logging out of your account. 
+* Go to the "My Account" icon and click to activate the drop down menu, click "Login" to be transported to the "Sign In" page. 
+* Click the link entitled "Forgot Password?". 
+* You should be on the "Password Reset" page. 
+
+#### Resting Password Rest Function 
+* Load Website
+* Make sure you are logged out, if you are unsure how to do that scroll down to the manual checks associated with logging out of your account. 
+* Follow steps in "Testing Links to Password Reset Page" to get to the "Password Reset" page. 
+* Once at the "Password Reset" page click the "Back to Login" call to action button. Make sure that the focus function is working correctly, and you will be transported back to the "Sign In" page. 
+* Click the link entitled "Forgot Password?", to be transported back to the Password Reset Function. 
+* Click the "Rest My Password" call to action button, you should be prompted with a reminder to fill in the "E-mail address" field.
+* Input an random email address into the  "E-mail address" field, would suggest `random@randomemail.com` and click the "Rest My Password" call to action button. 
+* The form won't submit and an error will appear. A red outine will surround the "E-mail address" field and an error message will appear saying "The e-mail address is not assigned to any user account". 
+* Input the email address you used to register an account and click the "Rest My Password" call to action button. 
+* A message will appear saying" We have sent you an e-mail. Please contact us if you don not receive it within a few minutes". 
+* Go to your email inbox and you should see an password rest email from Glass Jungle. 
+* Copy the link in the email into your browser, you will be transported to the "Change Password" page. 
+* Click the "Change Password" call to action button, you should get a reminder saying "Please fill in this field underneath the "New Password" field. 
+* Input a password into the "New Password" field, and click the "Change Password" call to action button, a reminder will appear saying "Please fill in this field underneath the "New Password (again)" field.
+* Input a different password to the one inputed in the "New Password" field in the "New Password (again)" field and click the "Change Password" call to action button. 
+* The form won't submit correctly, the border of the "New Password (again)" field will become red and an error message saying  "You must type the same password each time" will appear. 
+* Input a the same 4 letter password into both the "New Password" field and "New Password (again)" field and click the "Change Password" call to action button. 
+* The form won't submit correctly, the border of the "New Password" field will become red and two error messages "This password is too short. It must contain at least 8 characters." and "This password is too common".  will appear. 
+* Input a the same 8 letter password with numbers and letters into both the "New Password" field and "New Password (again)" field and click the "Change Password" call to action button. 
+* A success toast message will appear on the top right hand corner of the page saying "Password successfully changed". In addition you will be transported to the "Change Password" page. 
+*  Click the "My Account" icon on the navigation bar, a drop down should appear. 
+* Click "Login" and confirm that the focus function works after the link is clicked. 
+* You should be transported to the "Sign In" page. 
+* Input your email address into the "Username or e-mail" field and your new password into the "Password" field and click the "SIGN IN" call to action button. 
+* A success toast message will appear on the top right hand corner of the page saying "Successfully signed in as USERNAME". 
+* You will be transported back to the home page, in the navigation bar "Welcome USERNAME!" will have appeared next to the "My Account" icon confirming you have successfully logged in. 

@@ -288,3 +288,25 @@ To conduct the following tests an active email address will be required. Success
 * The cart page will no longer have cart summary, instead it will say "Your cart is empty" in the centre of the page. 
 *  Hover over "KEEP SHOPPING" call to action button, to confirm the hover effect works. 
 * Click "KEEP SHOPPING" and you will be transported back to the home page. 
+
+#### Testing Checkout Function Not Logged In
+* Load Website
+* Make sure you are logged out, if you are unsure how to do that search for the  manual checks associated with logging out of your account within this document.
+* Follow all of the steps found in **Testing Adding Items to Cart**.
+* At this point you should be on the cart page and have some items in your cart.
+* Scroll down the page and hover over the "SECURE CHECKOUT" call to action button, to confirm the hover function works. 
+* Click the "SECURE CHECKOUT" call to action button, the focus function should work and you should be taken to the checkout page. 
+* On the right hand side of the page you should see a order summary matching the cart summary on the previous cart page. On the left hand side of the page will be the delivery details. 
+* Scroll down the page and hover over the "COMPLETE ORDER" call to action button to confirm the hover function is working. 
+* Click the "COMPLETE ORDER" call to action button, a prompt reminding you to fill out the "Full Name" field will appear. 
+* Fill out the "Full Name" field, scroll down the page and click the "COMPLETE ORDER" call to action button, a prompt reminding you to fill out the "Email Address" field will appear. 
+* Fill out the "Email Address" field using the active email address. Doesn't have to be but for ease I would use the email address you have used throughout these manual tests and click the "COMPLETE ORDER" call to action button, a prompt reminding you to fill out the "Phone Number" field will appear.
+*  Fill out the "Phone Number" field and click the "COMPLETE ORDER" call to action button, a prompt reminding you to fill out the "Street Address 1" field will appear.
+* Fill out the "Street Address 1" field and click the "COMPLETE ORDER" call to action button. You won't get a prompt reminding you to fill out the "Street Address 2" , as it doesn't have a star next to it. Thus it isn't required in order to submit the form correctly. However, you will get a prompt reminding you to fill out the "Town or City" field will appear.
+* Fill out the "Town or City" field and click the "COMPLETE ORDER" call to action button. You won't get a prompt reminding you to fill out the "County" or "Postal Code" fields , as both fields don't have a star next to them and aren't required in order to submit the form correctly. However, you will get a prompt reminding you to fill out the "Country" field.
+* Click on the "Country" field and select the country you are delivering too. Once selected click the "COMPLETE ORDER" call to action button. A sync icon will appear spinning on the screen, and suggests the form is trying to submit. However, because you didn't fill out the payment information the form won't submit. Instead an error message will appear and say "Your card number is incomplete". 
+* Input `1234 1234 1234 1234` into to "Payment" field in order to test the built in Stripe validation. An error message should appear saying "Your card number is invalid"
+* Input `4242 4242 4242 4242 04/24 242 42424` into the "Payment" field and click the "COMPLETE ORDER" call to action at the bottom of the page. 
+* A sync icon will appear spinning on the screen as the form is processed. You will arrive at the checkout success page, thanking you for the order and telling you that a confirmation email will be sent to the email you used to process the payment. 
+* A success toast message will appear on the top right hand corner of the page saying "Success!, Order successfully purchased! Your order number is ORDER NUMBER. A confirmation email will be sent to EMAIL ADDRESS".
+* Go to the inbox of the email address you used in this test, you will have received a confirmation email confirming the purchase has been successful and is complete. 

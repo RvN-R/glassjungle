@@ -209,7 +209,7 @@ To conduct the following tests an active email address will be required. Success
 * Click the link entitled "Forgot Password?". 
 * You should be on the "Password Reset" page. 
 
-#### Resting Password Rest Function 
+#### Resting Password Reset Function 
 * Load Website
 * Make sure you are logged out, if you are unsure how to do that scroll down to the manual checks associated with logging out of your account. 
 * Follow steps in "Testing Links to Password Reset Page" to get to the "Password Reset" page. 
@@ -236,3 +236,55 @@ To conduct the following tests an active email address will be required. Success
 * Input your email address into the "Username or e-mail" field and your new password into the "Password" field and click the "SIGN IN" call to action button. 
 * A success toast message will appear on the top right hand corner of the page saying "Successfully signed in as USERNAME". 
 * You will be transported back to the home page, in the navigation bar "Welcome USERNAME!" will have appeared next to the "My Account" icon confirming you have successfully logged in. 
+
+### E-Commerce 
+#### Testing Adding Items to Cart
+* Load the Website.
+* You can be logged into an account or logged out for this test.
+* Right click and select inspection.
+* Toggle between different device screen sizes and confirm that text and buttons remain visible and unrestricted.
+* Go up to the navigation bar and click on the "Terrariums" drop down, and click one of the product categories. 
+* You will now be on one of the three product category pages on the site. Click on one of the product images. 
+* You will have now been transported to that products product detail page. 
+* Toggle between different device screen sizes and confirm that text and buttons remain visible and unrestricted.
+* Hover over all of the buttons on the page and make sure that the hover functions work. 
+* You will notice that there is a "Quantity" section, click the "-" icon, the icon will go grey and won't let you go below 0. 
+* Click the "ADD TO CART" call to action button. 
+* A success toast message will appear on the top right hand corner of the page saying "Success!". You will also see an summary of your cart, image, name and price of the product you have added to the cart. In addition the cart icon will have changed colour to a dark green and the total figure be positioned just underneath that icon. 
+* Go back up to the navigation bar and click on the "Terrariums" drop down, and click another one of the product categories you didn't click last time.
+*  You will now be on one of the three product category pages on the site. Click on one of the images of the product. 
+* You will have now been transported to that products product detail page. 
+* Test increase quantity feature of the "Quantity" section, buy clicking the "+" icon to increase quantity of the purchase product. 
+* Click the "ADD TO CART" call to action button. 
+* A success toast message will appear on the top right hand corner of the page saying "Success!". You will also see an summary of your cart, image, name and total price of all the products you have  added to the cart up until this point. The cart icon will still be dark green, but the figure underneath it will have increased to match the cart total.  
+* Hover over the "GO TO CART" call to action button to confirm the hover function works. 
+* Click the "GO TO CART" call to action button. 
+* You should now be on cart page with the title "Welcome To Your Cart" confirming that fact. 
+* All of the products you have added should appear in the cart summary table. 
+* Toggle between different device screen sizes and confirm that text and buttons remain visible and unrestricted.
+* Go up to the company logo on the top left hand corner of the page in the navigation bar and click "GLASS JUNGLE". 
+* You should arrive at the home page. 
+* To test another one of the links to the cart page go to the top left hand corner of the page and hover over the cart icon to confirm the hover function works. 
+* Click the cart icon, and you should be transported back to your cart page. 
+* Scroll down the page, the subtotals within the cart summary once added together should equal the same figure thats next to "Grand Total:" at the bottom of the page. 
+* Hover over "KEEP SHOPPING" call to action button, to confirm the hover effect works. 
+* Click "KEEP SHOPPING" to be transported back to home and confirm the button function. 
+
+#### Testing Amending Items within your Cart
+* Load the Website.
+* You can be logged into an account or logged out for this test.
+* Follow all of the steps found in **Testing Adding Items to Cart**. 
+* Providing you have followed the previous steps you should now find yourself on the cart page, with some products added to a cart. 
+* Within the cart summary you should see a similar quantity section to that found on the sites product details page, this time labelled "Qty". Click the "-" icon, the "-" icon won't let you go below 1.
+* Click the "+" icon to increase the quantity of said product in your cart. 
+* Click the "Update" call to action button just below the quantity selector. 
+* A success toast message will appear on the top right hand corner of the page saying "Success!". You will also see an summary of your cart, as before. In addition, the total will have been amended to match the quantity update you just made. In addition the total just under the cart icon in the navigation bar  will have increased. 
+* Click "X" in the top right hand corner of the toast to close it. 
+* Look at the subtotal for the product you have just amended, the subtotal should equal the price per unit multiplied by the quantity. 
+* Just below quantity selector is the "Remove" call to action button, click this button. 
+* A success toast message will appear on the top right hand corner of the page saying "Success!". You will also see an summary of your cart, as before but the total will have been amended to match the removal of the product. The total figure positioned just underneath the cart icon will have decreased by the price of the product you just removed.
+* Repeat the removal process until you have nothing left in your account. 
+* After the final product has been removed, a success toast message will appear on the top right hand corner of the page saying "Success! Removed PRODUCT NAME from your cart"
+* The cart page will no longer have cart summary, instead it will say "Your cart is empty" in the centre of the page. 
+*  Hover over "KEEP SHOPPING" call to action button, to confirm the hover effect works. 
+* Click "KEEP SHOPPING" and you will be transported back to the home page. 

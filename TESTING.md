@@ -398,3 +398,26 @@ Go back to the website scroll down to the "BACK TO PROFILE" call to action butto
 * Hover over the order number for this order to confirm the hover function works. 
 * Click the order number and you will be taken to the success page for that order. 
 * Scroll down and click the "BACK TO PROFILE" call to action button to go back to your profile. 
+
+### Profile
+#### Testing Profile Page
+
+* Load the Website.
+* Make sure you are logged out, if you are unsure how to do that search for the  manual checks associated with logging out of your account within this document.
+* Scroll down the page to the "Already have an account?" section.
+* Hover over the "Login to your Account" call to action button and verify that the hover function works.
+* Click the "Login to your Account" call to action button, verify the focus function works correctly.
+* Now on the "Sign In" page fill out the "Username or e-mail" and "Password" fields with the information you used to register an account in the previous manual tests. If you have yet to register an account please go to **Testing Sign Up Function** in this document and follow the steps to register an account. 
+*You will be taken back to the home page, and are now logged in. On the navigation bar "Welcome USERNAME!" will have appeared next to the "My Account" icon confirming you have successfully logged in.
+* Click the "My Account" icon and a drop down will appear. 
+* Click "My Profile" in the drop down menu, a focus function will execute and you will be transported to the profile page. 
+* On the page you will see the pages title saying "My Profile" denoting that you are on your profile page. 
+* On the left hand side of the profile page the fields within the "Default Delivery Information" section will either be empty because you have yet to update the fields or have yet to complete a purchase logged into your account. Alternatively, the "Default Delivery Information" fields will be pre-filled with the delivery from your first purchase you conducted while logged into your account, or last purchase conducted while logged into your account with the "Save this delivery information to my profile" checkbox on the checkout page engaged. 
+* Click the "Country" field drop down menu and change the country from the one you currently have selected to another. 
+* Hover over the "UPDATE INFORMATION" call to action button, to confirm the hover function works. 
+* Click "UPDATE INFORMATION" call to action button to submit the form. 
+* A success toast message will appear on the top right hand corner of the page saying "Success!, Profile updated successfully". The "Default Delivery Information" on the profile will be updated. 
+* On the right hand side of the profile page is the "Order History" section, and the previous purchases you made while logged into this account should appear, with the date, items from the order and the order total. 
+* Hover over the order number for this order to confirm the hover function works. 
+* Right click and open this link onto a different tab on your browser. The Checkout Success page associated with that order will appear, with the order summary of that order. 
+* Close the tab. 

@@ -107,7 +107,7 @@
                         {% endfor %}
                         {% else %}
                         <div class="card-body">
-                            <h5 class="card-title text-center text-uppercase">this product has has no review</h5>
+                            <h5 class="card-title text-center text-uppercase">this product has has no reviews</h5>
                             {% if request.user.is_authenticated %} <h6 class="text-center"><a
                                     href="{% url 'create_rating' products.id %}"
                                     class="text-center btn dark-green-btn rounded-0 text-uppercase">Leave a Reveiw</a></h6>{% endif %}

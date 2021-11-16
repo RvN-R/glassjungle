@@ -452,9 +452,12 @@ Go back to the website scroll down to the "BACK TO PROFILE" call to action butto
 * Scroll down the "Exo Terra Reptile Hiding Cave Small" product detail page. Just below the "KEEP SHOPPING" and "ADD TO CART" call to action buttons you will see the review you just left. You will see your account username, rating out of 5 with star icon, comment from the review, date the review was created, and a date should the review be updated. 
 
 #### Testing Edit a Review Function
-* Load the Website.
+* Load the Website
 * Firstly you will need to leave a review on a product in order to edit said review. If you are unsure on the process for leaving a review please follow the steps from the **Testing Leaving a Review Function**. 
-* At this point you should be on the "Exo Terra Reptile Hiding Cave Small" product detail page and as you scroll down the page your review will be in the "CUSTOMER REVIEW" section of the product detail page. 
+* Then log out of your account. If you are unsure how to do this please follow the steps from the **Testing Sign Out Function**.
+* Go to the "Exo Terra Reptile Hiding Cave Small" product detail page (as covered in the steps for **Testing Leaving a Review Function**) and scroll down the page. You should see your review in the "CUSTOMER" REVIEW" section of the product detail page. 
+* Now log back into your account, if you are unsure of how to do this please follow the steps from the **Testing Sign In Function**. 
+* Go back to the "Exo Terra Reptile Hiding Cave Small" product detail page (as covered in the steps for **Testing Leaving a Review Function**) and scroll down the page. You should see your review in the "CUSTOMER" REVIEW" section of the product detail page. You should see two new call to action buttons now you are signed in labelled "EDIT REVIEW" and "DELETE REVIEW".  
 * Hover over the "EDIT REVIEW" call to action button to confirm the hover function works. 
 * Click the "EDIT REVIEW" call to action button and the focus function should execute and you will be transported to the "Edit Review" page. The form will be pre-filled with the information from the review you are editing. 
 * Hover over the "CANCEL UPDATE" call to action button to confirm the hover function works. 
@@ -467,8 +470,11 @@ Go back to the website scroll down to the "BACK TO PROFILE" call to action butto
 
 #### Testing Delete a Review Function
 * Load the Website.
-* Firstly you will need to leave a review on a product in order to delete said review. If you are unsure on the process for leaving a review please follow the steps from the **Testing Leaving a Review Function**. 
-* At this point you should be on the "Exo Terra Reptile Hiding Cave Small" product detail page and as you scroll down the page your review will be in the "CUSTOMER REVIEW" section of the product detail page. 
+* Firstly you will need to leave a review on a product in order to delete said review. If you are unsure on the process for leaving a review please follow the steps from the **Testing Leaving a Review Function**.
+* Then log out of your account. If you are unsure how to do this please follow the steps from the **Testing Sign Out Function**.
+* Go to the "Exo Terra Reptile Hiding Cave Small" product detail page (as covered in the steps for **Testing Leaving a Review Function**) and scroll down the page. You should see your review in the "CUSTOMER" REVIEW" section of the product detail page. 
+* Now log back into your account, if you are unsure of how to do this please follow the steps from the **Testing Sign In Function**. 
+* Go back to the "Exo Terra Reptile Hiding Cave Small" product detail page (as covered in the steps for **Testing Leaving a Review Function**) and scroll down the page. You should see your review in the "CUSTOMER" REVIEW" section of the product detail page. You should see two new call to action buttons now you are signed in labelled "EDIT REVIEW" and "DELETE REVIEW".  
 * Hover over the "DELETE REVIEW" call to action button to confirm the hover function works. 
 * Click the "DELETE REVIEW" call to action button and the focus function should execute and you will be transported to the "Delete Review" page.
 * Once on the "Delete Review" page, you will see a message warning you that you are about to delete a review, and this is something that can't be undone. Below the message are two call to action buttons one labelled "NO" and the other labelled "YES". 

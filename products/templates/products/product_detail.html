@@ -89,8 +89,8 @@
                             <p class="card-text"></p>
                             <p class="card-text small">{{ rating.rating }}/5<i class="fas fa-star small"></i></p>
                             <p class="card-text small">{{ rating }}</p>
-                            <p class="card-text small">{{ rating.updated }}</p>
-                            <p class="card-text small">{{ rating.created }}</p>
+                            <p class="card-text small">Review was updated on: {{ rating.updated }}</p>
+                            <p class="card-text small">Review was posted on: {{ rating.created }}</p>
                             <hr>
                             {% if user == rating.poster.username %}
                             <div>
@@ -107,7 +107,7 @@
                         {% endfor %}
                         {% else %}
                         <div class="card-body">
-                            <h5 class="card-title text-center text-uppercase">this product has has no reviews</h5>
+                            <h5 class="card-title text-center text-uppercase">this product has had no reviews</h5>
                             {% if request.user.is_authenticated %} <h6 class="text-center"><a
                                     href="{% url 'create_rating' products.id %}"
                                     class="text-center btn dark-green-btn rounded-0 text-uppercase">Leave a Reveiw</a></h6>{% endif %}

@@ -421,3 +421,59 @@ Go back to the website scroll down to the "BACK TO PROFILE" call to action butto
 * Hover over the order number for this order to confirm the hover function works. 
 * Right click and open this link onto a different tab on your browser. The Checkout Success page associated with that order will appear, with the order summary of that order. 
 * Close the tab. 
+
+### Review
+#### Testing Leaving a Review Function
+* Load the Website.
+* Make sure you are logged out of your account. If you are unsure how to do this please follow the steps from the **Testing Sign Out Function**. 
+* At this point you should find yourself on the home page. 
+* Go up to the navigation bar and click the "TERRARIUMS" drop down menu, and select "Terrarium Accessories". 
+* When you click "Terrarium Accessories" a focus function will execute and you will be taken to the "Terrarium Accessories" product page. 
+* Scroll down the page and find the product card for the "Exo Terra Reptile Hiding Cave Small". 
+* Click on the image for the "Exo Terra Reptile Hiding Cave Small" you will be transported to the product detail page for the "Exo Terra Reptile Hiding Cave Small".
+* Scroll down the page and just below the "KEEP SHOPPING" and "ADD TO CART" call to action buttons you should see "THIS PRODUCT HAS NO REVIEWS". 
+* Now log in to your account, or if you have yet to register an account please register an account. If you are unsure how to do either of these processes please follow the manual steps for **Testing Sign In Function** or **Testing Sign Up Function**. 
+* You should be back at the home page, follow the steps above to get back to the "Exo Terra Reptile Hiding Cave Small" product info page. 
+* Scroll back down the page and just below the "KEEP SHOPPING" and "ADD TO CART" call to action buttons you should see "THIS PRODUCT HAS NO REVIEWS". Now because you are logged in you will see a "LEAVE A REVIEW" call to action button. 
+* Hover over the "LEAVE A REVIEW" call to action button to confirm the hover function works. 
+* Click the "LEAVE A REVIEW" call to action button and the focus function should execute and you will be transported to the "Review a Product" page. 
+* Hover over the "CANCEL" call to action button to confirm the hover function works. 
+* Click the "CANCEL" call to action button and the focus function should execute and you will be transported back to the product detail page for the "Exo Terra Reptile Hiding Cave Small". 
+* Click the "LEAVE A REVIEW" call to action button to go back to the "Review a Product" page. 
+* Hover over the "ADD REVIEW" call to action button to confirm the hover function works. 
+* Click the "ADD REVIEW" call to action button and the focus function will execute, the form won't submit. Instead you will see a prompt saying "Please fill in this field" underneath the "Comment" field.  
+* Add some text to the "Comment field" and click the "ADD REVIEW" call to action button, the form won't submit. Instead you will see a prompt saying "Please fill in this field" underneath the "Rating" field. 
+* Add "-1" in the "Rating" field and click the "ADD REVIEW" call to action button. 
+* The form won't submit, a error toast message will appear on the top right hand corner of the page saying "Please rate product between 0 and 5".
+* Fill out the "Comment" field again and add "20" to the "Rating" field and click the "ADD REVIEW" call to action button. 
+*  The form won't submit, a error toast message will appear on the top right hand corner of the page saying "Please rate product between 0 and 5".
+* Fill out the "Comment" field once more and add a number between 0 and 5 in the "Rating" field and click the "ADD REVIEW" call to action button.
+* The form will submit,  a success toast message will appear on the top right hand corner of the page saying "Success! Review Successfully added!".
+* Scroll down the "Exo Terra Reptile Hiding Cave Small" product detail page. Just below the "KEEP SHOPPING" and "ADD TO CART" call to action buttons you will see the review you just left. You will see your account username, rating out of 5 with star icon, comment from the review, date the review was created, and a date should the review be updated. 
+
+#### Testing Edit a Review Function
+* Load the Website.
+* Firstly you will need to leave a review on a product in order to edit said review. If you are unsure on the process for leaving a review please follow the steps from the **Testing Leaving a Review Function**. 
+* At this point you should be on the "Exo Terra Reptile Hiding Cave Small" product detail page and as you scroll down the page your review will be in the "CUSTOMER REVIEW" section of the product detail page. 
+* Hover over the "EDIT REVIEW" call to action button to confirm the hover function works. 
+* Click the "EDIT REVIEW" call to action button and the focus function should execute and you will be transported to the "Edit Review" page. The form will be pre-filled with the information from the review you are editing. 
+* Hover over the "CANCEL UPDATE" call to action button to confirm the hover function works. 
+* Click the "CANCEL UPDATE" call to action button, and you will be transported back to the product detail page for the "Exo Terra Reptile Hiding Cave Small". 
+* Click the "EDIT REVIEW" call to action button to go back to the "Edit Review" page. 
+*  Amend the text that is already in the "Comment field", and delete the number in the "Rating" field, add "-1" and click the "UPDATE REVIEW" call to action button.
+*  The form won't submit, a error toast message will appear on the top right hand corner of the page saying "Please rate product between 0 and 5". In addition the form will refresh pre-filled with original information from the review. 
+* Amend the text that is already in the "Comment field", and delete the number in the "Rating" field. Then add a number between 0 and 5 and click the "UPDATE REVIEW" call to action button.
+* You will arrive back at the product detail page for the "Exo Terra Reptile Hiding Cave Small". A success toast message will appear on the top right hand corner of the page saying "Success!, Review Successfully Updated!". Scroll down the page to the "CUSTOMER REVIEW" section and you will see the review with the amendments you have just made. You will also notice that the updated date should match the time and date of when you edited the review.  
+
+#### Testing Delete a Review Function
+* Load the Website.
+* Firstly you will need to leave a review on a product in order to delete said review. If you are unsure on the process for leaving a review please follow the steps from the **Testing Leaving a Review Function**. 
+* At this point you should be on the "Exo Terra Reptile Hiding Cave Small" product detail page and as you scroll down the page your review will be in the "CUSTOMER REVIEW" section of the product detail page. 
+* Hover over the "DELETE REVIEW" call to action button to confirm the hover function works. 
+* Click the "DELETE REVIEW" call to action button and the focus function should execute and you will be transported to the "Delete Review" page.
+* Once on the "Delete Review" page, you will see a message warning you that you are about to delete a review, and this is something that can't be undone. Below the message are two call to action buttons one labelled "NO" and the other labelled "YES". 
+* Hover over the "NO" call to action button to confirm the hover function works. 
+* Click the "NO" call to action button and the focus function should execute and you will be transported back to the "Exo Terra Reptile Hiding Cave Small" product detail page. 
+* Scroll back down to the "CUSTOMER REVIEW" section of the product detail page, and click the "DELETE REVIEW" call to action button to get back to the "Delete Review" page. 
+* Click the "YES" call to action button, you will be transported back to the "Exo Terra Reptile Hiding Cave Small" product detail page. 
+* A success toast message will appear on the top right hand corner of the page saying "Success!, Review Successfully Deleted!". Scroll down the page to the "CUSTOMER REVIEW" section and you will see the review has been deleted, and you should see in its place is a message that says "THIS PRODUCT HAS HAD NO REVIEWS". This is because you have deleted the only review left on the "Exo Terra Reptile Hiding Cave Small" product detail page. Below that should be the "LEAVE A REVIEW" call to action button ready for you to leave another review should you choose too.  

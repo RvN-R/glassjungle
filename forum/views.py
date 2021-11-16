@@ -37,7 +37,7 @@ def create_post(request):
                 messages.success(request, 'Build Successfully Shared')
                 return redirect('share_builds')
         except:
-            messages.error(request, 'Max file size is 2mb, please upload a smaller file')
+            messages.error(request, 'Max file size is 2MB, please upload a smaller file')
 
     return render(request, 'forum/create_post.html', context)
 

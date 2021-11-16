@@ -454,7 +454,7 @@ Go back to the website scroll down to the "BACK TO PROFILE" call to action butto
 #### Testing Edit a Review Function
 * Load the Website
 * Firstly you will need to leave a review on a product in order to edit said review. If you are unsure on the process for leaving a review please follow the steps from the **Testing Leaving a Review Function**. 
-* Then log out of your account. If you are unsure how to do this please follow the steps from the **Testing Sign Out Function**.
+* Log out of your account. If you are unsure how to do this please follow the steps from the **Testing Sign Out Function**.
 * Go to the "Exo Terra Reptile Hiding Cave Small" product detail page (as covered in the steps for **Testing Leaving a Review Function**) and scroll down the page. You should see your review in the "CUSTOMER" REVIEW" section of the product detail page. 
 * Now log back into your account, if you are unsure of how to do this please follow the steps from the **Testing Sign In Function**. 
 * Go back to the "Exo Terra Reptile Hiding Cave Small" product detail page (as covered in the steps for **Testing Leaving a Review Function**) and scroll down the page. You should see your review in the "CUSTOMER" REVIEW" section of the product detail page. You should see two new call to action buttons now you are signed in labelled "EDIT REVIEW" and "DELETE REVIEW".  
@@ -463,7 +463,7 @@ Go back to the website scroll down to the "BACK TO PROFILE" call to action butto
 * Hover over the "CANCEL UPDATE" call to action button to confirm the hover function works. 
 * Click the "CANCEL UPDATE" call to action button, and you will be transported back to the product detail page for the "Exo Terra Reptile Hiding Cave Small". 
 * Click the "EDIT REVIEW" call to action button to go back to the "Edit Review" page. 
-*  Amend the text that is already in the "Comment field", and delete the number in the "Rating" field, add "-1" and click the "UPDATE REVIEW" call to action button.
+*  Amend the text that is already in the "Comment" field, and delete the number in the "Rating" field, add "-1" and click the "UPDATE REVIEW" call to action button.
 *  The form won't submit, a error toast message will appear on the top right hand corner of the page saying "Please rate product between 0 and 5". In addition the form will refresh pre-filled with original information from the review. 
 * Amend the text that is already in the "Comment field", and delete the number in the "Rating" field. Then add a number between 0 and 5 and click the "UPDATE REVIEW" call to action button.
 * You will arrive back at the product detail page for the "Exo Terra Reptile Hiding Cave Small". A success toast message will appear on the top right hand corner of the page saying "Success!, Review Successfully Updated!". Scroll down the page to the "CUSTOMER REVIEW" section and you will see the review with the amendments you have just made. You will also notice that the updated date should match the time and date of when you edited the review.  
@@ -483,3 +483,67 @@ Go back to the website scroll down to the "BACK TO PROFILE" call to action butto
 * Scroll back down to the "CUSTOMER REVIEW" section of the product detail page, and click the "DELETE REVIEW" call to action button to get back to the "Delete Review" page. 
 * Click the "YES" call to action button, you will be transported back to the "Exo Terra Reptile Hiding Cave Small" product detail page. 
 * A success toast message will appear on the top right hand corner of the page saying "Success!, Review Successfully Deleted!". Scroll down the page to the "CUSTOMER REVIEW" section and you will see the review has been deleted, and you should see in its place is a message that says "THIS PRODUCT HAS HAD NO REVIEWS". This is because you have deleted the only review left on the "Exo Terra Reptile Hiding Cave Small" product detail page. Below that should be the "LEAVE A REVIEW" call to action button ready for you to leave another review should you choose too.  
+
+### Share Your Builds
+#### Testing Creating a Post Function
+* Load the Website.
+* Make sure you are logged out of your account. If you are unsure how to do this please follow the steps from the **Testing Sign Out Function**.
+* At this point you should find yourself on the home page.
+* Go up to the navigation bar and click the "SHARE YOUR BUILDS" link. 
+* You will have been transported to the "Share Your Builds" page, as you scroll up and down the page you will see various posts of users sharing there own Terrarium builds. 
+* Now log in to your account, or if you have yet to register an account please register an account. If you are unsure how to do either of these processes please follow the manual steps for **Testing Sign In Function** or **Testing Sign Up Function**.
+* Once signed in you should be back at the home page, go up to the navigation bar and click the "SHARE YOUR BUILDS" link. 
+* Scroll to the bottom of the page and you should see a "CLICK TO SHARE YOUR BUILDS!" call to action button. Hover over this "CLICK TO SHARE YOUR BUILDS!" call to action button to confirm the hover function is working. 
+* Click the "CLICK TO SHARE YOUR BUILDS!" call to action button, the focus function should execute and you should be transported to the "create post" page. 
+* Scroll down to the bottom of the page, hover over the "CANCEL" call to action button to confirm the hover function is working correctly.
+* Click the "CANCEL" call to action button, you will be transported back to the "Share Your Builds" page. 
+*  Scroll back to the bottom of the page and click the "CLICK TO SHARE YOUR BUILDS!" call to action button.
+* Now back on the "create post" page, scroll down the page and hover over the "SUBMIT POST" call to action button to confirm whether the hover function is working. 
+*  Click the "SUBMIT POST" call to action button, the form won't submit. Instead you will see a prompt saying "Please fill in this field" underneath the "Title" field.
+* Input some text into the "Title" field and click the "SUBMIT POST" call to action button, the form won't submit. Instead you will see a prompt saying "Please fill in this field" underneath the "Comment " field.
+* Input some text into the "Comment" field and click the "SUBMIT POST" call to action button, the form won't submit. Instead you will see a prompt saying "Please fill in this field" underneath the "Image" field.
+* In order to test the image file validator click the "Choose File" call to action button, you will only be able to upload an image file. Upload an image from your computer thats larger than 2MB. Once selected click the "SUBMIT POST" call to action button. 
+* The form will refresh but won't submit, an error toast message will appear on the top right hand corner of the page saying "Max file size is 2mb, please upload a smaller file".
+* Input text into both the "Title" and "Comment" fields.
+* Click the "Choose file" call to action button, this time choose an image file from your computer that's smaller than 2MB. Once selected click the "SUBMIT POST" call to action button.
+* The form has submitted and you have been transported back to the "Share Your Builds" page. A success toast message will appear on the top right hand corner of the page saying "Success! Build Successfully Shared"
+* Scroll down the page and your post will appear in a card, starting with the post image, followed by the title comment, date of when the post was created and date when it was updated.  
+
+#### Testing Editing a Post Function
+* Load the Website.
+* Firstly you will need to leave a post on the "Share Your Builds" page in order to edit said post. If you are unsure on the process for leaving a review please follow the steps from the **Testing Creating a Post Function**.
+* Log out of your account. If you are unsure how to do this please follow the steps from the **Testing Sign Out Function**.
+* Go up to the navigation bar and click the "SHARE YOUR BUILDS" link. 
+* You will have been transported to the "Share Your Builds" page, as you scroll up and down the page you will see you post that you have created if you have followed the steps from the **Testing Creating a Post Function**.
+* Now log in to your account, or if you have yet to register an account please register an account. If you are unsure how to do either of these processes please follow the manual steps for **Testing Sign In Function** or **Testing Sign Up Function**.
+* Once signed in you should be back at the home page, go up to the navigation bar and click the "SHARE YOUR BUILDS" link. 
+* Scroll back to your post and you will see You should see two new call to action buttons now you are signed in labelled "EDIT POST" and "DELETE POST".
+* Hover over the "EDIT POST" call to action button to confirm the hover function works.
+* Click the "EDIT POST" call to action button and the focus function should execute and you will be transported to the "Edit Post" page. A alert toast message will appear on the top right hand corner of the page saying "Alert! You are editing POST TITLE" The form will be pre-filled with the information from the post you are editing. 
+* Hover over the "CANCEL" call to action button to confirm the hover function works.
+* Click the "CANCEL" call to action button, and you will be transported back to "Share your Builds" page.
+* Click the "EDIT POST" call to action button to go back to the "Edit Post" page.
+* Amend the text that is already in the "Title" and "Comment" field.
+* In order to test the image file validator click the "Choose File" call to action button, you will only be able to upload an image file. Upload an image from your computer thats larger than 2MB. Once selected click the "EDIT POST" call to action button. The form will refresh with the all of the fields autofilled with information from the original post. An error toast message will appear on the top right hand corner of the page saying "Failed to update post. Please ensure the form is valid". In addition an error message will appear underneath the "Image" field saying "Max file size is 2.0MB.
+* A message saying "No file chosen" will be next to the "Choose file", click the "Choose file" call to action button and select an image that is less than 2MB. 
+* Click the "EDIT POST" call to action button. 
+*  The form has submitted and you have been transported back to the "Share Your Builds" page. A success toast message will appear on the top right hand corner of the page saying "Success! Successfully updated post!"
+* Scroll down the page and your post will appear in a card, starting with the post image, followed by the title, comment, date of when the post was created and date when it was updated. 
+
+#### Testing Deleting a Post Function
+* Load the Website.
+* Firstly you will need to creating a on the "Share Your Builds" page in order to delete said post. If you are unsure on the process for creating a post please follow the steps from the **Testing Creating a Post Function**.
+* Log out of your account. If you are unsure how to do this please follow the steps from the **Testing Sign Out Function**.
+* Go up to the navigation bar and click the "SHARE YOUR BUILDS" link. 
+* You will have been transported to the "Share Your Builds" page, as you scroll up and down the page you will see the post that you have created if you have followed the steps from the **Testing Creating a Post Function**.
+* Now log in to your account, or if you have yet to register an account please register an account. If you are unsure how to do either of these processes please follow the manual steps for **Testing Sign In Function** or **Testing Sign Up Function**.
+* Once signed in you should be back at the home page, go up to the navigation bar and click the "SHARE YOUR BUILDS" link. 
+* Scroll back to your post and you will see two new call to action buttons now you are signed in labelled "EDIT POST" and "DELETE POST".
+* Hover over the "DELETE POST" call to action button to confirm the hover function works.
+* Click the "DELETE POST" call to action button and the focus function should execute and you will be transported to the "Delete Post" page.
+* Once on the "Delete Post" page, you will see a message warning you that you are about to delete a post, and this is something that can't be undone. Below the message are two call to action buttons one labelled "NO" and the other labelled "YES".
+* Hover over the "NO" call to action button to confirm the hover function works.
+* Click the "NO" call to action button and the focus function should execute and you will be transported back to the "Share Your Builds" page.
+* Scroll back down to your post and click the "DELETE POST" call to action button to get back to the "Delete Post" page.
+* Click the "YES" call to action button, you will be transported back to the "Share Your Builds" page.
+* A success toast message will appear on the top right hand corner of the page saying "Success!, Successfully deleted post!". Scroll down the page and you will see the post has been deleted. 

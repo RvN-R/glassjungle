@@ -310,3 +310,91 @@ To conduct the following tests an active email address will be required. Success
 * A sync icon will appear spinning on the screen as the form is processed. You will arrive at the checkout success page, thanking you for the order and telling you that a confirmation email will be sent to the email you used to process the payment. 
 * A success toast message will appear on the top right hand corner of the page saying "Success!, Order successfully purchased! Your order number is ORDER NUMBER. A confirmation email will be sent to EMAIL ADDRESS".
 * Go to the inbox of the email address you used in this test, you will have received a confirmation email confirming the purchase has been successful and is complete. 
+* Go back to the website scroll down to the "BACK TO HOME" call to action button, hover over it to confirm the hover function is working. 
+* Click the "BACK TO HOME" call to action button, confirming focus function works and you will be taken to the home page. 
+
+#### Testing Checkout with Checkout Log In Function
+* Load Website
+* Make sure you are logged out, if you are unsure how to do that search for the  manual checks associated with logging out of your account within this document.
+* Follow all of the steps found in **Testing Adding Items to Cart**.
+* At this point you should be on the cart page and have some items in your cart.
+* Scroll down the page and hover over the "SECURE CHECKOUT" call to action button, to confirm the hover function works. 
+* Click the "SECURE CHECKOUT" call to action button, the focus function should work and you should be taken to the checkout page. 
+* On the right hand side of the page you should see a order summary matching the cart summary on the previous cart page. On the left hand side of the page will be the delivery details.
+* Scroll down the page and just below the "Delivery" fields should be a link that says "Login", hover over that link to make sure the hover function works. 
+* Click "Login" and you should be taken to the "Sign In" page. 
+* Fill out the "Username or e-mail" field with the email address you have already used to register, and fill out "Password" field with the password used to register that account. 
+* You will be taken back to the home page, this time you are logged in. On the navigation bar "Welcome USERNAME!" will have appeared next to the "My Account" icon confirming you have successfully logged in. A success toast message will also appear on the top right hand corner of the page saying "Success!". You will also see an summary of your cart, image, name and total price of all the products you have added to the cart up until this point. The cart icon will still be dark green, but the figure underneath it will be the cart total.
+* Scroll up to the toast and scroll over the "GO TO CART" call to action button and confirm the hover function works. 
+* Click the "GO TO CART" call to action button and you will be taken to the cart page. 
+* Scroll down the page click the "SECURE CHECKOUT" call to action button, the focus function should work and you should be taken to the checkout page. 
+* Having just logged in, the "E-mail" field on the left hand side of the checkout page in the details section will be pre-filled with the email address associated with the account you just logged into. 
+* Fill out the delivery fields as you did during the **Testing Checkout Function Not Logged In** manual tests. 
+* Just below the delivery fields there is a "Save this delivery information to my profile" checkbox. Make sure this checkbox is clicked to test this function. 
+* Scroll down to the payment field and fill it out with the following `4242 4242 4242 4242 04/24 242 42424` and then click the "COMPLETE ORDER" call to action at the bottom of the page. 
+* A sync icon will appear spinning on the screen as the form is processed. You will arrive at the checkout success page, thanking you for the order and telling you that a confirmation email will be sent to the email you used to process the payment. In addition a complete summary of your order will appear in a table just below this message. 
+* A success toast message will appear on the top right hand corner of the page saying "Success!, Order successfully purchased! Your order number is ORDER NUMBER. A confirmation email will be sent to EMAIL ADDRESS".
+* Go to the inbox of the email address you used in this test, you will have received a confirmation email confirming the purchase has been successful and is complete. 
+* Go back to the website scroll down to the "BACK TO PROFILE" call to action button, hover over it to confirm the hover function is working. 
+* Click the "BACK TO PROFILE" call to action button, the focus function will work and you will be taken to your accounts profile page. 
+* On the page you will see the pages title saying "My Profile" denoting that you are on your profile page. 
+* On the left hand side of the profile page the fields within the "Default Delivery Information" section will be pre-filled with the information you just filled out during the transaction above, this confirms the "Save this delivery information to my profile" function is working. 
+* On the right hand side of the profile page is the "Order History" section, and the transaction you just placed should appear, with the date, items from the order and the order total. 
+* Hover over the order number for this order to confirm the hover function works. 
+* Click the order number and you will be taken to the success page for that order. 
+* Scroll down and click the "BACK TO PROFILE" call to action button to go back to your profile. 
+
+#### Testing Checkout with Checkout Register Function
+* Load Website
+* Make sure you are logged out, if you are unsure how to do that search for the  manual checks associated with logging out of your account within this document.
+* Follow all of the steps found in **Testing Adding Items to Cart**.
+* At this point you should be on the cart page and have some items in your cart.
+* Scroll down the page and hover over the "SECURE CHECKOUT" call to action button, to confirm the hover function works. 
+* Click the "SECURE CHECKOUT" call to action button, the focus function should work and you should be taken to the checkout page. 
+* On the right hand side of the page you should see a order summary matching the cart summary on the previous cart page. On the left hand side of the page will be the delivery details.
+* Scroll down the page and just below the "Delivery" fields should be a link that says "Create an account", hover over that link to make sure the hover function works. 
+* Click "Create an account" and you should be taken to the "Sign Up" page. 
+* Follow the manual tests for **Testing Sign Up Function** to setup a new account. 
+* Once you have successfully registered and signed into that account you will be taken back to the home page. On the navigation bar "Welcome USERNAME!" will have appeared next to the "My Account" icon confirming you have successfully logged in. A success toast message will also appear on the top right hand corner of the page saying "Success!". You will also see an summary of your cart, image, name and total price of all the products you have added to the cart up until this point. The cart icon will still be dark green, but the figure underneath it will be the cart total.
+* Scroll up to the toast and scroll over the "GO TO CART" call to action button and confirm the hover function works. 
+* Click the "GO TO CART" call to action button and you will be taken to the cart page. 
+* Scroll down the page click the "SECURE CHECKOUT" call to action button, the focus function should work and you should be taken to the checkout page. 
+* Having just logged in, the "E-mail" field on the left hand side of the checkout page in the details section will be pre-filled with the email address associated with the account you just logged into. 
+* Fill out the delivery fields as you did during the **Testing Checkout Function Not Logged In** manual tests. 
+* Just below the delivery fields there is a "Save this delivery information to my profile" checkbox. Make sure this checkbox is clicked to test this function. 
+* Scroll down to the payment field and fill it out with the following `4242 4242 4242 4242 04/24 242 42424` and then click the "COMPLETE ORDER" call to action at the bottom of the page. 
+* A sync icon will appear spinning on the screen as the form is processed. You will arrive at the checkout success page, thanking you for the order and telling you that a confirmation email will be sent to the email you used to process the payment. In addition a complete summary of your order will appear in a table just below this message. 
+* A success toast message will appear on the top right hand corner of the page saying "Success!, Order successfully purchased! Your order number is ORDER NUMBER. A confirmation email will be sent to EMAIL ADDRESS".
+* Go to the inbox of the email address you used in this test, you will have received a confirmation email confirming the purchase has been successful and is complete. 
+* Go back to the website scroll down to the "BACK TO PROFILE" call to action button, hover over it to confirm the hover function is working. 
+* Click the "BACK TO PROFILE" call to action button, the focus function will work and you will be taken to your accounts profile page. 
+* On the page you will see the pages title saying "My Profile" denoting that you are on your profile page. 
+* On the left hand side of the profile page the fields within the "Default Delivery Information" section will be pre-filled with the information you just filled out during the transaction above, this confirms the "Save this delivery information to my profile" function is working. 
+* On the right hand side of the profile page is the "Order History" section, and the transaction you just placed should appear, with the date, items from the order and the order total. 
+* Hover over the order number for this order to confirm the hover function works. 
+* Click the order number and you will be taken to the success page for that order. 
+* Scroll down and click the "BACK TO PROFILE" call to action button to go back to your profile. 
+
+#### Testing Checkout Function Logged In
+* Load Website
+* Make sure you are logged in to you account. If you are unsure of how to do that search for the  manual checks associated with logging into your account within this document.
+* Follow all of the steps found in **Testing Adding Items to Cart**.
+* At this point you should be on the cart page and have some items in your cart.
+* Scroll down the page and hover over the "SECURE CHECKOUT" call to action button, to confirm the hover function works. 
+* Click the "SECURE CHECKOUT" call to action button, the focus function should work and you should be taken to the checkout page. 
+* On the right hand side of the page you should see a order summary matching the cart summary on the previous cart page. On the left hand side of the page will be the delivery details. The delivery details field will be pre filled with the "Default Delivery Information" from your profile. In addition the "Email" field will be pre-filled with the email address associated with the account. 
+* Fill out the "Full Name" field. 
+* Uncheck the "Save this delivery information to my profile" checkbox. 
+* Input `1234 1234 1234 1234` into to "Payment" field in order to test the built in Stripe validation. An error message should appear saying "Your card number is invalid"
+* Input `4242 4242 4242 4242 04/24 242 42424` into the "Payment" field and click the "COMPLETE ORDER" call to action at the bottom of the page. 
+* A sync icon will appear spinning on the screen as the form is processed. You will arrive at the checkout success page, thanking you for the order and telling you that a confirmation email will be sent to the email you used to process the payment. In addition a complete summary of your order will appear in a table just below this message. 
+* A success toast message will appear on the top right hand corner of the page saying "Success!, Order successfully purchased! Your order number is ORDER NUMBER. A confirmation email will be sent to EMAIL ADDRESS".
+* Go to the inbox of the email address you used in this test, you will have received a confirmation email confirming the purchase has been successful and is complete. 
+Go back to the website scroll down to the "BACK TO PROFILE" call to action button, hover over it to confirm the hover function is working. 
+* Click the "BACK TO PROFILE" call to action button, the focus function will work and you will be taken to your accounts profile page. 
+* On the page you will see the pages title saying "My Profile" denoting that you are on your profile page. 
+* On the left hand side of the profile page the fields within the "Default Delivery Information" section will be pre-filled with the last updated delivery information. Because you unchecked the "Save this delivery information to my profile" the the address information won't have been updated from the latest transaction. 
+* On the right hand side of the profile page is the "Order History" section, and the transaction you just placed should appear, with the date, items from the order and the order total. 
+* Hover over the order number for this order to confirm the hover function works. 
+* Click the order number and you will be taken to the success page for that order. 
+* Scroll down and click the "BACK TO PROFILE" call to action button to go back to your profile. 

@@ -1,3 +1,4 @@
+/*Widely used CSS across the Site*/
 html{
     height: 100%;
 }
@@ -29,7 +30,6 @@ body{
     background-color: rgba(0, 0, 0, 0.50);
 }
 
-
 .card{
     background-color: rgba(0, 0, 0, 0.75);
     color: white;
@@ -40,14 +40,20 @@ body{
     color: #02661D !important;
 }
 
-a.text-info:focus
+a.text-info:focus,
 a.text-info:hover {
-    color: red ;
+    color: #9CC24D !important; 
 }
 
+.text-black {
+    color: #000 !important;
+}
+
+.text-white {
+    color: white !important;
+}
 
 /* Navigation*/
-
 
 .dropdown-item:active{
     color: #fff;
@@ -55,8 +61,8 @@ a.text-info:hover {
     background-color: #9CC24D;
 }
 
-
-/*Taken inspiration from Bootstrap Buttons*/
+/*Buttons*/
+/*Below button has taken inspiration from Bootstrap Buttons*/
 .dark-green-btn{
     color: #fff;
     background-color: #114634;
@@ -75,34 +81,6 @@ a.text-info:hover {
     box-shadow: 0 0 0 0.2rem rgb(156 194 77 / 50%);
 }
 
-
-/*Terrarium Accessories page*/
-
-.accessories-img{
-    width: 100%;
-    height: 270px;
-    object-fit: contain;
-}
-
-/*Product Details page*/
-/* .keep-shopping-btn{
-    color:black;
-    background-color: #9CC24D;
-    border-color: #9CC24D;
-    
-}
-.keep-shopping-btn:hover{
-    color: white;
-    background-color: #02661D;
-    border-color: #02661D;
-    text-decoration: none;
-}
-
-.keep-shopping-btn:focus{
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgb(156 194 77 / 50%);
-} */
-
 .bright-green-btn{
     color:black;
     background-color: #9CC24D;
@@ -119,6 +97,14 @@ a.text-info:hover {
 .bright-green-btn:focus{
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgb(156 194 77 / 50%);
+}
+
+/*Terrarium Accessories page*/
+
+.accessories-img{
+    width: 100%;
+    height: 270px;
+    object-fit: contain;
 }
 
 .product-detail-img{
@@ -179,7 +165,8 @@ a.text-info:hover {
     padding-left: 0px;
 }
 
-/* from Bulma */
+/*Icons used across the site*/
+/* Below CSS for .icon took inspiration from the course content */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -217,13 +204,7 @@ a.text-info:hover {
     color: white;
 }
 
-.text-black {
-    color: #000 !important;
-}
 
-.text-white {
-    color: white !important;
-}
 
 .border-black {
     border: 1px solid black !important;
@@ -252,9 +233,6 @@ input[name='q']::placeholder {
     overflow: visible;
 }
 
-/* .bg-warning{
-    background-color: #9CC24D;
-} */
 
 /*Toast*/
 .toast-capper {
@@ -316,20 +294,9 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
-
-
-/* bag.html */
+/* Bag Page */
 .update-link, .remove-item{
     cursor: pointer;
-}
-
-/* -------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
 }
 
 /* Allauth form formatting */
@@ -399,6 +366,15 @@ input[name='q']::placeholder {
     color: white;
 }
 
+/* Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
@@ -426,6 +402,20 @@ input[name='q']::placeholder {
 
 }
 
+@media only screen and  (max-width: 768px) {
+
+    button:focus, 
+    .navbar-toggler:focus {
+        outline: 5px auto #02661D !important
+      }
+
+    a.text-primary:focus,
+    a.text-primary:hover {
+        color: #9CC24D !important; 
+    }
+    
+}
+
 @media only screen and  (max-width: 425px) {
 
     .index-nav-button-outter,
@@ -447,6 +437,5 @@ input[name='q']::placeholder {
     .share-builds-btn-container{
         padding-left: 0px;
     }
-    
     
 }

@@ -116,7 +116,7 @@ a.text-info:hover {
     background: #222;
     color: white;
 }
-/*Terrarium Accessories page*/
+/*Product pages*/
 
 .accessories-img{
     width: 100%;
@@ -424,5 +424,9 @@ input[name='q']::placeholder {
     .share-builds-btn-container{
         padding-left: 0px;
     }
-    
+
+    .product-img-div{
+        padding-right: 5px !important;
+        padding-left: 5px !important;
+    }
 }

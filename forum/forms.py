@@ -7,4 +7,3 @@ class CreatePostForm(forms.ModelForm):
     class Meta:
         model = Forum
         exclude = ('poster',)
-

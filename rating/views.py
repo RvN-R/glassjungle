@@ -1,7 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
-from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from django.core.validators import ValidationError
 from django.contrib import messages
 from .models import Rating
 from .forms import CreateRatingForm
@@ -15,11 +13,13 @@ def create_rating(request, product_id):
     """A view to return create_rating.html"""
     # product varible returns the product that you want to add a rating too.
     # user variable returns the request.user converted to a string
-    # exisiting_user returns a bool if user has left rating for product with product_id
+    # exisiting_user returns a bool
+    # if user has left rating for product with product_id
     # form variable returns CreateRatingForm from form.py
     product = get_object_or_404(Product, pk=product_id)
     user = request.user
-    exisiting_user = bool(Rating.objects.all().filter(poster=user).filter(product_id=product))
+    exisiting_user = bool(
+        Rating.objects.all().filter(poster=user).filter(product_id=product))
     form = CreateRatingForm()
     context = {
         'form': form,
@@ -27,7 +27,8 @@ def create_rating(request, product_id):
         }
 
     if exisiting_user is True:
-        messages.warning(request, "Sorry, can't review a product more than once")
+        messages.warning(
+            request, "Sorry, can't review a product more than once")
         return redirect(reverse('product_detail', args=[product.id]))
     else:
         if request.method == 'POST':
@@ -74,17 +75,6 @@ def update_rating(request, rating_id):
                 return redirect(reverse('product_detail', args=[product.id]))
             else:
                 messages.error(request, "Please rate product between 0 and 5")
-
-        # try:
-        #     form = CreateRatingForm(request.POST, instance=rating)
-        #     if form.is_valid():
-        #         form.save()
-        #         messages.success(request, 'Rating Successfully Updated!')
-        #         return redirect(reverse('product_detail', args=[product.id]))
-        # except ValidationError as e:
-        #     print('recieved validation error')
-        #     print(ValidationError)
-        #     messages.error(request, "Please rate product between 0 and 5")
 
     else:
         messages.warning(request, 'Not allowed to update other users reviews!')

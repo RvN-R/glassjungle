@@ -12,4 +12,5 @@ class RatingAdmin(admin.ModelAdmin):
         'created',
     )
 
+
 admin.site.register(Rating, RatingAdmin)

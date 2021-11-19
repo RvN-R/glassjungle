@@ -1,3 +1,18 @@
+# Testing
+<a href="#">Main README.md</a>
+
+I used <a href='https://validator.w3.org/'>Markup Validator Service</a>, <a href="https://jigsaw.w3.org/css-validator/">CSS Validator</a> and <a href='http://pep8online.com/'>PEP8 Online</a> to check the HTML, CSS and Python  I have written for any errors. Those areas that flagged errors I amended the code to make sure it met the validators requirements. 
+
+I used Chrome's inspect feature Lighthouse to check my sites performance on both desktops and mobile devices. 
+
+<img class="text-center" src="testing_assets/testing_images/lighthouse_desktop.png">
+
+As you can see from the image the desktop results scored well with a 93 on Performance and 100 on Accessibility. Best Practices scored 87 which is still a good score. Lighthouse has made comment to the fact it suggests I have used front-end Javascript libraries with known security vulnerabilities. When I investigated this further I leaned its making reference to JQuery. Lighthouse suggests the severity is medium, so further investigation on how to combat this in the future is needed. SEO scored 89 so little higher than Best Practices. However, should I want to improve this score I could add meta descriptions to the site. This will make the site appear more relevant and should increase the sites search traffic on search engines. 
+
+<img class="text-center" src="testing_assets/testing_images/lighthouse_mobile.png">
+
+As you can see from the mobile results, the site scored well with 100 Accessibility and 91 on SEO. Scored slightly low with 85 on performance and that's down to the large background image I've used across the site. It effects the load up time and according to Lighthouse makes the site sluggish on some mobile devices with limited processing. To improve this score in the future I could look to compress the image file, making it load faster and improve the sites performance. Finally the site scored 87 on Best Practices, once again Lighthouse made reference to the same Javascript libraries security vulnerabilities that it reported in the Desktop test. Once again its worth investigating this to try and avoid any issues moving forward. s
+
 ## Testing client Requirements featured in README
 * **We need a platform that aesthetics connect with the companies key demographic**
 I did a great deal of research into the clients demographic by visiting sites of there competitors to see how they connect with the demographic. From the research I found that the demographic wanted to connect with nature, and recreate that in there living spaces. I felt that using a high resolution image of a Rainforest as the body's background throughout the site would tap into that need of connection to nature. I then used a colour palette across the site that complimented that background image. 
@@ -79,7 +94,7 @@ Providing a user has registered an account once they have logged in if they go t
 * Assuming the user in logged in they can go up to the "My Account" icon and once clicked a drop down will appear. One of the options in the drop down menu  will be "My Profile", which the user needs to click. Once clicked they will be transported to there profile page. On the left hand side of the page will be their "Default Delivery Information". If they have made a transaction on the site then the delivery information they have used will fill this form. Alternatively, they form will be empty.  If they fill out the form or amend the information already present, click the "UPDATE INFORMATION" button then their "Default Delivery Information" will be updated.
 
 ## Manually Testing Website Features
-To conduct the following tests an active email address will be required. Successful functions of a number of from's across this site will require you to follow links you have been emailed.  I would suggest either registering a new email address for these tests via gmail, or use <a href="https://temp-mail.org/en/">Temp Mail </a>
+To conduct the following tests an active email address will be required. A number of forms across the site once successfully submited will require you to follow links the site has emailed you. I would suggest either registering a new email address for these tests via gmail, or use <a href="https://temp-mail.org/en/">Temp Mail </a>
 ### Navigation
 * Load the Website. 
 * Right click and select inspection. 

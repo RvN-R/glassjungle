@@ -10,10 +10,10 @@ class TestCreateRatingForm(TestCase):
         )
         self.assertTrue(form.is_valid())
 
-    def test_comment_error_message_returned(self):
+    def test_comment_error_returned(self):
         form = CreateRatingForm(
             {"comment": "", "rating": "4"}
         )
         self.assertFalse(form.is_valid())
         self.assertIn('comment', form.errors.keys())
-        self.assertEqual(form.errors['comment'], 'Please fill in this field.')
+        

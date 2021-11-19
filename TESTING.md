@@ -93,6 +93,13 @@ Providing a user has registered an account once they have logged in if they go t
 4. <b>As a Frequent User, I want to be able to edit or amend by default delivery information on my profile.</b>
 * Assuming the user in logged in they can go up to the "My Account" icon and once clicked a drop down will appear. One of the options in the drop down menu  will be "My Profile", which the user needs to click. Once clicked they will be transported to there profile page. On the left hand side of the page will be their "Default Delivery Information". If they have made a transaction on the site then the delivery information they have used will fill this form. Alternatively, they form will be empty.  If they fill out the form or amend the information already present, click the "UPDATE INFORMATION" button then their "Default Delivery Information" will be updated.
 
+## Unit Testing Website Features
+For extensive testing of the websites features please visit the Manually Testing Website Features section of this document. However, I wanted to display some unit testing using Django's built in testing facility. Given the time constraints for this project I elected not to concentrate on this method of testing, as it can become extremely extensive. Instead I chose to focus on writing manual tests for this TESTING.md document as I felt it a better method of testing for the functions I have build for this project.
+
+Type `python3 manage.py test rating` into the terminal, it will return the results for two tests that I have written. These tests can be found within `test.py` within the rating app of my Glass Jungle project. The first test entitled "test_create_rating_form_valid", tests whether the form submits properly when both the comment and rating fields are filled out correcting. The second test entitled "test_comment_error_returned" tests to see whether the form returns an error when the comment field hasn't been filled out and the form has been submitted. You should see `..` in the terminal denoting that both tests have come back successful. 
+
+Once again please read the Manually Testing Website Features section within this document in order to test the websites features extensively. 
+
 ## Manually Testing Website Features
 To conduct the following tests an active email address will be required. A number of forms across the site once successfully submited will require you to follow links the site has emailed you. I would suggest either registering a new email address for these tests via gmail, or use <a href="https://temp-mail.org/en/">Temp Mail </a>
 ### Navigation
@@ -562,3 +569,25 @@ Go back to the website scroll down to the "BACK TO PROFILE" call to action butto
 * Scroll back down to your post and click the "DELETE POST" call to action button to get back to the "Delete Post" page.
 * Click the "YES" call to action button, you will be transported back to the "Share Your Builds" page.
 * A success toast message will appear on the top right hand corner of the page saying "Success!, Successfully deleted post!". Scroll down the page and you will see the post has been deleted. 
+
+## Further Testing
+* I've views this website on various devices including iPhone 11, iPad Pro, Microsoft Surface, iMac Pro, Dell Latitude 5410 and Sony Xperia Android Phone. With no report issues. 
+
+* I completed the manual testing steps mentioned above on various browsers, including Safari, Edge, Chrome and Firefox with no issues flagged. 
+
+* I sent a link of the website family and friends for them to check over the site. It was reported that the background image on the sites body was slow to load. 
+
+## Known Bugs 
+To the average user this isn't a bug, however its something that I noticed and wanted to comment on. When a user try's to upload an image larger than 2MB using the "Create Post" form on the "Share Your Builds" section of the site. The form won't submit. Instead an error message will appear prompting them to upload a smaller image. This form of validation is prevalent whether a user attempts to upload a large image when creating a post, or amending an existing post on the "Share Your Builds" section of the site. However, the messages they receive aren't identical. Below is a screen shot of each message: 
+
+<img src="testing_assets/testing_images/create_post_error_message.png">
+<p><i>create post page error messages</i></p>
+
+<img src="testing_assets/testing_images/edit_post_error_message.png">
+<p><i>edit post page error messages</i></p>
+
+As you can see the error message and toast error message seen on the "Edit Post" page is different to that of the error message and toast error message seen on the "Create Post" page. Both forms are submitting to the same "Forum" models in the `models.py` within the forum app of my project. Within this model I have imported ValidationError from django.core.expections, and I have written a function which returns an error message underneath the image field of the form saying, "Max file size is 2MB" should someone attempt to save a image file larger than that. In addition it will prevent the form from submitting, and then within the `views.py` in the forum app if the form isn't valid a error toast message appears saying "Failed to update post. Please ensure the form is valid. 
+
+So why aren't both forms showing the same error messages when the user attempts to submit both forms with large file images? The `create_post` function in the `views.py` in the forum app saves the form differently to the  `edit_post` function. This is because I had to adopt a different method of saving the forms to the database. I didn't want all of the fields from the "Forum" models in the `models.py` to be rendered in the form on the "Edit Post" page. I want the users to submit information for the "title", "comment" and "image" fields of the "Forum" models. However if I try and save that to my models an error appears. This is due to the fact I am not saving information to all of the fields featured in the "Forum" models. I want the "poster" fields value to be the ID of the user who is logged in. The only way I could devise to achieve this was prevent the information from the form from being uploaded to the model when the form is valid. Instead I allocate that result to a variable called "post". I then update the "post" variable and tell it that I want the "poster" fields value to be the ID of the user who is logged in. I then save the variable "post" and it is then uploaded to the database. I am able to save the contents of the form successfully, but this prevents the ValidationError from appearing as you would expect, should a user attempt to upload a large image. As.a result I had to adopt a Try and Except statement within the `create_post` function. If the form isn't valid then an error toast appears saying "Max file size is 2MB, please upload smaller file". 
+
+I suspect had I not used Crispy Forms then potentially I wouldn't of had to adopt a different approach for the `create_post` function to that of the one used for the `edit_post` function. However, whats important is the form doesn't allow for large files to be uploaded, and an error message (although not aesthetically identical) appears to notify the user of there mistake and how to submit the form correctly. 

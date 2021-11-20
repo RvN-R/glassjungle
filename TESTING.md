@@ -14,7 +14,7 @@ As you can see from the image the desktop results scored well with a 93 on Perfo
 As you can see from the mobile results, the site scored well with 100 Accessibility and 91 on SEO. Scored slightly low with 85 on performance and that's down to the large background image I've used across the site. It effects the load up time and according to Lighthouse makes the site sluggish on some mobile devices with limited processing. To improve this score in the future I could look to compress the image file, making it load faster and improve the sites performance. Finally the site scored 87 on Best Practices, once again Lighthouse made reference to the same Javascript libraries security vulnerabilities that it reported in the Desktop test. Once again its worth investigating this to try and avoid any issues moving forward. s
 
 ## Testing client Requirements featured in README
-* **We need a platform that aesthetics connect with the companies key demographic**
+* **We need the platforms aesthetics to connect with the companies key demographic**
 I did a great deal of research into the clients demographic by visiting sites of there competitors to see how they connect with the demographic. From the research I found that the demographic wanted to connect with nature, and recreate that in there living spaces. I felt that using a high resolution image of a Rainforest as the body's background throughout the site would tap into that need of connection to nature. I then used a colour palette across the site that complimented that background image. 
 
 * **We need a platform that succinctly explains who we are and the function of the company.**
@@ -29,7 +29,7 @@ There are a number of ways for the user to register an account on the site. I've
 * **We need a platform that allows those who have registered an account to log in and log out freely**
 There are a number of ways for a user who has already registered to log into and log out of their account. Firstly, their is a link on the home page that directs those who have registered an account to log in. In addition if a user has yet to log in then the "My Account" link on the top right hand corner of the navigation bar will have "Log In" in its drop down. If the user is logged in and wants to log out then they can go back to the "My Account" link on the top right hand corner of the navigation bar. In its drop down menu they will see "Log Out" once clicked they will be asked if they want to log out, once confirmed a success toast message will appear just below the right hand corner of the navigation bar confirming the user has successfully logged out. 
 
-* **We need a platform that allows those who have registered to review products.**
+* **We need a platform that allows those who have registered to leave reviews of products.**
 I've created a function which will allow those users who have registered an account to leave a review with a rating on a product. They will be prevented from leaving more than one review, but they will be able to edit or delete said review. 
 
 * **We need a platform that allows those who have registered to share an image and a description of there own terrarium builds**
@@ -38,7 +38,7 @@ I've created a a feature of the site called "Share Your Builds", which allows th
 * **We need a platform that allows users to purchase product**
 I've built a number of apps within the project that allows registered and non registered users to view all of the product avalaible on the site, add product they want to purchase to a cart, amend that cart, progress the cart to the checkout and purchase and place an order for those items. 
 
-* **We need a platform that notifies users who have registered an account to document there previous purchase history.**
+* **We need a platform that notifies registered users of their previous purchase history.**
 Providing a user has registered an account once they have logged in if they go to the "My Account" link on the top right hand corner of the navigation bar and click the icon the drop down should appear with "Profile" in it. The user can click the "Profile" link and be transported to their Profile page. The page will display there shipping information on left hand side (that can be amended) and their purchasing history on the right. They can click any order number and that will open a summary of the order. However, the user has to purchase product logged into there account, if they aren't logged in when they purchase then that purchase won't appear in there history. 
 
 ## Testing User Stories from UX section in README
@@ -74,7 +74,7 @@ Providing a user has registered an account once they have logged in if they go t
 4. <b>As a Returning Visitor, I want to be able to leave a review on a product easily.</b>
 * Assuming the user is logged in they can leave a review on a product relatively easy. Quickest route to leaving a review is  clicking one of the three large buttons on the home page, that have the titles "Empty Terrariums", "Full Terrariums" and "Terrarium Accessories". By clicking one of these call to action buttons the user will be transported to the product category page associated with that button. They can click on the image of one of the products that catches there interest, transporting them to that products product detail page. Once there they can scroll down to the bottom of the page to the "Customer Review" section. They can click the "LEAVE A REVIEW" button. Providing they haven't already left a review they will be able to fill out the review form. Providing they have filled out the form correctly once they click "ADD REVIEW" then the review is uploaded to that product.  
 
-5. <b>As a Returning Visitor, I want to be able to leave a post on the Share Your Builds Section of the site easily.</b>
+5. <b>As a Returning Visitor, I want to be able to leave a post on the community section of the site easily.</b>
 * I wanted to allow users with registered accounts to post on the Share Your Builds section of the site. No matter where the user is on the site a link to the "Share Your Builds" section appears on the navigation bar at the top of the screen. If the user is on a device with a smaller screen the main navigation will toggle down to a remote view navigation. However once the user clicks the toggle icon the link to "Share Your Builds" will appear. Once on the "Share Your Builds" page the user (needs to be logged in) can scroll to the bottom of the page and click the "CLICK TO SHARE YOUR BUILDS" button. They will then be transported to a create post form, once filled out correctly they can click the "SUBMIT POST" button and there post will be uploaded to the "Share Your Builds" section. 
 
 ### Testing Frequent Visitor Goals
@@ -87,7 +87,7 @@ Providing a user has registered an account once they have logged in if they go t
 * Assuming the user is logged in then when they visit any product detail page on the site an "EDIT REVIEW" and "DELETE REVIEW" button will appear next to there product reviews. If the user clicks the "EDIT REVIEW" button they will be transported to a page with a form pre filled with information from that review.  They can amend the information on the form, and click the "UPDATE REVIEW" button. They will be transported back to the product detail page, a toast success message will appear confirming the review has been updated and the review will be updated. Alternatively, if they want to delete the review they can click the "DELETE REVIEW" button. They will be transported to a page that asks them to confirm the decision. If they click "YES" then a toast success message will appear confirming the review is deleted and the review will have been deleted.   
 
 
-3.  <b>As a Frequent User, I want to be able to edit or delete my posts on the Share Your Builds Section of the site.</b>
+3.  <b>As a Frequent User, I want to be able to edit or delete my posts from the community section of the site.</b>
 * Providing the user is logged in, when the visit the "Share Your Builds" section then an "EDIT POST" and "DELETE POST" button will appear underneath each post. If the user clicks the "EDIT POST" button they will be transported to a page with a form pre filled with information from that post.  They can amend the information on the form, and click the "UPDATE POST" button. They will be transported back to the "Share Your Builds" page, a toast success message will appear confirming the post has been updated and the post will be updated. Alternatively, if they want to delete the post they can click the "DELETE POST" button. They will be transported to a page that asks them to confirm the decision. If they click "YES" then a toast success message will appear confirming the post is deleted and the post will have been deleted.   
 
 4. <b>As a Frequent User, I want to be able to edit or amend by default delivery information on my profile.</b>

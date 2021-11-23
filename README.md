@@ -1,14 +1,8 @@
-## Image
-
-*  <a  href="https://unsplash.com/photos/qLW70Aoo8BE">Rain Forest Background Image</a>
-
-  
-
 # Glass Jungle Website
 
   
 
-<a  href="#">View the live project here..</a>
+<a  href="https://glass-jungle.herokuapp.com/">View the live project here..</a>
 
   
 
@@ -18,6 +12,7 @@ This site is for a new and emerging company called Glass Jungle. It is designed 
 
 The company's prime mission statement is to offer their customers a platform to purchase all of their terrarium building needs. Whether thats making a terrarium for decorative purposes, or making a naturalistic environment for a pet reptile or amphibian. Glass Jungle wants to be able to offer full range of products to cover that application. So the primary goal for this website is to provide Glass Jungle's customers with an e-commerce platform in which to purchase products. The client (Glass Jungle) also wants to start building a online community, connecting their customers together to encourage them to share their projects on the website. The "Share Your Builds" section of the site will not only help start building an online community, it will also increase future sales. Potential customers will be able to visit the "Share Your Builds" section to gain inspiration for their own builds, thus turning an indecisive customer into a divisive one. In order to make the "Share Your Builds" section function correctly the site will need to allow customers to register an account. The account will show them their purchase history, allow them to leave a review on a product and also upload a post on the "Share Your Builds" section of the site.
 
+<img  src="readme_assets/readme_images/glass_jungle_responsive.png">
   
 
 ## Client Requirements

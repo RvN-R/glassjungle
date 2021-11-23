@@ -114,13 +114,15 @@
             <!-- {{ bag_items }} -->
         </div>
         {% else %}
-        <p class="lead mb-5"><h2 class="text-center text-white text-uppercase">Your cart is empty</h2></p>
+       <div class="col-lg-12 col-md-12 col-sm-12">
+        <h2 class="text-center text-white text-uppercase mb-5">Your cart is empty</h2>
         <a href="{% url 'home' %}" class="btn bright-green-btn rounded-0 btn-lg mx-4">
             <span class="icon">
                 <i class="fas fa-chevron-left"></i>
             </span>
             <span class="text-uppercase">Keep Shopping</span>
         </a>
+       </div>
         {% endif %}
     </div>
 </div>

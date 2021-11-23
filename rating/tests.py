@@ -16,4 +16,3 @@ class TestCreateRatingForm(TestCase):
         )
         self.assertFalse(form.is_valid())
         self.assertIn('comment', form.errors.keys())
-        

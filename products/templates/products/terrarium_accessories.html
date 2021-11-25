@@ -21,7 +21,7 @@
     </div>
     <div class="row">
     {% for product in products %}
-        <div class="col-lg-4 col-md-12 col-sm-12">
+        <div class="d-lg-none d-xl-block col-lg-4 col-md-12 col-sm-12">
             <div class="card mx-5 mb-3" style="max-width: 540px; min-height: 272px;">
                 <div class="row no-gutters pt-2">
                   <div class="product-img-div col-md-4 d-block m-auto pl-3 pb-2">
@@ -35,8 +35,20 @@
                     </div>
                   </div>
                 </div>
-              </div>
-        </div>                
+            </div>
+        </div>
+        <div class="d-none d-lg-block d-xl-none col-lg-4">
+            <div class="card mx-5 mb-3 h-100 border-0" style="max-width: 540px; min-height: 272px;">
+                <div class="row justify-content-center no-gutters">
+                    <a href="{% url 'product_detail' product.id %}" class="text-center">
+                        <img src="{{ MEDIA_URL }}{{product.image}}" class="card-img-top product-detail-img img-fluid rounded-start" alt="{{ product.name }}">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product.name }}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
     {% endfor %}
     </div>
 {% endblock %}

@@ -372,13 +372,18 @@ input[name='q']::placeholder {
 }
 
 @media only screen and  (max-width: 1200px) {
-    
+
     .share-builds-img-container{
         width: 30rem;
     }
+
+    .product-detail-img {
+        width: 100%;
+        height: 400px;
+        object-fit: contain;
+    }
     
 }
-  
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {

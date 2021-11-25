@@ -5,11 +5,17 @@ I used <a href='https://validator.w3.org/'>Markup Validator Service</a>, <a href
 
 I used Chrome's inspect feature Lighthouse to check my sites performance on both desktops and mobile devices. 
 
-<img class="text-center" src="testing_assets/testing_images/lighthouse_desktop.png">
+<p align= "center">
+    <img src="testing_assets/testing_images/lighthouse_desktop.png" alt="image of desktop lighthouse results">
+</p>
+
 
 As you can see from the image the desktop results scored well with a 93 on Performance and 100 on Accessibility. Best Practices scored 87 which is still a good score. Lighthouse has made comment to the fact it suggests I have used front-end Javascript libraries with known security vulnerabilities. When I investigated this further I leaned its making reference to JQuery. Lighthouse suggests the severity is medium, so further investigation on how to combat this in the future is needed. SEO scored 89 so little higher than Best Practices. However, should I want to improve this score I could add meta descriptions to the site. This will increase the visibility of the site on search engines and should increase the sites search traffic. 
 
-<img class="text-center" src="testing_assets/testing_images/lighthouse_mobile.png">
+<p align= "center">
+    <img src="testing_assets/testing_images/lighthouse_mobile.png" alt="image of mobile lighthouse results">
+</p>
+
 
 As you can see from the mobile results, the site scored well with 100 Accessibility and 91 on SEO. Scored slightly low with 85 on Performance and that's down to the large background image I've used across the site. It effects the load up time and according to Lighthouse makes the site sluggish on some mobile devices with limited processing. To improve this score in the future I could look to compress the image file, making it load faster and improve the sites performance. Finally the site scored 87 on Best Practices, once again Lighthouse made reference to the same Javascript libraries security vulnerabilities that it reported in the Desktop test. Once again its worth investigating this to try and avoid any issues moving forward.
 

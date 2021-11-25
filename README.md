@@ -734,9 +734,25 @@ You will need a Github account in order to clone this project into Gitpod. Follo
 1. Follow this link: <a href="https://github.com/">Create a Github account here</a>
 
 Providing you have a Github account do as follows:
-1. Log in to GitHub and locate the correct GitHub Repository
-2. Above the list located to the right of the green "Gitpod" button click code
+1. Login to to GitHub and locate the correct GitHub Repository
+2. Above the list click the green "Gitpod" button in the top right corner of the respository
 3. This will trigger a new gitpod workspace to be created from the repository in github, you can now work locally. 
+
+### Cloning Repository Using Command Line
+1. Login to GitHub and locate the correct GitHub ≈.
+2. Above the list located to the right of the green "Gitpod" button click code.
+3. Under Clone you will see three options HTTPS, SSH and GitHub CLI. Choose which option you prefer and then click the copy icon nexto to the URL to copy it. 
+4. Open Terminal.
+5. Change the current working directory to the location where you want the cloned directory.
+6. Type git clone, and then paste the URL copied earlier during step 3. 
+7. Press Enter to create your local clone.
+
+### Cloning Repository to GitHub Desktop
+1. Login to GitHub and locate the correct GitHub Repository. 
+2. Above the list located to the right of the green "Gitpod" button click code. 
+3. Click "Open with Github Desktop" to clone and open the repository with GitHub Desktop. 
+4. Follow the prompts in GitHub Desktop to complete the clone. 
+
 
 ## Credits
 

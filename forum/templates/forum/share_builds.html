@@ -22,7 +22,7 @@
 <div class="row no-gutters">
     {% for post in posts %}
     <div class="col-12 d-flex justify-content-center">
-        <div class="card my-4" style="width: 60rem;">
+        <div class="card my-4 share-builds-img-container">
             <a href="{{ MEDIA_URL }}{{post.image}}" target="_blank"><img src="{{ MEDIA_URL }}{{post.image}}" class="card-img-top" alt="Image from {{post.title}} post"></a>
             <div class="card-body">
                 <h5 class="card-title">{{post.title}}</h5>

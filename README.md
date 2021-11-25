@@ -12,7 +12,10 @@ This site is for a new and emerging company called Glass Jungle. It is designed 
 
 The company's prime mission statement is to offer their customers a platform to purchase all of their terrarium building needs. Whether thats making a terrarium for decorative purposes, or making a naturalistic environment for a pet reptile or amphibian. Glass Jungle wants to be able to offer full range of products to cover that application. So the primary goal for this website is to provide Glass Jungle's customers with an e-commerce platform in which to purchase products. The client (Glass Jungle) also wants to start building a online community, connecting their customers together to encourage them to share their projects on the website. The "Share Your Builds" section of the site will not only help start building an online community, it will also increase future sales. Potential customers will be able to visit the "Share Your Builds" section to gain inspiration for their own builds, thus turning an indecisive customer into a divisive one. In order to make the "Share Your Builds" section function correctly the site will need to allow customers to register an account. The account will show them their purchase history, allow them to leave a review on a product and also upload a post on the "Share Your Builds" section of the site.
 
-<img  src="readme_assets/readme_images/glass_jungle_responsive.png">
+<p align= "center">
+    <img src="readme_assets/readme_images/glass_jungle_responsive.png" alt="image of site on various screen sizes">
+</p>
+
   
 
 ## Client Requirements
@@ -368,23 +371,23 @@ The final key feature that the client required was a feature that allowed its cu
  
 ## Testing
 
-Testing information can be found on a separate <a  href="#">Testing Readme</a>
+Testing information can be found on a separate <a  href="TESTING.md">Testing Readme</a>
 
   
 
-# Deployment
+## Deployment
 
 I've included both a Web Map and ERD of the site to aid in the deployment. Having a better understanding of the user journey through the website, and connections between databases should increase the chances of a successful deployment. Please find links for the <a  href="readme_assets/readme_images/GlassJungleWebMapV2.png">Web Map</a> and <a  href="readme_assets/readme_images/GlassJungleERDV2.png">ERD</a> here, also included images below:
 
 
-## Glass Jungle Web Map
+### Glass Jungle Web Map
 
 <img  src="readme_assets/readme_images/GlassJungleWebMapV2.png">
 
 <hr>
 
 
-## Glass Jungle ERD
+### Glass Jungle ERD
 
 <img  src="readme_assets/readme_images/GlassJungleERDV2.png">
 
@@ -392,7 +395,7 @@ I've included both a Web Map and ERD of the site to aid in the deployment. Havin
 
   
 
-## Deploy The Application using Heroku and AWS
+### Deploy The Application using Heroku and AWS
 
 
 1. Prior to creating an account with Heroku, its is necessary to create a requirements.txt and Procfile within your application, to enable Heroku to know which application and dependences are required to run the app.
@@ -725,6 +728,15 @@ I've included both a Web Map and ERD of the site to aid in the deployment. Havin
 
 146. At this point the website should be successfully deployed to Heroku, the static and media files should be displayed as they are hosted with AWS and Stripe webhooks should be functioning.
 
+### Deploy to Gitpod - Run Locally
+
+You will need a Github account in order to clone this project into Gitpod. Follow these steps if you have yet to register a Github account:
+1. Follow this link: <a href="https://github.com/">Create a Github account here</a>
+
+Providing you have a Github account do as follows:
+1. Log in to GitHub and locate the correct GitHub Repository
+2. Above the list located to the right of the green "Gitpod" button click code
+3. This will trigger a new gitpod workspace to be created from the repository in github, you can now work locally. 
 
 ## Credits
 

@@ -355,6 +355,14 @@ input[name='q']::placeholder {
 }
 /* Media Queries */
 
+@media only screen and  (max-width: 2560px) {
+    
+    .share-builds-img-container{
+        width: 50rem;
+    }
+    
+}
+
 @media only screen and  (max-width: 1440px) {
     
     .share-builds-img-container{
